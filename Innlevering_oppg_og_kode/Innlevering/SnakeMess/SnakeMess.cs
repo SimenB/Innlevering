@@ -12,7 +12,6 @@ using System.Diagnostics;
 //          (And yes, it could have been a lot ugglier! But the idea wasn't to make it fuggly-uggly, just funny-uggly, sweet-uggly, or whatever you want to call it.)
 //
 //          -Tomas
-
 //
 namespace SnakeMess
 {
