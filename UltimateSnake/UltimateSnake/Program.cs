@@ -13,6 +13,7 @@ namespace UltimateSnake
     using System.Collections.Generic;
     using System.Linq;
     using System.Text;
+    using System.Diagnostics;
     using System.Threading.Tasks;
 
     /// <summary>
@@ -28,6 +29,28 @@ namespace UltimateSnake
         /// </param>
         public static void Main(string[] args)
         {
+            GameLoop();
+        }
+
+        private static void GameLoop()
+        {
+            Stopwatch sW = new Stopwatch();
+
+            sW.Start();
+
+            Snake per = Snake.Instance;
+
+            while (per.Alive)
+            {
+                if (sW.ElapsedMilliseconds < 100)
+                {
+                    continue;
+                }
+
+                sW.Restart();
+
+                // TODO: Game Logic here
+            }
         }
     }
 }

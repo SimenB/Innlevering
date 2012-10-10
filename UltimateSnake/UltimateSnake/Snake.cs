@@ -41,6 +41,8 @@ namespace UltimateSnake
         /// </summary>
         private int prevPosY;
 
+        private InputHandler input = InputHandler.Instance;
+
         /// <summary>
         /// Prevents a default instance of the <see cref="Snake"/> class from being created.
         /// </summary>
