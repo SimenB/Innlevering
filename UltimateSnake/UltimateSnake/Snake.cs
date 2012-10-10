@@ -10,7 +10,6 @@
 namespace UltimateSnake
 {
     using System;
-    using System.Collections.Generic;
 
     /// <summary>
     /// The snake
@@ -27,9 +26,24 @@ namespace UltimateSnake
         /// </summary>
         private int bodyParts;
 
+        /// <summary>
+        /// The x-position
+        /// </summary>
         private int posX;
+
+        /// <summary>
+        /// The y-position
+        /// </summary>
         private int posY;
+
+        /// <summary>
+        /// The previous x-position
+        /// </summary>
         private int prevPosX;
+
+        /// <summary>
+        /// The previous y-position
+        /// </summary>
         private int prevPosY;
 
         /// <summary>
@@ -58,11 +72,6 @@ namespace UltimateSnake
         }
 
         /// <summary>
-        /// Gets a value indicating whether the snake is alive or not
-        /// </summary>
-        public bool Alive { get; private set; }
-
-        /// <summary>
         /// Gets the instance. If it's not initialized, do so
         /// </summary>
         public static Snake Instance
@@ -72,6 +81,11 @@ namespace UltimateSnake
                 return instance == null ? instance : instance = new Snake();
             }
         }
+
+        /// <summary>
+        /// Gets a value indicating whether the snake is alive or not
+        /// </summary>
+        public bool Alive { get; private set; }
 
         /// <summary>
         /// The update.

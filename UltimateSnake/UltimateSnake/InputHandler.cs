@@ -1,7 +1,13 @@
-using Microsoft.Xna.Framework;
-using Microsoft.Xna.Framework.Input;
+// --------------------------------------------------------------------------------------------------------------------
+// <copyright file="InputHandler.cs" company="MarSimJør">
+//   Copyright © 2012
+// </copyright>
+// <summary>
+//   Defines the InputHandler type.
+// </summary>
+// --------------------------------------------------------------------------------------------------------------------
 
-namespace InputHandler
+namespace UltimateSnake
 {
     public class InputHandler
     {
@@ -18,14 +24,14 @@ namespace InputHandler
         /// </summary>
         public void Update()
         {
-            currentkeys = KeyState.GetPressedKeys();
-            if (previouskeys == currentkeys)
+            this.currentkeys = this.KeyState.GetPressedKeys();
+            if (this.previouskeys == this.currentkeys)
             {
                 goto end;
             }
-            for (int i = 0; i < currentkeys.Length; i++)
+            for (int i = 0; i < this.currentkeys.Length; i++)
             {
-                switch (currentkeys[i])
+                switch (this.currentkeys[i])
                 {
                     case Keys.W:
                         ActionW();
@@ -57,7 +63,7 @@ namespace InputHandler
                 }
             }
             end:
-            previouskeys = currentkeys;
+            this.previouskeys = this.currentkeys;
         }
         #endregion
         
