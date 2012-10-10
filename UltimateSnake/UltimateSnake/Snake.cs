@@ -22,11 +22,6 @@ namespace UltimateSnake
         private static Snake instance;
 
         /// <summary>
-        /// The number of body-parts
-        /// </summary>
-        private int bodyParts;
-
-        /// <summary>
         /// The x-position
         /// </summary>
         private int posX;
@@ -51,7 +46,7 @@ namespace UltimateSnake
         /// </summary>
         private Snake()
         {
-            this.bodyParts = 3;
+            this.BodyParts = 3;
 
             // TODO: set initial position to middle of screen
             this.posX = 5;
@@ -59,6 +54,11 @@ namespace UltimateSnake
 
             this.Alive = true;
         }
+
+        /// <summary>
+        /// Gets the number of body-parts
+        /// </summary>
+        public int BodyParts { get; private set; }
 
         /// <summary>
         /// The direction the snake is moving in
@@ -104,7 +104,7 @@ namespace UltimateSnake
         /// </summary>
         public void Draw()
         {
-            for (int i = 0; i <= this.bodyParts; i++)
+            for (int i = 0; i <= this.BodyParts; i++)
             {
                 // TODO: Draw the snake
                 this.prevPosX = this.posX;
