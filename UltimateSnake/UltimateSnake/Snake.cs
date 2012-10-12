@@ -76,10 +76,7 @@ namespace UltimateSnake
         /// </summary>
         public static Snake Instance
         {
-            get
-            {
-                return instance ?? (instance = new Snake());
-            }
+            get { return instance ?? (instance = new Snake()); }
         }
 
         /// <summary>

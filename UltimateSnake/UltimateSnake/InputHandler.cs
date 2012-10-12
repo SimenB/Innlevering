@@ -21,12 +21,7 @@ namespace UltimateSnake
 
         public static InputHandler Instance
         {
-            get
-            {
-                {
-                    return instance ?? (instance = new InputHandler());
-                }
-            }
+            get { return instance ?? (instance = new InputHandler()); }
         }
 
         public bool MoveUp()
