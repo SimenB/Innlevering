@@ -41,6 +41,9 @@ namespace UltimateSnake
         /// </summary>
         private int prevPosY;
 
+        /// <summary>
+        /// The input-handler instance
+        /// </summary>
         private InputHandler input = InputHandler.Instance;
 
         /// <summary>
@@ -56,11 +59,6 @@ namespace UltimateSnake
 
             this.Alive = true;
         }
-
-        /// <summary>
-        /// Gets the number of body-parts
-        /// </summary>
-        public int BodyParts { get; private set; }
 
         /// <summary>
         /// The direction the snake is moving in
@@ -80,11 +78,14 @@ namespace UltimateSnake
         {
             get
             {
-                {
-                    return instance ?? (instance = new Snake());
-                }
+                return instance ?? (instance = new Snake());
             }
         }
+
+        /// <summary>
+        /// Gets the number of body-parts
+        /// </summary>
+        public int BodyParts { get; private set; }
 
         /// <summary>
         /// Gets a value indicating whether the snake is alive or not
