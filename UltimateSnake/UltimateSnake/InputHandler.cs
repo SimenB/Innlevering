@@ -23,7 +23,7 @@ namespace UltimateSnake
         {
             get
             {
-                return instance == null ? instance : instance = new InputHandler();
+                { return instance ?? (instance = new InputHandler()); }
             }
         }
 

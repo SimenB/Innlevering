@@ -80,7 +80,9 @@ namespace UltimateSnake
         {
             get
             {
-                return instance == null ? instance : instance = new Snake();
+                {
+                    return instance ?? (instance = new Snake());
+                }
             }
         }
 
