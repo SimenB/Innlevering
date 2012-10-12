@@ -7,10 +7,8 @@
 // </summary>
 // --------------------------------------------------------------------------------------------------------------------
 
-namespace UltimateSnake
+namespace UltimateSnake.GameObjects
 {
-    using System;
-
     /// <summary>
     /// The snake
     /// </summary>
@@ -44,8 +42,8 @@ namespace UltimateSnake
             this.BodyParts = 3;
 
             // TODO: set initial position to middle of screen
-            this.position.X = 5;
-            this.position.Y = 5;
+            this.position = new Point(5, 5);
+            this.previousPosition = position;
 
             this.Alive = true;
         }
@@ -84,6 +82,8 @@ namespace UltimateSnake
         /// </summary>
         public void Update()
         {
+            
+
             // TODO: Insert width and height of game-window
             this.Alive = this.position.X > 0 && this.position.X < 1000 && this.position.Y > 0 && this.position.Y < 1000;
         }
@@ -93,7 +93,7 @@ namespace UltimateSnake
         /// </summary>
         public void Draw()
         {
-            for (int i = 0; i <= this.BodyParts; i++)
+            for (var i = 0; i <= this.BodyParts; i++)
             {
                 // TODO: Draw the snake
                 this.previousPosition.X = this.position.X;

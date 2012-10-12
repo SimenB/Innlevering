@@ -55,7 +55,7 @@
       <class Id="9864349d-e095-4d7f-9857-a06af341f419" name="Controller" isAbstract="false" isLeaf="false" isActiveClass="false">
         <elementDefinition Id="0d221d28-a66d-476c-b07e-d8e159f57bd9" />
         <suppliersInternal>
-          <dependency Id="86377188-d478-481e-b49d-c8f12290f842">
+          <dependency Id="86377188-d478-481e-b49d-c8f12290f842" name="uses">
             <classMoniker Id="c2def252-ca23-401a-945d-0959f9a79cb5" LastKnownName="InputHandler" />
             <elementDefinition Id="ad10ad4d-e08e-49f0-b7f2-ce684f8ba0ec" />
           </dependency>
@@ -178,6 +178,24 @@
     <logicalClassDesignerModelHasTypes>
       <class Id="76d7c4a1-a55d-4efc-a177-11ae4eb06ac3" name="Snake" isAbstract="false" isLeaf="false" isActiveClass="false">
         <elementDefinition Id="250ba406-35bf-4dfa-b291-2fff241bc4c9" />
+        <targetEnds>
+          <association Id="30cdf573-cef2-4bee-93a0-01ae9288781f" isDerived="false" sourceEndRoleName="Snake" targetEndRoleName="Point" isLeaf="false" isAbstract="false">
+            <classMoniker Id="b93d687d-57e9-4d06-a3fa-a49c66a8293c" LastKnownName="Point" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="f29fc21f-2733-449a-b870-fcc9a76044bd" name="Snake" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="Shared" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="12521ae4-66a5-4ee0-812b-294cfe71377c" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="20805edb-c82a-494c-b77d-8da46ff72a31" name="Point" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="6f41f2c6-bd2a-49ee-9a68-60f4fc795bd3" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="a5a26128-0c0a-4a67-93a6-bd14dea99107" />
+          </association>
+        </targetEnds>
         <ownedAttributesInternal>
           <property Id="5b714c4c-c7f0-4340-a97f-4c0f978acd1d" name="instance" visibility="Private" isLeaf="false" isStatic="true" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
             <elementDefinition Id="d69da64a-7b58-4ccd-bb4f-7f9145ac497e" />
@@ -350,6 +368,24 @@
     <logicalClassDesignerModelHasTypes>
       <class Id="1a8b3ddb-1d3e-4bef-a66c-2531225fc48e" name="Loot" isAbstract="false" isLeaf="false" isActiveClass="false">
         <elementDefinition Id="40f8e158-efa6-49f4-a2f0-d037b91d39d1" />
+        <targetEnds>
+          <association Id="1000054c-9dbc-4fe4-a720-870c2a24f490" isDerived="false" sourceEndRoleName="Loot" targetEndRoleName="Point" isLeaf="false" isAbstract="false">
+            <classMoniker Id="b93d687d-57e9-4d06-a3fa-a49c66a8293c" LastKnownName="Point" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="000b2a3d-72ad-4242-9dc0-82aab665a942" name="Loot" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="Shared" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="97c8820e-8a88-47ae-8d05-2eef07d9dce0" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="52b94889-4302-4f57-8b97-f1471fbff6cd" name="Point" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="ba798d30-0af5-4d82-a96c-b3f9606f8617" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="77667623-2037-4f47-af98-c3ee508c98eb" />
+          </association>
+        </targetEnds>
         <ownedAttributesInternal>
           <property Id="09ad744b-104c-43de-9a5b-93b53284d8c9" name="posX" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
             <elementDefinition Id="a7557d5f-d0cc-45ff-868b-a11521a7a94f" />
@@ -377,6 +413,25 @@
         <elementDefinition Id="1c609271-4f1b-4ef1-b80c-eaf8e7715da9" />
       </referencedType>
     </packageHasNamedElement>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="b93d687d-57e9-4d06-a3fa-a49c66a8293c" name="Point" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="82c11eb6-6a82-4cd8-80b4-3c7eac307860" />
+        <ownedAttributesInternal>
+          <property Id="cd1c7ea0-681f-4ed1-a241-7af19e492fba" name="X" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="7d095a1d-2eb6-489e-a0ed-6a4f01ee24b8" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="3acf7a1c-01ce-4b61-af2b-e18a392d8d37" LastKnownName="int" />
+            </type_NamedElement>
+          </property>
+          <property Id="e136b82d-92b7-4e59-bf91-7ed3b10e12e8" name="Y" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="619c9a2f-6f3e-4df1-8cf8-85f6ca64573f" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="3acf7a1c-01ce-4b61-af2b-e18a392d8d37" LastKnownName="int" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
   </packagedElements>
   <package Id="35d05203-facb-454d-a9b6-2c34a96c701e" name="SnakeModelProject">
     <elementDefinition Id="3a3a5f8a-07a3-4e38-9aa9-298ef4f064ed" />

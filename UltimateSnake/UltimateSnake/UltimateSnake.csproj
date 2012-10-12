@@ -41,11 +41,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="InputHandler.cs" />
+    <Compile Include="GameObjects\Loot.cs" />
+    <Compile Include="MVC\Controller.cs" />
+    <Compile Include="utilities\InputHandler.cs" />
+    <Compile Include="MVC\Model.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Snake.cs" />
-    <Compile Include="Point.cs" />
+    <Compile Include="GameObjects\Snake.cs" />
+    <Compile Include="utilities\Point.cs" />
+    <Compile Include="MVC\View.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

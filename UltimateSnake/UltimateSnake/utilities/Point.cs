@@ -16,5 +16,12 @@ namespace UltimateSnake
             X = x;
             Y = y;
         }
+
+        // TODO: What?
+        public static bool Clamped(Point value, Point minPosition, Point maxPosition)
+        {
+            return value.X >= minPosition.X && value.X <= maxPosition.X && value.Y >= minPosition.Y &&
+                   value.Y <= maxPosition.Y;
+        }
     }
 }

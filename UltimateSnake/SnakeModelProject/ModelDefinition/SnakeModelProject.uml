@@ -125,7 +125,8 @@
         isActiveClass="false">
         <suppliersInternal>
           <dependency
-            Id="ad10ad4d-e08e-49f0-b7f2-ce684f8ba0ec">
+            Id="ad10ad4d-e08e-49f0-b7f2-ce684f8ba0ec"
+            name="uses">
             <classMoniker
               Id="9f6eac76-6848-460b-9427-19b2806a5849"
               LastKnownName="InputHandler"
@@ -355,6 +356,47 @@
         isAbstract="false"
         isLeaf="false"
         isActiveClass="false">
+        <targetEnds>
+          <association
+            Id="a5a26128-0c0a-4a67-93a6-bd14dea99107"
+            isDerived="false"
+            sourceEndRoleName="Snake"
+            targetEndRoleName="Point"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="82c11eb6-6a82-4cd8-80b4-3c7eac307860"
+              LastKnownName="Point"
+              LastKnownLocation="SnakeModelProject.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="12521ae4-66a5-4ee0-812b-294cfe71377c"
+                  name="Snake"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="Shared"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="6f41f2c6-bd2a-49ee-9a68-60f4fc795bd3"
+                  name="Point"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
         <ownedAttributesInternal>
           <property
             Id="d69da64a-7b58-4ccd-bb4f-7f9145ac497e"
@@ -714,6 +756,47 @@
         isAbstract="false"
         isLeaf="false"
         isActiveClass="false">
+        <targetEnds>
+          <association
+            Id="77667623-2037-4f47-af98-c3ee508c98eb"
+            isDerived="false"
+            sourceEndRoleName="Loot"
+            targetEndRoleName="Point"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="82c11eb6-6a82-4cd8-80b4-3c7eac307860"
+              LastKnownName="Point"
+              LastKnownLocation="SnakeModelProject.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="97c8820e-8a88-47ae-8d05-2eef07d9dce0"
+                  name="Loot"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="Shared"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="ba798d30-0af5-4d82-a96c-b3f9606f8617"
+                  name="Point"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
         <ownedAttributesInternal>
           <property
             Id="a7557d5f-d0cc-45ff-868b-a11521a7a94f"
@@ -779,6 +862,53 @@
       <undefinedType
         Id="1c609271-4f1b-4ef1-b80c-eaf8e7715da9"
         name="char" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="82c11eb6-6a82-4cd8-80b4-3c7eac307860"
+        name="Point"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <ownedAttributesInternal>
+          <property
+            Id="7d095a1d-2eb6-489e-a0ed-6a4f01ee24b8"
+            name="X"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="8afc706f-0eb8-444f-b98e-299b5d2c03b4"
+                LastKnownName="int"
+                LastKnownLocation="SnakeModelProject.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="619c9a2f-6f3e-4df1-8cf8-85f6ca64573f"
+            name="Y"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="8afc706f-0eb8-444f-b98e-299b5d2c03b4"
+                LastKnownName="int"
+                LastKnownLocation="SnakeModelProject.uml" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+      </class>
     </packageHasNamedElement>
   </packagedElements>
   <primitiveType
