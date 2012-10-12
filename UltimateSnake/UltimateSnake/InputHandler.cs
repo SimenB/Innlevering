@@ -32,7 +32,7 @@ namespace UltimateSnake
             return true;
         }
 
-        public bool MoveRigth()
+        public bool MoveRight()
         {
             return false;
         }
