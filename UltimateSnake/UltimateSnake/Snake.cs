@@ -22,24 +22,14 @@ namespace UltimateSnake
         private static Snake instance;
 
         /// <summary>
-        /// The x-position
+        /// The position
         /// </summary>
-        private int posX;
+        private Point position;
 
         /// <summary>
-        /// The y-position
+        /// The previous position
         /// </summary>
-        private int posY;
-
-        /// <summary>
-        /// The previous x-position
-        /// </summary>
-        private int prevPosX;
-
-        /// <summary>
-        /// The previous y-position
-        /// </summary>
-        private int prevPosY;
+        private Point previousPosition;
 
         /// <summary>
         /// The input-handler instance
@@ -54,8 +44,8 @@ namespace UltimateSnake
             this.BodyParts = 3;
 
             // TODO: set initial position to middle of screen
-            this.posX = 5;
-            this.posY = 5;
+            this.position.X = 5;
+            this.position.Y = 5;
 
             this.Alive = true;
         }
@@ -95,10 +85,7 @@ namespace UltimateSnake
         public void Update()
         {
             // TODO: Insert width and height of game-window
-            if ((this.posX < 0 && this.posX > 1000) || (this.posY < 0 && this.posY > 1000))
-            {
-                this.Alive = false;
-            }
+            this.Alive = this.position.X > 0 && this.position.X < 1000 && this.position.Y > 0 && this.position.Y < 1000;
         }
 
         /// <summary>
@@ -109,8 +96,8 @@ namespace UltimateSnake
             for (int i = 0; i <= this.BodyParts; i++)
             {
                 // TODO: Draw the snake
-                this.prevPosX = this.posX;
-                this.prevPosY = this.posY;
+                this.previousPosition.X = this.position.X;
+                this.previousPosition.Y = this.position.Y;
             }
         }
     }
