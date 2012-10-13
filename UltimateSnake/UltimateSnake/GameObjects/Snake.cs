@@ -7,8 +7,6 @@
 // </summary>
 // --------------------------------------------------------------------------------------------------------------------
 
-using UltimateSnake.Utilities;
-
 namespace UltimateSnake.GameObjects
 {
     /// <summary>
