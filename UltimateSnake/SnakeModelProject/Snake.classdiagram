@@ -63,25 +63,11 @@
             <classMoniker Id="662e2f28-5d24-42e9-b5d0-c1e68ad92122" LastKnownName="Model" />
             <elementDefinition Id="1820df43-e6d6-44d1-abff-d91e76ec76cf" />
           </dependency>
-        </suppliersInternal>
-        <targetEnds>
-          <association Id="75adc1f5-49e5-4d4e-a11e-acb4885aad63" isDerived="false" sourceEndRoleName="Controller" targetEndRoleName="View" isLeaf="false" isAbstract="false">
+          <dependency Id="6ee679d1-f9c8-480c-a7cd-dea22e0e4f7d">
             <classMoniker Id="2faa3470-440f-48ed-93fd-3bd08fafc599" LastKnownName="View" />
-            <relationshipOwnedElementsInternal>
-              <associationHasOwnedEnds>
-                <memberEnd Id="5c82c17b-d189-4208-bbec-dc01651baff7" name="Controller" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
-                  <elementDefinition Id="da72e926-81c7-4c4b-83d0-2bde0622a3e8" />
-                </memberEnd>
-              </associationHasOwnedEnds>
-              <associationHasOwnedEnds>
-                <memberEnd Id="1961b726-b0b2-4ed1-8e12-2116f3c1dbaa" name="View" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
-                  <elementDefinition Id="074f1d7d-0bc2-4f8b-a27d-5b7679576429" />
-                </memberEnd>
-              </associationHasOwnedEnds>
-            </relationshipOwnedElementsInternal>
-            <elementDefinition Id="ba69f212-b032-4413-aa76-735847f3bcbf" />
-          </association>
-        </targetEnds>
+            <elementDefinition Id="872478ee-a2cf-4c98-81ef-b332d1db9249" />
+          </dependency>
+        </suppliersInternal>
       </class>
     </logicalClassDesignerModelHasTypes>
     <logicalClassDesignerModelHasTypes>
@@ -189,6 +175,16 @@
               </associationHasOwnedEnds>
               <associationHasOwnedEnds>
                 <memberEnd Id="20805edb-c82a-494c-b77d-8da46ff72a31" name="Point" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <lowerValueInternal>
+                    <literalString Id="bc46b14b-ee4b-45eb-96ff-2cfbba19d185" name="Lower" value="2">
+                      <elementDefinition Id="243a1f79-f61c-47ce-a09b-a2275c342706" />
+                    </literalString>
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString Id="ad9ee4db-c439-4706-998e-03960518acda" name="Upper" value="2">
+                      <elementDefinition Id="a44db968-b88c-4243-bbdd-f659cb0eb467" />
+                    </literalString>
+                  </upperValueInternal>
                   <elementDefinition Id="6f41f2c6-bd2a-49ee-9a68-60f4fc795bd3" />
                 </memberEnd>
               </associationHasOwnedEnds>
@@ -221,34 +217,22 @@
               <referencedTypeMoniker Id="ac2ce752-b14c-4b1c-88a4-d1a07ddb286e" LastKnownName="enum" />
             </type_NamedElement>
           </property>
-          <property Id="b967f4a2-ebda-467b-8f6c-9f24b488a868" name="posX" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
-            <elementDefinition Id="f28754c6-c189-454c-9819-3dc3b0e0dcf9" />
-            <type_NamedElement>
-              <referencedTypeMoniker Id="3acf7a1c-01ce-4b61-af2b-e18a392d8d37" LastKnownName="int" />
-            </type_NamedElement>
-          </property>
-          <property Id="2220b351-ef4c-4a50-bbcc-96571136c8f5" name="posY" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
-            <elementDefinition Id="42fa8680-41de-4b1d-b21a-5fc310659193" />
-            <type_NamedElement>
-              <referencedTypeMoniker Id="3acf7a1c-01ce-4b61-af2b-e18a392d8d37" LastKnownName="int" />
-            </type_NamedElement>
-          </property>
-          <property Id="498ed6bd-4be2-49bd-ae07-c3a8a97ab4a7" name="prevPosX" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
-            <elementDefinition Id="d1f35d7b-4f8d-4cb6-a68f-63607e4748a4" />
-            <type_NamedElement>
-              <referencedTypeMoniker Id="3acf7a1c-01ce-4b61-af2b-e18a392d8d37" LastKnownName="int" />
-            </type_NamedElement>
-          </property>
-          <property Id="8aa7b9ad-bd40-4c5e-bf9e-0381c4f341e4" name="prevPosY" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
-            <elementDefinition Id="4a1ea91e-279b-4fcf-81aa-85108a4e0a85" />
-            <type_NamedElement>
-              <referencedTypeMoniker Id="3acf7a1c-01ce-4b61-af2b-e18a392d8d37" LastKnownName="int" />
-            </type_NamedElement>
-          </property>
           <property Id="6c692bad-f272-48b3-a882-1e0a2480c68c" name="Alive" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
             <elementDefinition Id="bc2c1300-d427-4dc8-b3d7-e17e6feac620" />
             <type_NamedElement>
               <referencedTypeMoniker Id="4ebc5117-dc5d-4553-a873-d17c8e719eeb" LastKnownName="bool" />
+            </type_NamedElement>
+          </property>
+          <property Id="6fa233da-e1ff-4826-95a9-20651f65f85d" name="position" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="df09e038-232c-4844-b1c9-63cbcbbd6956" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="d1345148-3168-43d0-8d48-c345bf099491" LastKnownName="Point" />
+            </type_NamedElement>
+          </property>
+          <property Id="772c1136-4a47-49ef-9c3f-bd04e6e11ef5" name="previousPosition" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="135c06a1-a8dc-4337-8ba9-00ca3e813119" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="d1345148-3168-43d0-8d48-c345bf099491" LastKnownName="Point" />
             </type_NamedElement>
           </property>
         </ownedAttributesInternal>
@@ -387,25 +371,50 @@
           </association>
         </targetEnds>
         <ownedAttributesInternal>
-          <property Id="09ad744b-104c-43de-9a5b-93b53284d8c9" name="posX" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
-            <elementDefinition Id="a7557d5f-d0cc-45ff-868b-a11521a7a94f" />
-            <type_NamedElement>
-              <referencedTypeMoniker Id="3acf7a1c-01ce-4b61-af2b-e18a392d8d37" LastKnownName="int" />
-            </type_NamedElement>
-          </property>
-          <property Id="6a56526d-9d2e-41ca-b3a1-a2fc6da8c63d" name="posY" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
-            <elementDefinition Id="cbcc203f-2261-4d8d-9eff-7cd67e1bcd79" />
-            <type_NamedElement>
-              <referencedTypeMoniker Id="3acf7a1c-01ce-4b61-af2b-e18a392d8d37" LastKnownName="int" />
-            </type_NamedElement>
-          </property>
           <property Id="d413bd31-1496-40cc-9bf9-ab75a5adaaa2" name="sign" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
             <elementDefinition Id="648553f4-0fd5-40be-8988-6438a53510e0" />
             <type_NamedElement>
               <referencedTypeMoniker Id="a2049e79-e44a-496f-8ffb-05425e29d373" LastKnownName="char" />
             </type_NamedElement>
           </property>
+          <property Id="86f6fabe-667f-4bfa-a625-5194f1af56f8" name="position" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="4dc1a7f9-7612-4955-9efc-938c45cd526b" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="d1345148-3168-43d0-8d48-c345bf099491" LastKnownName="Point" />
+            </type_NamedElement>
+          </property>
         </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation Id="b7200cb3-2ae0-49f5-9a95-970c2304a4ec" name="Draw" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="1de21d20-dfd9-438b-8eec-ab8951063860" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="afecddb9-fcf9-43a9-bc15-5d2bf9ec68d9" direction="Return" isUnique="false">
+                  <elementDefinition Id="9d5c5cb2-629c-4d1c-817e-96f7c9043e09" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="c6c1ad20-6a21-418c-87a9-1aace7fb9e4b" LastKnownName="void" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="bea91f22-1cb9-4cad-8497-b5020742a1de" name="Update" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="0ea7bb00-5371-4bf3-bc3e-1f49cec597ac" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="475501b3-7c84-4ac6-8f84-1362669e57ea" direction="Return" isUnique="false">
+                  <elementDefinition Id="5c560866-2ce1-4eb9-9cf9-b9b76fb78b45" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="c6c1ad20-6a21-418c-87a9-1aace7fb9e4b" LastKnownName="void" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="0e275098-16ef-41aa-a432-1e3d1b7c2844" name="Loot" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="bef1c439-34e4-444f-9423-70ca207a0883" />
+          </operation>
+        </ownedOperationsInternal>
       </class>
     </logicalClassDesignerModelHasTypes>
     <packageHasNamedElement>
@@ -432,6 +441,11 @@
         </ownedAttributesInternal>
       </class>
     </logicalClassDesignerModelHasTypes>
+    <packageHasNamedElement>
+      <referencedType Id="d1345148-3168-43d0-8d48-c345bf099491" name="Point" isAbstract="false" isLeaf="false" cachedFullName="SnakeModelProject::Point">
+        <elementDefinition Id="82c11eb6-6a82-4cd8-80b4-3c7eac307860" />
+      </referencedType>
+    </packageHasNamedElement>
   </packagedElements>
   <package Id="35d05203-facb-454d-a9b6-2c34a96c701e" name="SnakeModelProject">
     <elementDefinition Id="3a3a5f8a-07a3-4e38-9aa9-298ef4f064ed" />

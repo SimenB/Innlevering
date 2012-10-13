@@ -140,48 +140,14 @@
               LastKnownName="Model"
               LastKnownLocation="SnakeModelProject.uml" />
           </dependency>
-        </suppliersInternal>
-        <targetEnds>
-          <association
-            Id="ba69f212-b032-4413-aa76-735847f3bcbf"
-            isDerived="false"
-            sourceEndRoleName="Controller"
-            targetEndRoleName="View"
-            isLeaf="false"
-            isAbstract="false">
+          <dependency
+            Id="872478ee-a2cf-4c98-81ef-b332d1db9249">
             <classMoniker
               Id="fd95179d-a339-4007-8cde-58255dc2aa3a"
               LastKnownName="View"
               LastKnownLocation="SnakeModelProject.uml" />
-            <relationshipOwnedElementsInternal>
-              <associationHasOwnedEnds>
-                <memberEnd
-                  Id="da72e926-81c7-4c4b-83d0-2bde0622a3e8"
-                  name="Controller"
-                  isLeaf="false"
-                  isStatic="false"
-                  isReadOnly="false"
-                  isDerived="false"
-                  isDerivedUnion="false"
-                  aggregation="None"
-                  isComposite="false"
-                  isNavigableOwned="false" />
-              </associationHasOwnedEnds>
-              <associationHasOwnedEnds>
-                <memberEnd
-                  Id="074f1d7d-0bc2-4f8b-a27d-5b7679576429"
-                  name="View"
-                  isLeaf="false"
-                  isStatic="false"
-                  isReadOnly="false"
-                  isDerived="false"
-                  isDerivedUnion="false"
-                  aggregation="None"
-                  isComposite="false" />
-              </associationHasOwnedEnds>
-            </relationshipOwnedElementsInternal>
-          </association>
-        </targetEnds>
+          </dependency>
+        </suppliersInternal>
       </class>
     </packageHasNamedElement>
     <packageHasNamedElement>
@@ -392,7 +358,20 @@
                   isDerived="false"
                   isDerivedUnion="false"
                   aggregation="None"
-                  isComposite="false" />
+                  isComposite="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="243a1f79-f61c-47ce-a09b-a2275c342706"
+                      name="Lower"
+                      value="2" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="a44db968-b88c-4243-bbdd-f659cb0eb467"
+                      name="Upper"
+                      value="2" />
+                  </upperValueInternal>
+                </memberEnd>
               </associationHasOwnedEnds>
             </relationshipOwnedElementsInternal>
           </association>
@@ -474,82 +453,6 @@
             </type_NamedElement>
           </property>
           <property
-            Id="f28754c6-c189-454c-9819-3dc3b0e0dcf9"
-            name="posX"
-            visibility="Private"
-            isLeaf="false"
-            isStatic="false"
-            isReadOnly="false"
-            isUnique="false"
-            isDerived="false"
-            isDerivedUnion="false"
-            aggregation="None"
-            isComposite="false">
-            <type_NamedElement>
-              <undefinedTypeMoniker
-                Id="8afc706f-0eb8-444f-b98e-299b5d2c03b4"
-                LastKnownName="int"
-                LastKnownLocation="SnakeModelProject.uml" />
-            </type_NamedElement>
-          </property>
-          <property
-            Id="42fa8680-41de-4b1d-b21a-5fc310659193"
-            name="posY"
-            visibility="Private"
-            isLeaf="false"
-            isStatic="false"
-            isReadOnly="false"
-            isUnique="false"
-            isDerived="false"
-            isDerivedUnion="false"
-            aggregation="None"
-            isComposite="false">
-            <type_NamedElement>
-              <undefinedTypeMoniker
-                Id="8afc706f-0eb8-444f-b98e-299b5d2c03b4"
-                LastKnownName="int"
-                LastKnownLocation="SnakeModelProject.uml" />
-            </type_NamedElement>
-          </property>
-          <property
-            Id="d1f35d7b-4f8d-4cb6-a68f-63607e4748a4"
-            name="prevPosX"
-            visibility="Private"
-            isLeaf="false"
-            isStatic="false"
-            isReadOnly="false"
-            isUnique="false"
-            isDerived="false"
-            isDerivedUnion="false"
-            aggregation="None"
-            isComposite="false">
-            <type_NamedElement>
-              <undefinedTypeMoniker
-                Id="8afc706f-0eb8-444f-b98e-299b5d2c03b4"
-                LastKnownName="int"
-                LastKnownLocation="SnakeModelProject.uml" />
-            </type_NamedElement>
-          </property>
-          <property
-            Id="4a1ea91e-279b-4fcf-81aa-85108a4e0a85"
-            name="prevPosY"
-            visibility="Private"
-            isLeaf="false"
-            isStatic="false"
-            isReadOnly="false"
-            isUnique="false"
-            isDerived="false"
-            isDerivedUnion="false"
-            aggregation="None"
-            isComposite="false">
-            <type_NamedElement>
-              <undefinedTypeMoniker
-                Id="8afc706f-0eb8-444f-b98e-299b5d2c03b4"
-                LastKnownName="int"
-                LastKnownLocation="SnakeModelProject.uml" />
-            </type_NamedElement>
-          </property>
-          <property
             Id="bc2c1300-d427-4dc8-b3d7-e17e6feac620"
             name="Alive"
             isLeaf="false"
@@ -564,6 +467,44 @@
               <undefinedTypeMoniker
                 Id="18e06de9-47a1-4ee1-8533-04313b3b72bf"
                 LastKnownName="bool"
+                LastKnownLocation="SnakeModelProject.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="df09e038-232c-4844-b1c9-63cbcbbd6956"
+            name="position"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <classMoniker
+                Id="82c11eb6-6a82-4cd8-80b4-3c7eac307860"
+                LastKnownName="Point"
+                LastKnownLocation="SnakeModelProject.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="135c06a1-a8dc-4337-8ba9-00ca3e813119"
+            name="previousPosition"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <classMoniker
+                Id="82c11eb6-6a82-4cd8-80b4-3c7eac307860"
+                LastKnownName="Point"
                 LastKnownLocation="SnakeModelProject.uml" />
             </type_NamedElement>
           </property>
@@ -799,44 +740,6 @@
         </targetEnds>
         <ownedAttributesInternal>
           <property
-            Id="a7557d5f-d0cc-45ff-868b-a11521a7a94f"
-            name="posX"
-            visibility="Private"
-            isLeaf="false"
-            isStatic="false"
-            isReadOnly="false"
-            isUnique="false"
-            isDerived="false"
-            isDerivedUnion="false"
-            aggregation="None"
-            isComposite="false">
-            <type_NamedElement>
-              <undefinedTypeMoniker
-                Id="8afc706f-0eb8-444f-b98e-299b5d2c03b4"
-                LastKnownName="int"
-                LastKnownLocation="SnakeModelProject.uml" />
-            </type_NamedElement>
-          </property>
-          <property
-            Id="cbcc203f-2261-4d8d-9eff-7cd67e1bcd79"
-            name="posY"
-            visibility="Private"
-            isLeaf="false"
-            isStatic="false"
-            isReadOnly="false"
-            isUnique="false"
-            isDerived="false"
-            isDerivedUnion="false"
-            aggregation="None"
-            isComposite="false">
-            <type_NamedElement>
-              <undefinedTypeMoniker
-                Id="8afc706f-0eb8-444f-b98e-299b5d2c03b4"
-                LastKnownName="int"
-                LastKnownLocation="SnakeModelProject.uml" />
-            </type_NamedElement>
-          </property>
-          <property
             Id="648553f4-0fd5-40be-8988-6438a53510e0"
             name="sign"
             visibility="Private"
@@ -855,7 +758,84 @@
                 LastKnownLocation="SnakeModelProject.uml" />
             </type_NamedElement>
           </property>
+          <property
+            Id="4dc1a7f9-7612-4955-9efc-938c45cd526b"
+            name="position"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <classMoniker
+                Id="82c11eb6-6a82-4cd8-80b4-3c7eac307860"
+                LastKnownName="Point"
+                LastKnownLocation="SnakeModelProject.uml" />
+            </type_NamedElement>
+          </property>
         </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="1de21d20-dfd9-438b-8eec-ab8951063860"
+            name="Draw"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="9d5c5cb2-629c-4d1c-817e-96f7c9043e09"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="ea0062b0-626d-492d-8b17-0f02a755c16a"
+                      LastKnownName="void"
+                      LastKnownLocation="SnakeModelProject.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="0ea7bb00-5371-4bf3-bc3e-1f49cec597ac"
+            name="Update"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="5c560866-2ce1-4eb9-9cf9-b9b76fb78b45"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="ea0062b0-626d-492d-8b17-0f02a755c16a"
+                      LastKnownName="void"
+                      LastKnownLocation="SnakeModelProject.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="bef1c439-34e4-444f-9423-70ca207a0883"
+            name="Loot"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+        </ownedOperationsInternal>
       </class>
     </packageHasNamedElement>
     <packageHasNamedElement>

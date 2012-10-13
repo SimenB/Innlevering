@@ -82,9 +82,8 @@ namespace UltimateSnake.GameObjects
         /// </summary>
         public void Update()
         {
-            
-
             // TODO: Insert width and height of game-window
+            // TODO: Check for "self-cannibalism"
             this.Alive = this.position.X > 0 && this.position.X < 1000 && this.position.Y > 0 && this.position.Y < 1000;
         }
 
