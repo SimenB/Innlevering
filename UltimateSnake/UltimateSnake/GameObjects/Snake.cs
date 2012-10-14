@@ -13,7 +13,7 @@ namespace UltimateSnake.GameObjects
     using System.Collections.Generic;
     using System.Linq;
 
-    using UltimateSnake.Utilities;
+    using Utilities;
 
     /// <summary>
     /// The snake
