@@ -177,6 +177,7 @@ namespace UltimateSnake.GameObjects
                 }
             }
 
+            // TODO: This is not how movement speed works in snake :P
             switch (this.direction)
             {
                 case Direction.Up:

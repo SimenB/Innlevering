@@ -12,6 +12,8 @@ namespace UltimateSnake
     using System;
     using System.Diagnostics;
 
+    using MVC;
+
     using GameObjects;
     using Utilities;
 
@@ -65,7 +67,8 @@ namespace UltimateSnake
                 stopwatch.Restart();
 
                 // TODO: Game Logic here
-                snake.Update();
+                Model.Instance.Update();
+                View.Instance.Draw();
 
                 if (!snake.Alive)
                 {

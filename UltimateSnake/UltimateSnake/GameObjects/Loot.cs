@@ -7,6 +7,8 @@
 // </summary>
 // --------------------------------------------------------------------------------------------------------------------
 
+using System;
+
 namespace UltimateSnake.GameObjects
 {
     using Utilities;
@@ -24,6 +26,11 @@ namespace UltimateSnake.GameObjects
         public char Sign { get; set; }
 
         /// <summary>
+        /// The position of the loot
+        /// </summary>
+        private readonly Point position;
+
+        /// <summary>
         /// Initializes a new instance of the <see cref="Loot"/> class.
         /// </summary>
         /// <param name="position">
@@ -34,28 +41,31 @@ namespace UltimateSnake.GameObjects
         /// </param>
         private Loot(Point position, char sign = '$')
         {
-            this.Position = position;
+            this.position = position;
             this.Sign = sign;
         }
-
 
 
         public static Loot Instance
         {
             // TODO: Move to middle of screen
-            get { return instance ?? (instance = new Loot(new Point())); }
+            get { return instance ?? (instance = new Loot(GetRandomPosition())); }
         }
 
-        /// <summary>
-        /// Gets the position of the loot
-        /// </summary>
-        public Point Position { get; private set; }
+
+        private static Point GetRandomPosition()
+        {
+            // TODO: Don't spawn on snake
+            Random random = new Random();
+            return new Point(random.Next(Program.WindowSize.X), random.Next(Program.WindowSize.Y));
+        }
 
         /// <summary>
         /// The update.
         /// </summary>
         public void Update()
         {
+
         }
 
         /// <summary>
@@ -63,6 +73,9 @@ namespace UltimateSnake.GameObjects
         /// </summary>
         public void Draw()
         {
+            // TODO: SetCursorPosition should only happen on being eaten (in Update)
+            Console.SetCursorPosition(this.position.X, this.position.Y);
+            Console.Write(Sign);
         }
     }
 }
