@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" dslVersion="1.0.0.0" Id="d3a93f15-4f86-41e9-88e5-834e162253ed" name="UltimateSnake" linkedPackageId="35d05203-facb-454d-a9b6-2c34a96c701e" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
+<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm5="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" dslVersion="1.0.0.0" Id="d3a93f15-4f86-41e9-88e5-834e162253ed" name="UltimateSnake" linkedPackageId="35d05203-facb-454d-a9b6-2c34a96c701e" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
   <packagedElements>
     <logicalClassDesignerModelHasTypes>
       <class Id="662e2f28-5d24-42e9-b5d0-c1e68ad92122" name="Model" isAbstract="false" isLeaf="false" isActiveClass="false">
@@ -22,7 +22,7 @@
           <property Id="bba5d992-302f-4c9c-9f7d-07e113eceb7f" name="snake" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
             <elementDefinition Id="1fd2ad5f-29a3-48ab-a615-77955c285e74" />
             <type_NamedElement>
-              <referencedTypeMoniker Id="105a78a4-41bc-4bd5-b281-ccbfb4b634e8" LastKnownName="Snake" />
+              <referencedTypeMoniker Id="5816e888-4c61-4a88-a903-da2b15d5dd06" LastKnownName="UltimateSnake::Snake" />
             </type_NamedElement>
           </property>
         </ownedAttributesInternal>
@@ -40,8 +40,18 @@
               </operationHasOwnedParameters>
             </ownedParameters>
           </operation>
-          <operation Id="da87c8c4-7a44-4016-9798-217c14da17cf" name="Draw) : void" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+          <operation Id="da87c8c4-7a44-4016-9798-217c14da17cf" name="Draw" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
             <elementDefinition Id="3ee0dbd7-4c61-449d-ba9a-f83e1830fefd" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="95f733d7-4b0a-4d46-a875-692869d514db" direction="Return" isUnique="false">
+                  <elementDefinition Id="025bb4c4-b445-401c-8dec-5bbe9e716560" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="c6c1ad20-6a21-418c-87a9-1aace7fb9e4b" LastKnownName="void" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
           </operation>
         </ownedOperationsInternal>
       </class>
@@ -77,13 +87,13 @@
           <property Id="0308f3a2-bbeb-4454-a580-a99465497b18" name="instance" visibility="Private" isLeaf="false" isStatic="true" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
             <elementDefinition Id="ac6395a8-0d15-4a13-9572-e3d97eb06d55" />
             <type_NamedElement>
-              <referencedTypeMoniker Id="2784e0ed-4dae-4958-a57d-ae408d1b9001" LastKnownName="InputHandler" />
+              <referencedTypeMoniker Id="d3416e1a-cfd6-4a2f-8f52-8ffb0947d6af" LastKnownName="UltimateSnake::InputHandler" />
             </type_NamedElement>
           </property>
           <property Id="33d0ed89-ea0e-4a38-833c-8f13ca87d86e" name="Instance" isLeaf="false" isStatic="true" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
             <elementDefinition Id="035c687c-f12e-4f69-ac28-5d3bcb799fcf" />
             <type_NamedElement>
-              <referencedTypeMoniker Id="2784e0ed-4dae-4958-a57d-ae408d1b9001" LastKnownName="InputHandler" />
+              <referencedTypeMoniker Id="50ab236f-b1c6-4ecd-a14e-56adb7c375b5" LastKnownName="UltimateSnake::InputHandler" />
             </type_NamedElement>
           </property>
         </ownedAttributesInternal>
@@ -146,11 +156,6 @@
         </ownedOperationsInternal>
       </class>
     </logicalClassDesignerModelHasTypes>
-    <packageHasNamedElement>
-      <referencedType Id="2784e0ed-4dae-4958-a57d-ae408d1b9001" name="InputHandler" isAbstract="false" isLeaf="false" cachedFullName="SnakeModelProject::InputHandler">
-        <elementDefinition Id="9f6eac76-6848-460b-9427-19b2806a5849" />
-      </referencedType>
-    </packageHasNamedElement>
     <packageHasNamedElement>
       <referencedType Id="d1c9c09b-a78f-4408-94a4-219ec97c6ab2" name="Boolean" isAbstract="false" isLeaf="false" cachedFullName="Boolean">
         <elementDefinition Id="8943dc84-709e-4f62-b15a-a3273aa6f165" />
@@ -439,11 +444,31 @@
             </type_NamedElement>
           </property>
         </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation Id="a8dbac24-f166-4966-a866-cc47a42bfe2c" name="Clamp" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="79cffd40-a40e-4c43-92a5-f8e43ef5943c" />
+          </operation>
+        </ownedOperationsInternal>
       </class>
     </logicalClassDesignerModelHasTypes>
     <packageHasNamedElement>
       <referencedType Id="d1345148-3168-43d0-8d48-c345bf099491" name="Point" isAbstract="false" isLeaf="false" cachedFullName="SnakeModelProject::Point">
         <elementDefinition Id="82c11eb6-6a82-4cd8-80b4-3c7eac307860" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="d3416e1a-cfd6-4a2f-8f52-8ffb0947d6af" name="UltimateSnake::InputHandler" isAbstract="false" isLeaf="false" cachedFullName="UltimateSnake::InputHandler">
+        <elementDefinition Id="ceffd0d4-5d21-4716-a17d-36f4c1efc38c" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="50ab236f-b1c6-4ecd-a14e-56adb7c375b5" name="UltimateSnake::InputHandler" isAbstract="false" isLeaf="false" cachedFullName="UltimateSnake::InputHandler">
+        <elementDefinition Id="ceffd0d4-5d21-4716-a17d-36f4c1efc38c" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="5816e888-4c61-4a88-a903-da2b15d5dd06" name="UltimateSnake::Snake" isAbstract="false" isLeaf="false" cachedFullName="UltimateSnake::Snake">
+        <elementDefinition Id="d61ab6de-7305-4a46-8c11-765ab44b2214" />
       </referencedType>
     </packageHasNamedElement>
   </packagedElements>

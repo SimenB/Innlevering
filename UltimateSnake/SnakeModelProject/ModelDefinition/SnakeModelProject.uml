@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<modelStoreModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+<modelStoreModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm5="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
   dslVersion="1.0.0.0"
   Id="3a3a5f8a-07a3-4e38-9aa9-298ef4f064ed"
   name="SnakeModelProject" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
@@ -65,9 +65,9 @@
             aggregation="None"
             isComposite="false">
             <type_NamedElement>
-              <classMoniker
-                Id="250ba406-35bf-4dfa-b291-2fff241bc4c9"
-                LastKnownName="Snake"
+              <undefinedTypeMoniker
+                Id="d61ab6de-7305-4a46-8c11-765ab44b2214"
+                LastKnownName="UltimateSnake::Snake"
                 LastKnownLocation="SnakeModelProject.uml" />
             </type_NamedElement>
           </property>
@@ -99,12 +99,28 @@
           </operation>
           <operation
             Id="3ee0dbd7-4c61-449d-ba9a-f83e1830fefd"
-            name="Draw) : void"
+            name="Draw"
             isLeaf="false"
             isStatic="false"
             isAbstract="false"
             concurrency="Sequential"
-            isQuery="false" />
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="025bb4c4-b445-401c-8dec-5bbe9e716560"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="ea0062b0-626d-492d-8b17-0f02a755c16a"
+                      LastKnownName="void"
+                      LastKnownLocation="SnakeModelProject.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
         </ownedOperationsInternal>
       </class>
     </packageHasNamedElement>
@@ -177,9 +193,9 @@
             aggregation="None"
             isComposite="false">
             <type_NamedElement>
-              <classMoniker
-                Id="9f6eac76-6848-460b-9427-19b2806a5849"
-                LastKnownName="InputHandler"
+              <undefinedTypeMoniker
+                Id="ceffd0d4-5d21-4716-a17d-36f4c1efc38c"
+                LastKnownName="UltimateSnake::InputHandler"
                 LastKnownLocation="SnakeModelProject.uml" />
             </type_NamedElement>
           </property>
@@ -195,9 +211,9 @@
             aggregation="None"
             isComposite="false">
             <type_NamedElement>
-              <classMoniker
-                Id="9f6eac76-6848-460b-9427-19b2806a5849"
-                LastKnownName="InputHandler"
+              <undefinedTypeMoniker
+                Id="ceffd0d4-5d21-4716-a17d-36f4c1efc38c"
+                LastKnownName="UltimateSnake::InputHandler"
                 LastKnownLocation="SnakeModelProject.uml" />
             </type_NamedElement>
           </property>
@@ -888,7 +904,27 @@
             </type_NamedElement>
           </property>
         </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="79cffd40-a40e-4c43-92a5-f8e43ef5943c"
+            name="Clamp"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+        </ownedOperationsInternal>
       </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="ceffd0d4-5d21-4716-a17d-36f4c1efc38c"
+        name="UltimateSnake::InputHandler" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="d61ab6de-7305-4a46-8c11-765ab44b2214"
+        name="UltimateSnake::Snake" />
     </packageHasNamedElement>
   </packagedElements>
   <primitiveType

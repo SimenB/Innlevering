@@ -41,7 +41,6 @@ namespace UltimateSnake.GameObjects
         {
             this.BodyParts = 3;
 
-            // TODO: set initial position to middle of screen
             this.position = new Point(Program.WindowSize.X / 2, Program.WindowSize.Y / 2);
             this.previousPosition = new Point(this.position);
 

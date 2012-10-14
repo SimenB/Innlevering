@@ -20,6 +20,11 @@ namespace UltimateSnake
     /// </summary>
     public static class Program
     {
+        // TODO: Set custom size of the window, mebbi?
+
+        /// <summary>
+        /// Gets the size of the window
+        /// </summary>
         public static Point WindowSize
         {
             get { return new Point(Console.BufferWidth, Console.BufferHeight); }
@@ -36,6 +41,9 @@ namespace UltimateSnake
             GameLoop();
         }
 
+        /// <summary>
+        /// The game loop
+        /// </summary>
         private static void GameLoop()
         {
             Stopwatch stopwatch = new Stopwatch();
