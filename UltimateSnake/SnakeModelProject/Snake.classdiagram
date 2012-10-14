@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm5="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" dslVersion="1.0.0.0" Id="d3a93f15-4f86-41e9-88e5-834e162253ed" name="UltimateSnake" linkedPackageId="35d05203-facb-454d-a9b6-2c34a96c701e" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
+<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" dslVersion="1.0.0.0" Id="d3a93f15-4f86-41e9-88e5-834e162253ed" name="UltimateSnake" linkedPackageId="35d05203-facb-454d-a9b6-2c34a96c701e" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
   <packagedElements>
     <logicalClassDesignerModelHasTypes>
       <class Id="662e2f28-5d24-42e9-b5d0-c1e68ad92122" name="Model" isAbstract="false" isLeaf="false" isActiveClass="false">
@@ -59,6 +59,31 @@
     <logicalClassDesignerModelHasTypes>
       <class Id="2faa3470-440f-48ed-93fd-3bd08fafc599" name="View" isAbstract="false" isLeaf="false" isActiveClass="false">
         <elementDefinition Id="fd95179d-a339-4007-8cde-58255dc2aa3a" />
+        <suppliersInternal>
+          <dependency Id="5ff6b67c-a50f-45f3-b17b-e7a3689d5638" name="calls">
+            <classMoniker Id="76d7c4a1-a55d-4efc-a177-11ae4eb06ac3" LastKnownName="Snake" />
+            <elementDefinition Id="1ec48ed5-55b7-41e2-9c1f-150f1008a575" />
+          </dependency>
+          <dependency Id="9dc2aa05-af1b-429b-82c9-b67f265f1adb" name="calls">
+            <classMoniker Id="1a8b3ddb-1d3e-4bef-a66c-2531225fc48e" LastKnownName="Loot" />
+            <elementDefinition Id="8c1bea4d-e4c8-42b0-b8ad-c7693657c803" />
+          </dependency>
+        </suppliersInternal>
+        <ownedOperationsInternal>
+          <operation Id="2dfd0873-09df-4395-a865-866e44efea49" name="Draw" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="8b7b9f94-46c8-4743-bcaa-fa041852246b" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="cd44fcb7-3775-4036-a209-6aea264595ff" direction="Return" isUnique="false">
+                  <elementDefinition Id="90152e22-cc12-4527-aaf8-7656713a21a1" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="c6c1ad20-6a21-418c-87a9-1aace7fb9e4b" LastKnownName="void" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
       </class>
     </logicalClassDesignerModelHasTypes>
     <logicalClassDesignerModelHasTypes>

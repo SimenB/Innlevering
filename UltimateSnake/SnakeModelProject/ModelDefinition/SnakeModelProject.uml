@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<modelStoreModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm5="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+<modelStoreModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
   dslVersion="1.0.0.0"
   Id="3a3a5f8a-07a3-4e38-9aa9-298ef4f064ed"
   name="SnakeModelProject" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
@@ -130,7 +130,52 @@
         name="View"
         isAbstract="false"
         isLeaf="false"
-        isActiveClass="false" />
+        isActiveClass="false">
+        <suppliersInternal>
+          <dependency
+            Id="1ec48ed5-55b7-41e2-9c1f-150f1008a575"
+            name="calls">
+            <classMoniker
+              Id="250ba406-35bf-4dfa-b291-2fff241bc4c9"
+              LastKnownName="Snake"
+              LastKnownLocation="SnakeModelProject.uml" />
+          </dependency>
+          <dependency
+            Id="8c1bea4d-e4c8-42b0-b8ad-c7693657c803"
+            name="calls">
+            <classMoniker
+              Id="40f8e158-efa6-49f4-a2f0-d037b91d39d1"
+              LastKnownName="Loot"
+              LastKnownLocation="SnakeModelProject.uml" />
+          </dependency>
+        </suppliersInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="8b7b9f94-46c8-4743-bcaa-fa041852246b"
+            name="Draw"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="90152e22-cc12-4527-aaf8-7656713a21a1"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="ea0062b0-626d-492d-8b17-0f02a755c16a"
+                      LastKnownName="void"
+                      LastKnownLocation="SnakeModelProject.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
     </packageHasNamedElement>
     <packageHasNamedElement>
       <class
@@ -925,6 +970,11 @@
       <undefinedType
         Id="d61ab6de-7305-4a46-8c11-765ab44b2214"
         name="UltimateSnake::Snake" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="0293f4c0-d51e-4df3-b8a9-08da7fed4fd9"
+        name="vpod" />
     </packageHasNamedElement>
   </packagedElements>
   <primitiveType
