@@ -59,7 +59,7 @@ namespace UltimateSnake.Utilities
             ConsoleKeyInfo buttonPressed = Console.ReadKey(true);
             
             // Empty the buffer
-            while (Console.KeyAvailable)
+            if (Console.KeyAvailable)
             {
                 Console.ReadKey(true);
             }
