@@ -75,6 +75,9 @@ namespace UltimateSnake.Utilities
                 case ConsoleKey.Escape:
                     Environment.Exit(0);
                     break;
+                case ConsoleKey.Spacebar :
+                    Program.Paused = !Program.Paused;
+                    break;
             }
         }
 

@@ -21,6 +21,11 @@
 
         public void Update()
         {
+            if (Program.Paused)
+            {
+                return;
+            }
+
             Snake.Instance.Update();
             Loot.Instance.Update();
 

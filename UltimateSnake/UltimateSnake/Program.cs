@@ -32,6 +32,8 @@ namespace UltimateSnake
             get { return new Point(Console.WindowWidth - 2, Console.WindowHeight - 2); }
         }
 
+        public static bool Paused { get; set; }
+
         /// <summary>
         /// The main.
         /// </summary>
@@ -68,11 +70,14 @@ namespace UltimateSnake
 
                 stopwatch.Restart();
 
-                // TODO: Game Logic here
-                Model.Instance.Update();
-                View.Instance.Draw();
+                // CMV for the win
+
+                // Check for pause
                 Controller.Instance.Update();
 
+                Model.Instance.Update();
+                View.Instance.Draw();
+                
                 if (!snake.Alive)
                 {
                     break;
