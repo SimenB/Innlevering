@@ -1,7 +1,8 @@
-﻿namespace UltimateSnake.MVC
+﻿
+
+namespace UltimateSnake.MVC
 {
-    using GameObjects.Snake;
-    using GameObjects.Loot;
+    using GameObjects;
 
     class View
     {
@@ -18,8 +19,8 @@
 
         public void Draw()
         {
-            GameObjects.Snake.Instance.Draw();
-            GameObjects.Loot.Instance.Draw();
+            Snake.Instance.Draw();
+            Loot.Instance.Draw();
         }
     }
 }
