@@ -101,6 +101,7 @@ namespace UltimateSnake.GameObjects
         /// </summary>
         public void Update()
         {
+            // If the snake is outside of the game-window, it's dead
             if (this.position.X < 0 || this.position.X > Program.WindowSize.X || this.position.Y < 0 || this.position.Y > Program.WindowSize.Y)
             {
                 this.Alive = false;
@@ -108,6 +109,7 @@ namespace UltimateSnake.GameObjects
                 return;
             }
 
+            // If the snake runs into itself, it dies
             if (this.bodyParts.Any(bodyPart => this.position.X == bodyPart.X && this.position.Y == bodyPart.Y))
             {
                 this.Alive = false;
@@ -115,6 +117,7 @@ namespace UltimateSnake.GameObjects
                 return;
             }
 
+            // Set all the positions of all the body-parts to the one ahead of it
             for (int i = this.bodyParts.Count - 1; i > 0; i--)
             {
                 this.bodyParts[i].X = this.bodyParts[i - 1].X;
@@ -123,6 +126,27 @@ namespace UltimateSnake.GameObjects
 
             this.bodyParts[0] = this.position;
 
+            this.Movement();
+
+            foreach (Point bodyPart in this.bodyParts)
+            {
+                Console.WriteLine(bodyPart.X + ", " + bodyPart.Y);
+            }
+        }
+
+        /// <summary>
+        /// The draw.
+        /// </summary>
+        public void Draw()
+        {
+            // TODO: Draw the snake
+        }
+
+        /// <summary>
+        /// The movement method. To make the update method easier to read
+        /// </summary>
+        private void Movement()
+        {
             if (this.input.KeyPressed)
             {
                 if (this.input.MoveUp() && this.direction != Direction.Down)
@@ -158,19 +182,7 @@ namespace UltimateSnake.GameObjects
                     this.position.X -= MovementSpeed;
                     break;
             }
-
-            foreach (Point bodyPart in this.bodyParts)
-            {
-                Console.WriteLine(bodyPart.X + ", " + bodyPart.Y);
-            }
-        }
-
-        /// <summary>
-        /// The draw.
-        /// </summary>
-        public void Draw()
-        {
-            // TODO: Draw the snake
+            
         }
     }
 }
