@@ -19,6 +19,8 @@ namespace UltimateSnake.GameObjects
     /// </summary>
     public class Loot
     {
+        private static Loot instance;
+
         /// <summary>
         /// The sign
         /// </summary>
@@ -33,10 +35,18 @@ namespace UltimateSnake.GameObjects
         /// <param name="sign">
         /// The sign.
         /// </param>
-        public Loot(Point position, char sign = '$')
+        private Loot(Point position, char sign = '$')
         {
             this.Position = position;
             this.sign = sign;
+        }
+
+
+
+        public static Loot Instance
+        {
+            // TODO: Move to middle of screen
+            get { return instance ?? (instance = new Loot(new Point())); }
         }
 
         /// <summary>
