@@ -24,14 +24,19 @@
             Snake.Instance.Update();
             Loot.Instance.Update();
 
-            this.CheckCollison();
+            this.CheckCollision();
         }
 
-        private void CheckCollison()
+        /// <summary>
+        /// Checks if the snake eats the loot
+        /// </summary>
+        private void CheckCollision()
         {
             if (Point.Intersects(Snake.Instance.Position, Loot.Instance.Position))
             {
                 Snake.Instance.BodyParts.Add(new Point(Snake.Instance.BodyParts.Last()));
+
+                Loot.Instance.NewLoot();
             }
         }
     }

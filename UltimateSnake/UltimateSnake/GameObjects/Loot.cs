@@ -57,7 +57,24 @@ namespace UltimateSnake.GameObjects
         {
             // TODO: Don't spawn on snake
             Random random = new Random();
-            return new Point(random.Next(Program.WindowSize.X), random.Next(Program.WindowSize.Y));
+
+            int x = 0, y = 0;
+            Point temp;
+
+//             while (true)
+//             {
+                temp = new Point(random.Next(Program.WindowSize.X), random.Next(Program.WindowSize.Y));
+
+//                 foreach (Point bodyPart in Snake.Instance.BodyParts)
+//                 {
+//                     if (Point.Intersects(bodyPart, temp))
+//                     {
+//                         
+//                     }
+//                 }
+//             }
+
+            return temp;
         }
 
         /// <summary>
@@ -65,7 +82,6 @@ namespace UltimateSnake.GameObjects
         /// </summary>
         public void Update()
         {
-
         }
 
         /// <summary>
@@ -77,6 +93,11 @@ namespace UltimateSnake.GameObjects
             Console.SetCursorPosition(this.Position.X, this.Position.Y);
             Console.ForegroundColor = ConsoleColor.Red;
             Console.Write(Sign);
+        }
+
+        public void NewLoot()
+        {
+            instance = new Loot(GetRandomPosition());
         }
     }
 }
