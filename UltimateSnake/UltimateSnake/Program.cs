@@ -7,18 +7,24 @@
 // </summary>
 // --------------------------------------------------------------------------------------------------------------------
 
-using UltimateSnake.GameObjects;
-using UltimateSnake.MVC;
-
 namespace UltimateSnake
 {
+    using System;
     using System.Diagnostics;
+
+    using UltimateSnake.GameObjects;
+    using UltimateSnake.MVC;
 
     /// <summary>
     /// The program.
     /// </summary>
     public static class Program
     {
+        public static Point WindowSize
+        {
+            get { return new Point(Console.BufferWidth, Console.BufferHeight); }
+        }
+
         /// <summary>
         /// The main.
         /// </summary>
@@ -32,11 +38,11 @@ namespace UltimateSnake
 
         private static void GameLoop()
         {
-            var stopwatch = new Stopwatch();
+            Stopwatch stopwatch = new Stopwatch();
 
             stopwatch.Start();
 
-            var snake = Snake.Instance;
+            Snake snake = Snake.Instance;
 
             while (snake.Alive)
             {

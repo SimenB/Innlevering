@@ -43,7 +43,7 @@ namespace UltimateSnake.GameObjects
 
             // TODO: set initial position to middle of screen
             this.position = new Point(5, 5);
-            this.previousPosition = position;
+            this.previousPosition = this.position;
 
             this.Alive = true;
         }
@@ -82,9 +82,8 @@ namespace UltimateSnake.GameObjects
         /// </summary>
         public void Update()
         {
-            // TODO: Insert width and height of game-window
             // TODO: Check for "self-cannibalism"
-            this.Alive = this.position.X > 0 && this.position.X < 1000 && this.position.Y > 0 && this.position.Y < 1000;
+            this.position = Point.Clamp(this.position, Point.Zero, Program.WindowSize);
         }
 
         /// <summary>
