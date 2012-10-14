@@ -46,9 +46,9 @@ namespace UltimateSnake.GameObjects
         private readonly InputHandler input = InputHandler.Instance;
 
         /// <summary>
-        /// The position of the last body-part, so it's removed
+        /// The position of the last item in the last frame.
         /// </summary>
-        private Point positionOfLast;
+        private Point positionLastFrame;
 
         /// <summary>
         /// The direction the snake is traveling in
@@ -72,11 +72,9 @@ namespace UltimateSnake.GameObjects
                 this.bodyParts[i].Y = this.bodyParts[i - 1].X;
             }
 
-            this.positionOfLast = this.bodyParts.Last();
-
             this.Alive = true;
 
-            this.direction = Direction.Down;
+            this.direction = Direction.Right;
         }
 
         /// <summary>
@@ -105,6 +103,8 @@ namespace UltimateSnake.GameObjects
         /// </summary>
         public void Update()
         {
+            this.positionLastFrame = this.bodyParts.Last();
+
             // If the snake is outside of the game-window, it's dead
             if (this.position.X < 0 || this.position.X > Program.WindowSize.X || this.position.Y < 0 || this.position.Y > Program.WindowSize.Y - 2)
             {
@@ -132,8 +132,6 @@ namespace UltimateSnake.GameObjects
             }
 
             this.Draw();
-
-            this.positionOfLast = this.bodyParts.Last();
         }
 
         /// <summary>
@@ -141,17 +139,16 @@ namespace UltimateSnake.GameObjects
         /// </summary>
         public void Draw()
         {
-            // TODO: Draw the snake
             Console.SetCursorPosition(this.position.X, this.position.Y);
             Console.Write("@");
 
             foreach (Point bodyPart in this.bodyParts)
             {
                 Console.SetCursorPosition(bodyPart.X, bodyPart.Y);
-                Console.Write("O");
+                Console.Write("0");
             }
 
-            Console.SetCursorPosition(this.positionOfLast.X, this.positionOfLast.Y);
+            Console.SetCursorPosition(this.positionLastFrame.X, this.positionLastFrame.Y);
             Console.Write(" ");
         }
 

@@ -74,7 +74,7 @@ namespace UltimateSnake.Utilities
         /// </returns>
         public bool MoveDown()
         {
-            return true;
+            return false;
         }
 
         /// <summary>
