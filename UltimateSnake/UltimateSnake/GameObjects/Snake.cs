@@ -113,6 +113,26 @@ namespace UltimateSnake.GameObjects
 
             this.bodyParts[0] = this.position;
 
+            if (this.input.KeyPressed)
+            {
+                if (this.input.MoveUp() && this.direction != Direction.Down)
+                {
+                    this.direction = Direction.Up;
+                }
+                else if (this.input.MoveRight() && this.direction != Direction.Left)
+                {
+                    this.direction = Direction.Right;
+                }
+                else if (this.input.MoveDown() && this.direction != Direction.Up)
+                {
+                    this.direction = Direction.Down;
+                }
+                else if (this.input.MoveLeft() && this.direction != Direction.Right)
+                {
+                    this.direction = Direction.Left;
+                }
+            }
+
             switch (this.direction)
             {
                 case Direction.Up:

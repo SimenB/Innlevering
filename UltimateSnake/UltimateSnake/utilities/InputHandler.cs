@@ -17,6 +17,7 @@ namespace UltimateSnake
 
         private InputHandler()
         {
+            this.KeyPressed = true;
         }
 
         public static InputHandler Instance
@@ -24,9 +25,12 @@ namespace UltimateSnake
             get { return instance ?? (instance = new InputHandler()); }
         }
 
+        // TODO: Actually check if the player has pressed a button
+        public bool KeyPressed { get; private set; }
+
         public bool MoveUp()
         {
-            return true;
+            return false;
         }
 
         public bool MoveRight()
@@ -36,7 +40,7 @@ namespace UltimateSnake
 
         public bool MoveDown()
         {
-            return false;
+            return true;
         }
 
         public bool MoveLeft()
