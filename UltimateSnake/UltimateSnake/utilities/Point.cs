@@ -14,6 +14,12 @@ namespace UltimateSnake
             this.Y = y;
         }
 
+        public Point(Point p)
+        {
+            this.X = p.X;
+            this.Y = p.Y;
+        }
+
         public int X { get; set; }
         public int Y { get; set; }
 

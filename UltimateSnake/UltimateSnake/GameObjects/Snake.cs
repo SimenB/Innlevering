@@ -20,7 +20,7 @@ namespace UltimateSnake.GameObjects
         private static Snake instance;
 
         /// <summary>
-        /// The position
+        /// The position of the head of the snake
         /// </summary>
         private Point position;
 
@@ -42,8 +42,8 @@ namespace UltimateSnake.GameObjects
             this.BodyParts = 3;
 
             // TODO: set initial position to middle of screen
-            this.position = new Point(5, 5);
-            this.previousPosition = this.position;
+            this.position = new Point(Program.WindowSize.X / 2, Program.WindowSize.Y / 2);
+            this.previousPosition = new Point(this.position);
 
             this.Alive = true;
         }
