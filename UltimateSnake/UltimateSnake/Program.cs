@@ -51,8 +51,10 @@ namespace UltimateSnake
             Console.CursorVisible = false;
             Console.ForegroundColor = ConsoleColor.Green;
 
+            // Limits the update loop to 10 updates per second
+            
+            // TODO: This should be used to define movement speed of the snake, which should always move the same amount of pixels per update
             Stopwatch stopwatch = new Stopwatch();
-
             stopwatch.Start();
 
             Snake snake = Snake.Instance;
@@ -67,9 +69,10 @@ namespace UltimateSnake
                 stopwatch.Restart();
 
                 // TODO: Game Logic here
+                InputHandler.Instance.Update();
                 Model.Instance.Update();
                 View.Instance.Draw();
-                InputHandler.Instance.Update();
+                Controller.Instance.Update();
 
                 if (!snake.Alive)
                 {
