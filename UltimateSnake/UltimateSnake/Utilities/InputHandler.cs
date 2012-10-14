@@ -11,6 +11,10 @@
 
 namespace UltimateSnake.Utilities
 {
+    using System;
+
+    using UltimateSnake.GameObjects;
+
     /// <summary>
     /// The input handler
     /// </summary>
@@ -26,7 +30,7 @@ namespace UltimateSnake.Utilities
         /// </summary>
         private InputHandler()
         {
-            this.KeyPressed = true;
+            this.DirectionToMove = Snake.Direction.Right;
         }
 
         /// <summary>
@@ -37,55 +41,35 @@ namespace UltimateSnake.Utilities
             get { return instance ?? (instance = new InputHandler()); }
         }
 
-        // TODO: Actually check if the player has pressed a button
-
         /// <summary>
-        /// Gets a value indicating whether a key is pressed.
+        /// Gets the direction to move.
         /// </summary>
-        public bool KeyPressed { get; private set; }
+        public Snake.Direction DirectionToMove { get; private set; }
 
-        /// <summary>
-        /// The move up.
-        /// </summary>
-        /// <returns>
-        /// The <see cref="bool"/>.
-        /// </returns>
-        public bool MoveUp()
+        public void Update()
         {
-            return false;
-        }
+            if (!Console.KeyAvailable)
+            {
+                return;
+            }
 
-        /// <summary>
-        /// The move right.
-        /// </summary>
-        /// <returns>
-        /// The <see cref="bool"/>.
-        /// </returns>
-        public bool MoveRight()
-        {
-            return false;
-        }
+            ConsoleKeyInfo buttonPressed = Console.ReadKey();
 
-        /// <summary>
-        /// The move down.
-        /// </summary>
-        /// <returns>
-        /// The <see cref="bool"/>.
-        /// </returns>
-        public bool MoveDown()
-        {
-            return false;
-        }
-
-        /// <summary>
-        /// The move left.
-        /// </summary>
-        /// <returns>
-        /// The <see cref="bool"/>.
-        /// </returns>
-        public bool MoveLeft()
-        {
-            return false;
+            switch (buttonPressed.Key)
+            {
+                case ConsoleKey.UpArrow:
+                    this.DirectionToMove = Snake.Direction.Up;
+                    break;
+                case ConsoleKey.RightArrow:
+                    this.DirectionToMove = Snake.Direction.Right;
+                    break;
+                case ConsoleKey.DownArrow:
+                    this.DirectionToMove = Snake.Direction.Down;
+                    break;
+                case ConsoleKey.LeftArrow:
+                    this.DirectionToMove = Snake.Direction.Left;
+                    break;
+            }
         }
 
         //         #region Fields
