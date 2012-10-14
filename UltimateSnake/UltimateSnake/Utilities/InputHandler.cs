@@ -56,26 +56,30 @@ namespace UltimateSnake.Utilities
                 return;
             }
 
-            ConsoleKeyInfo buttonPressed = Console.ReadKey();
+            ConsoleKeyInfo buttonPressed = Console.ReadKey(true);
             
             // Empty the buffer
             while (Console.KeyAvailable)
             {
-                Console.ReadKey(false);
+                Console.ReadKey(true);
             }
 
             switch (buttonPressed.Key)
             {
                 case ConsoleKey.UpArrow:
+                case ConsoleKey.W:
                     this.DirectionToMove = Snake.Direction.Up;
                     break;
                 case ConsoleKey.RightArrow:
+                case ConsoleKey.D:
                     this.DirectionToMove = Snake.Direction.Right;
                     break;
                 case ConsoleKey.DownArrow:
+                case ConsoleKey.S:
                     this.DirectionToMove = Snake.Direction.Down;
                     break;
                 case ConsoleKey.LeftArrow:
+                case ConsoleKey.A:
                     this.DirectionToMove = Snake.Direction.Left;
                     break;
                 case ConsoleKey.Escape:
