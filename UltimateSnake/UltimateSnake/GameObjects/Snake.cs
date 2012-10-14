@@ -127,11 +127,7 @@ namespace UltimateSnake.GameObjects
             if (this.bodyParts.Any(bodyPart => this.position.X == bodyPart.X && this.position.Y == bodyPart.Y))
             {
                 this.Alive = false;
-
-                return;
             }
-
-            this.Draw();
         }
 
         /// <summary>
@@ -140,9 +136,10 @@ namespace UltimateSnake.GameObjects
         public void Draw()
         {
             Console.SetCursorPosition(this.position.X, this.position.Y);
+            Console.ForegroundColor = ConsoleColor.Green;
             Console.Write("@");
 
-            foreach (Point bodyPart in this.bodyParts)
+            foreach (var bodyPart in this.bodyParts)
             {
                 Console.SetCursorPosition(bodyPart.X, bodyPart.Y);
                 Console.Write("0");

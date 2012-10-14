@@ -75,6 +75,7 @@ namespace UltimateSnake.GameObjects
         {
             // TODO: SetCursorPosition should only happen on being eaten (in Update)
             Console.SetCursorPosition(this.Position.X, this.Position.Y);
+            Console.ForegroundColor = ConsoleColor.Red;
             Console.Write(Sign);
         }
     }

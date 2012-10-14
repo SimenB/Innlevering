@@ -70,7 +70,6 @@ namespace UltimateSnake
                 Model.Instance.Update();
                 View.Instance.Draw();
                 InputHandler.Instance.Update();
-                snake.Update();
 
                 if (!snake.Alive)
                 {
