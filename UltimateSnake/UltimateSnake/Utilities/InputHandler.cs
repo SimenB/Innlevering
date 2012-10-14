@@ -57,6 +57,11 @@ namespace UltimateSnake.Utilities
             }
 
             ConsoleKeyInfo buttonPressed = Console.ReadKey();
+            
+            while (Console.KeyAvailable)
+            {
+                Console.ReadKey(false);
+            }
 
             switch (buttonPressed.Key)
             {
