@@ -11,6 +11,7 @@ namespace UltimateSnake.GameObjects
 {
     using System;
     using System.Collections.Generic;
+    using System.Linq;
 
     using UltimateSnake.Utilities;
 
@@ -100,8 +101,14 @@ namespace UltimateSnake.GameObjects
         /// </summary>
         public void Update()
         {
-            // TODO: Check for "self-cannibalism"
             if (this.position.X < 0 || this.position.X > Program.WindowSize.X || this.position.Y < 0 || this.position.Y > Program.WindowSize.Y)
+            {
+                this.Alive = false;
+
+                return;
+            }
+
+            if (this.bodyParts.Any(bodyPart => this.position.X == bodyPart.X && this.position.Y == bodyPart.Y))
             {
                 this.Alive = false;
 
