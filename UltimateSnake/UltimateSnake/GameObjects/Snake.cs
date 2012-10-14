@@ -77,10 +77,7 @@ namespace UltimateSnake.GameObjects
         /// </summary>
         private enum Direction
         {
-            Up,
-            Right,
-            Down,
-            Left
+            Up, Right, Down, Left
         }
 
         /// <summary>
@@ -129,8 +126,10 @@ namespace UltimateSnake.GameObjects
 
             foreach (Point bodyPart in this.bodyParts)
             {
-                Console.WriteLine(bodyPart.X + ", " + bodyPart.Y);
+                Console.Write(bodyPart.X + ", " + bodyPart.Y);
             }
+
+            this.Draw();
         }
 
         /// <summary>
@@ -139,6 +138,12 @@ namespace UltimateSnake.GameObjects
         public void Draw()
         {
             // TODO: Draw the snake
+            Console.SetCursorPosition(this.position.X, this.position.Y);
+
+            foreach (Point bodyPart in bodyParts)
+            {
+                Console.SetCursorPosition(bodyPart.X, bodyPart.Y);
+            }
         }
 
         /// <summary>
@@ -181,7 +186,6 @@ namespace UltimateSnake.GameObjects
                     this.position.X -= MovementSpeed;
                     break;
             }
-            
         }
     }
 }

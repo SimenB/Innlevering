@@ -47,6 +47,9 @@ namespace UltimateSnake
         /// </summary>
         private static void GameLoop()
         {
+            Console.CursorVisible = false;
+            Console.ForegroundColor = ConsoleColor.Green;
+
             Stopwatch stopwatch = new Stopwatch();
 
             stopwatch.Start();
