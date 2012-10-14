@@ -106,7 +106,7 @@ namespace UltimateSnake.GameObjects
             this.positionLastFrame = this.bodyParts.Last();
 
             // If the snake is outside of the game-window, it's dead
-            if (this.position.X < 0 || this.position.X > Program.WindowSize.X || this.position.Y < 0 || this.position.Y > Program.WindowSize.Y - 2)
+            if (this.position.X < 1 || this.position.X > Program.WindowSize.X || this.position.Y < 1 || this.position.Y > Program.WindowSize.Y)
             {
                 this.Alive = false;
 
