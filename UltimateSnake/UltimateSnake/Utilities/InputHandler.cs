@@ -10,11 +10,13 @@
 // TODO: The whole shebang. This is very much a placeholder
 // TODO: The keystrokes stack up and are all executed (try spamming up-left-up-left-up-left a lot of times, then keep playing...)
 
+using System.Net.Mime;
+
 namespace UltimateSnake.Utilities
 {
     using System;
 
-    using UltimateSnake.GameObjects;
+    using GameObjects;
 
     /// <summary>
     /// The input handler
@@ -69,6 +71,9 @@ namespace UltimateSnake.Utilities
                     break;
                 case ConsoleKey.LeftArrow:
                     this.DirectionToMove = Snake.Direction.Left;
+                    break;
+                case ConsoleKey.Escape:
+                    Environment.Exit(0);
                     break;
             }
         }
