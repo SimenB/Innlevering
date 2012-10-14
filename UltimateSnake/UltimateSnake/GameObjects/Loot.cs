@@ -9,10 +9,7 @@
 
 namespace UltimateSnake.GameObjects
 {
-    using System;
-    using System.Text;
-
-    using UltimateSnake.Utilities;
+    using Utilities;
 
     /// <summary>
     /// The loot
@@ -24,7 +21,7 @@ namespace UltimateSnake.GameObjects
         /// <summary>
         /// The sign
         /// </summary>
-        private char sign;
+        public char Sign { get; set; }
 
         /// <summary>
         /// Initializes a new instance of the <see cref="Loot"/> class.
@@ -38,7 +35,7 @@ namespace UltimateSnake.GameObjects
         private Loot(Point position, char sign = '$')
         {
             this.Position = position;
-            this.sign = sign;
+            this.Sign = sign;
         }
 
 
