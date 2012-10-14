@@ -59,7 +59,7 @@ namespace UltimateSnake.GameObjects
 
             this.Alive = true;
 
-            this.SnakeDirection = Direction.Right;
+            this.CurrentDirection = Direction.Right;
         }
 
         /// <summary>
@@ -81,7 +81,7 @@ namespace UltimateSnake.GameObjects
         /// <summary>
         /// Gets the direction the snake is traveling in
         /// </summary>
-        public Direction SnakeDirection { get; private set; }
+        public Direction CurrentDirection { get; private set; }
 
         /// <summary>
         /// Gets a list of the position of each body-part
@@ -154,28 +154,28 @@ namespace UltimateSnake.GameObjects
         /// </summary>
         private void Movement()
         {
-            if (this.input.DirectionToMove != this.SnakeDirection)
+            if (this.input.DirectionToMove != this.CurrentDirection)
             {
-                if (this.SnakeDirection == Direction.Up && this.input.DirectionToMove != Direction.Down)
+                if (this.CurrentDirection == Direction.Up && this.input.DirectionToMove != Direction.Down)
                 {
-                    this.SnakeDirection = this.input.DirectionToMove;
+                    this.CurrentDirection = this.input.DirectionToMove;
                 }
-                else if (this.SnakeDirection == Direction.Right && this.input.DirectionToMove != Direction.Left)
+                else if (this.CurrentDirection == Direction.Right && this.input.DirectionToMove != Direction.Left)
                 {
-                    this.SnakeDirection = this.input.DirectionToMove;
+                    this.CurrentDirection = this.input.DirectionToMove;
                 }
-                else if (this.SnakeDirection == Direction.Down && this.input.DirectionToMove != Direction.Up)
+                else if (this.CurrentDirection == Direction.Down && this.input.DirectionToMove != Direction.Up)
                 {
-                    this.SnakeDirection = this.input.DirectionToMove;
+                    this.CurrentDirection = this.input.DirectionToMove;
                 }
-                else if (this.SnakeDirection == Direction.Left && this.input.DirectionToMove != Direction.Right)
+                else if (this.CurrentDirection == Direction.Left && this.input.DirectionToMove != Direction.Right)
                 {
-                    this.SnakeDirection = this.input.DirectionToMove;
+                    this.CurrentDirection = this.input.DirectionToMove;
                 }
             }
 
             // TODO: This is not how movement speed works in snake :P fuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
-            switch (this.SnakeDirection)
+            switch (this.CurrentDirection)
             {
                 case Direction.Up:
                     this.Position.Y -= MovementSpeed;

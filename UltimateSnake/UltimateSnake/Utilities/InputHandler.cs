@@ -87,7 +87,7 @@ namespace UltimateSnake.Utilities
                     break;
                 case ConsoleKey.Spacebar:
                     Program.Paused = !Program.Paused;
-                    this.DirectionToMove = Snake.Instance.SnakeDirection;
+                    this.DirectionToMove = Snake.Instance.CurrentDirection;
                     break;
             }
         }
