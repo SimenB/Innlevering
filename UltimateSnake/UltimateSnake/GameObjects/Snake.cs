@@ -9,11 +9,20 @@
 
 namespace UltimateSnake.GameObjects
 {
+    using System;
+    using System.Collections.Generic;
+    using System.Diagnostics.CodeAnalysis;
+
     /// <summary>
     /// The snake
     /// </summary>
     public class Snake
     {
+        /// <summary>
+        /// The movement speed of the snake
+        /// </summary>
+        private const int MovementSpeed = 3;
+
         /// <summary>
         /// The instance of the snake (singleton)
         /// </summary>
@@ -25,9 +34,14 @@ namespace UltimateSnake.GameObjects
         private Point position;
 
         /// <summary>
-        /// The previous position
+        /// A list of the position of each body-part
         /// </summary>
-        private Point previousPosition;
+        private List<Point> bodyParts;
+
+        /// <summary>
+        /// The direction the snake is traveling in
+        /// </summary>
+        private Direction direction;
 
         /// <summary>
         /// The input-handler instance
@@ -39,12 +53,19 @@ namespace UltimateSnake.GameObjects
         /// </summary>
         private Snake()
         {
-            this.BodyParts = 3;
+            this.bodyParts = new List<Point> { new Point(), new Point(), new Point() };
 
             this.position = new Point(Program.WindowSize.X / 2, Program.WindowSize.Y / 2);
-            this.previousPosition = new Point(this.position);
+            
+            for (var i = this.bodyParts.Count - 1; i > 1; i--)
+            {
+                this.bodyParts[i].X = this.bodyParts[i - 1].X;
+                this.bodyParts[i].Y = this.bodyParts[i - 1].X;
+            }
 
             this.Alive = true;
+
+            this.direction = Direction.Down;
         }
 
         /// <summary>
@@ -67,11 +88,6 @@ namespace UltimateSnake.GameObjects
         }
 
         /// <summary>
-        /// Gets the number of body-parts
-        /// </summary>
-        public int BodyParts { get; private set; }
-
-        /// <summary>
         /// Gets a value indicating whether the snake is alive or not
         /// </summary>
         public bool Alive { get; private set; }
@@ -82,7 +98,41 @@ namespace UltimateSnake.GameObjects
         public void Update()
         {
             // TODO: Check for "self-cannibalism"
-            this.position = Point.Clamp(this.position, Point.Zero, Program.WindowSize);
+            if (this.position.X < 0 || this.position.X > Program.WindowSize.X || this.position.Y < 0 || this.position.Y > Program.WindowSize.Y)
+            {
+                this.Alive = false;
+
+                return;
+            }
+
+            for (int i = this.bodyParts.Count - 1; i > 0; i--)
+            {
+                this.bodyParts[i].X = this.bodyParts[i - 1].X;
+                this.bodyParts[i].Y = this.bodyParts[i - 1].Y;
+            }
+
+            this.bodyParts[0] = this.position;
+
+            switch (this.direction)
+            {
+                case Direction.Up:
+                    this.position.Y -= MovementSpeed;
+                    break;
+                case Direction.Right:
+                    this.position.X += MovementSpeed;
+                    break;
+                case Direction.Down:
+                    this.position.Y += MovementSpeed;
+                    break;
+                case Direction.Left:
+                    this.position.X -= MovementSpeed;
+                    break;
+            }
+
+            foreach (Point bodyPart in this.bodyParts)
+            {
+                Console.WriteLine(bodyPart.X + ", " + bodyPart.Y);
+            }
         }
 
         /// <summary>
@@ -90,12 +140,7 @@ namespace UltimateSnake.GameObjects
         /// </summary>
         public void Draw()
         {
-            for (var i = 0; i <= this.BodyParts; i++)
-            {
-                // TODO: Draw the snake
-                this.previousPosition.X = this.position.X;
-                this.previousPosition.Y = this.position.Y;
-            }
+            // TODO: Draw the snake
         }
     }
 }

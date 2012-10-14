@@ -63,6 +63,11 @@ namespace UltimateSnake
 
                 // TODO: Game Logic here
                 snake.Update();
+
+                if (!snake.Alive)
+                {
+                    break;
+                }
             }
         }
     }
