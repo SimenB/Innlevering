@@ -140,7 +140,7 @@ namespace UltimateSnake.GameObjects
             Console.SetCursorPosition(this.Position.X, this.Position.Y);
             Console.Write("@");
 
-            foreach (var bodyPart in this.BodyParts)
+            foreach (Point bodyPart in this.BodyParts)
             {
                 Console.SetCursorPosition(bodyPart.X, bodyPart.Y);
                 Console.Write("0");
