@@ -23,7 +23,7 @@ namespace UltimateSnake
         // TODO: Set custom size of the window, mebbi?
 
         /// <summary>
-        /// Gets the size of the window
+        /// Gets the size of the window (remember that the console uses rows and columns, NOT pixels)
         /// </summary>
         public static Point WindowSize
         {
@@ -62,6 +62,7 @@ namespace UltimateSnake
                 stopwatch.Restart();
 
                 // TODO: Game Logic here
+                snake.Update();
             }
         }
     }

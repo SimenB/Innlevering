@@ -30,25 +30,5 @@ namespace UltimateSnake
         {
             get { return new Point(); }
         }
-
-        // TODO: This doesn't make sense here, and if it did, we would have to implement support for directional changes and stuffs idek man
-        public static Point Clamp(Point value, Point minPosition, Point maxPosition)
-        {
-            //return value.X >= minPosition.X && value.X <= maxPosition.X && value.Y >= minPosition.Y &&
-            //       value.Y <= maxPosition.Y;
-
-            // Keeps the snake in place
-            if (value.X < minPosition.X)
-                value.X = minPosition.X;
-            else if (value.X > maxPosition.X)
-                value.X = maxPosition.X;
-            
-            if (value.Y < minPosition.Y)
-                value.Y = minPosition.Y;
-            else if (value.Y > maxPosition.Y)
-                value.Y = maxPosition.Y;
-
-            return value;
-        }
     }
 }
