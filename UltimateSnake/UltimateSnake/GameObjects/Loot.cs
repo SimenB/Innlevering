@@ -28,7 +28,7 @@ namespace UltimateSnake.GameObjects
         /// <summary>
         /// The position of the loot
         /// </summary>
-        private readonly Point position;
+        public Point Position { get; private set; }
 
         /// <summary>
         /// Initializes a new instance of the <see cref="Loot"/> class.
@@ -41,7 +41,7 @@ namespace UltimateSnake.GameObjects
         /// </param>
         private Loot(Point position, char sign = '$')
         {
-            this.position = position;
+            this.Position = position;
             this.Sign = sign;
         }
 
@@ -74,7 +74,7 @@ namespace UltimateSnake.GameObjects
         public void Draw()
         {
             // TODO: SetCursorPosition should only happen on being eaten (in Update)
-            Console.SetCursorPosition(this.position.X, this.position.Y);
+            Console.SetCursorPosition(this.Position.X, this.Position.Y);
             Console.Write(Sign);
         }
     }
