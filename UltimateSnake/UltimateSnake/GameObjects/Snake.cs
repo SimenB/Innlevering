@@ -19,7 +19,7 @@ namespace UltimateSnake.GameObjects
     /// The snake
     /// </summary>
     public class Snake
-    {
+    {   
         /// <summary>
         /// The movement speed of the snake
         /// </summary>
@@ -29,16 +29,6 @@ namespace UltimateSnake.GameObjects
         /// The instance of the snake (singleton)
         /// </summary>
         private static Snake instance;
-
-        /// <summary>
-        /// The position of the head of the snake
-        /// </summary>
-        private readonly Point position;
-
-        /// <summary>
-        /// A list of the position of each body-part
-        /// </summary>
-        private readonly List<Point> bodyParts;
 
         /// <summary>
         /// The input-handler instance
@@ -60,16 +50,16 @@ namespace UltimateSnake.GameObjects
         /// </summary>
         private Snake()
         {
-            this.bodyParts = new List<Point> { new Point(), new Point(), new Point(), new Point(), new Point() };
+            this.BodyParts = new List<Point> { new Point(), new Point(), new Point(), new Point(), new Point() };
 
-            this.position = new Point(Program.WindowSize.X / 2, Program.WindowSize.Y / 2);
+            this.Position = new Point(Program.WindowSize.X / 2, Program.WindowSize.Y / 2);
 
-            Console.SetCursorPosition(this.position.X, this.position.Y);
+            Console.SetCursorPosition(this.Position.X, this.Position.Y);
             
-            for (var i = this.bodyParts.Count - 1; i > 0; i--)
+            for (int i = this.BodyParts.Count - 1; i > 0; i--)
             {
-                this.bodyParts[i].X = this.bodyParts[i - 1].X;
-                this.bodyParts[i].Y = this.bodyParts[i - 1].X;
+                this.BodyParts[i].X = this.BodyParts[i - 1].X;
+                this.BodyParts[i].Y = this.BodyParts[i - 1].Y;
             }
 
             this.Alive = true;
@@ -94,6 +84,16 @@ namespace UltimateSnake.GameObjects
         }
 
         /// <summary>
+        /// Gets a list of the position of each body-part
+        /// </summary>
+        public List<Point> BodyParts { get; private set; }
+
+        /// <summary>
+        /// Gets the position of the head of the snake
+        /// </summary>
+        public Point Position { get; private set; }
+
+        /// <summary>
         /// Gets a value indicating whether the snake is alive or not
         /// </summary>
         public bool Alive { get; private set; }
@@ -103,10 +103,10 @@ namespace UltimateSnake.GameObjects
         /// </summary>
         public void Update()
         {
-            this.positionLastFrame = this.bodyParts.Last();
+            this.positionLastFrame = this.BodyParts.Last();
 
             // If the snake is outside of the game-window, it's dead
-            if (this.position.X < 1 || this.position.X > Program.WindowSize.X || this.position.Y < 1 || this.position.Y > Program.WindowSize.Y)
+            if (this.Position.X < 1 || this.Position.X > Program.WindowSize.X || this.Position.Y < 1 || this.Position.Y > Program.WindowSize.Y)
             {
                 this.Alive = false;
 
@@ -114,17 +114,17 @@ namespace UltimateSnake.GameObjects
             }
 
             // Set all the positions of all the body-parts to the one ahead of it
-            for (int i = this.bodyParts.Count - 1; i > 0; i--)
+            for (int i = this.BodyParts.Count - 1; i > 0; i--)
             {
-                this.bodyParts[i] = new Point(this.bodyParts[i - 1]);
+                this.BodyParts[i] = new Point(this.BodyParts[i - 1]);
             }
 
-            this.bodyParts[0] = new Point(this.position);
+            this.BodyParts[0] = new Point(this.Position);
 
             this.Movement();
 
             // If the snake runs into itself, it dies
-            if (this.bodyParts.Any(bodyPart => this.position.X == bodyPart.X && this.position.Y == bodyPart.Y))
+            if (this.BodyParts.Any(bodyPart => this.Position.X == bodyPart.X && this.Position.Y == bodyPart.Y))
             {
                 this.Alive = false;
             }
@@ -135,11 +135,11 @@ namespace UltimateSnake.GameObjects
         /// </summary>
         public void Draw()
         {
-            Console.SetCursorPosition(this.position.X, this.position.Y);
+            Console.SetCursorPosition(this.Position.X, this.Position.Y);
             Console.ForegroundColor = ConsoleColor.Green;
             Console.Write("@");
 
-            foreach (var bodyPart in this.bodyParts)
+            foreach (var bodyPart in this.BodyParts)
             {
                 Console.SetCursorPosition(bodyPart.X, bodyPart.Y);
                 Console.Write("0");
@@ -174,20 +174,20 @@ namespace UltimateSnake.GameObjects
                 }
             }
 
-            // TODO: This is not how movement speed works in snake :P
+            // TODO: This is not how movement speed works in snake :P fuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
             switch (this.direction)
             {
                 case Direction.Up:
-                    this.position.Y -= MovementSpeed;
+                    this.Position.Y -= MovementSpeed;
                     break;
                 case Direction.Right:
-                    this.position.X += MovementSpeed;
+                    this.Position.X += MovementSpeed;
                     break;
                 case Direction.Down:
-                    this.position.Y += MovementSpeed;
+                    this.Position.Y += MovementSpeed;
                     break;
                 case Direction.Left:
-                    this.position.X -= MovementSpeed;
+                    this.Position.X -= MovementSpeed;
                     break;
             }
         }

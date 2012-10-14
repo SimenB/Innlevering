@@ -69,7 +69,6 @@ namespace UltimateSnake
                 stopwatch.Restart();
 
                 // TODO: Game Logic here
-                InputHandler.Instance.Update();
                 Model.Instance.Update();
                 View.Instance.Draw();
                 Controller.Instance.Update();
