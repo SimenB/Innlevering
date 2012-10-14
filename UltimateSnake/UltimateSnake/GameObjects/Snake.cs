@@ -22,7 +22,7 @@ namespace UltimateSnake.GameObjects
         /// <summary>
         /// The movement speed of the snake
         /// </summary>
-        private const int MovementSpeed = 3;
+        private const int MovementSpeed = 1;
 
         /// <summary>
         /// The instance of the snake (singleton)
@@ -32,22 +32,22 @@ namespace UltimateSnake.GameObjects
         /// <summary>
         /// The position of the head of the snake
         /// </summary>
-        private Point position;
+        private readonly Point position;
 
         /// <summary>
         /// A list of the position of each body-part
         /// </summary>
-        private List<Point> bodyParts;
+        private readonly List<Point> bodyParts;
+
+        /// <summary>
+        /// The input-handler instance
+        /// </summary>
+        private readonly InputHandler input = InputHandler.Instance;
 
         /// <summary>
         /// The direction the snake is traveling in
         /// </summary>
         private Direction direction;
-
-        /// <summary>
-        /// The input-handler instance
-        /// </summary>
-        private InputHandler input = InputHandler.Instance;
 
         /// <summary>
         /// Prevents a default instance of the <see cref="Snake"/> class from being created.
@@ -57,6 +57,8 @@ namespace UltimateSnake.GameObjects
             this.bodyParts = new List<Point> { new Point(), new Point(), new Point() };
 
             this.position = new Point(Program.WindowSize.X / 2, Program.WindowSize.Y / 2);
+
+            Console.SetCursorPosition(this.position.X, this.position.Y);
             
             for (var i = this.bodyParts.Count - 1; i > 1; i--)
             {
