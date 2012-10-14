@@ -19,8 +19,8 @@ namespace UltimateSnake.MVC
 
         public void Draw()
         {
-            Snake.Instance.Draw();
             Loot.Instance.Draw();
+            Snake.Instance.Draw();
         }
     }
 }
