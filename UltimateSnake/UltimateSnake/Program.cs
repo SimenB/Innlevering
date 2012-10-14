@@ -28,7 +28,7 @@ namespace UltimateSnake
         /// </summary>
         public static Point WindowSize
         {
-            get { return new Point(Console.BufferWidth, Console.BufferHeight); }
+            get { return new Point(Console.WindowWidth, Console.WindowHeight); }
         }
 
         /// <summary>
