@@ -124,11 +124,6 @@ namespace UltimateSnake.GameObjects
                 return;
             }
 
-            foreach (Point bodyPart in this.bodyParts)
-            {
-                Console.Write(bodyPart.X + ", " + bodyPart.Y);
-            }
-
             this.Draw();
         }
 
@@ -139,10 +134,12 @@ namespace UltimateSnake.GameObjects
         {
             // TODO: Draw the snake
             Console.SetCursorPosition(this.position.X, this.position.Y);
+            Console.Write("@");
 
-            foreach (Point bodyPart in bodyParts)
+            foreach (Point bodyPart in this.bodyParts)
             {
                 Console.SetCursorPosition(bodyPart.X, bodyPart.Y);
+                Console.Write("O");
             }
         }
 
