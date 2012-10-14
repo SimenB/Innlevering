@@ -135,8 +135,9 @@ namespace UltimateSnake.GameObjects
         /// </summary>
         public void Draw()
         {
-            Console.SetCursorPosition(this.Position.X, this.Position.Y);
             Console.ForegroundColor = ConsoleColor.Green;
+
+            Console.SetCursorPosition(this.Position.X, this.Position.Y);
             Console.Write("@");
 
             foreach (var bodyPart in this.BodyParts)

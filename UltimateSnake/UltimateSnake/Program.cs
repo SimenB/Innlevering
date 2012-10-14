@@ -12,9 +12,8 @@ namespace UltimateSnake
     using System;
     using System.Diagnostics;
 
-    using MVC;
-
     using GameObjects;
+    using MVC;
     using Utilities;
 
     /// <summary>
@@ -32,6 +31,9 @@ namespace UltimateSnake
             get { return new Point(Console.WindowWidth - 2, Console.WindowHeight - 2); }
         }
 
+        /// <summary>
+        /// Gets or sets a value indicating whether the game is paused.
+        /// </summary>
         public static bool Paused { get; set; }
 
         /// <summary>
