@@ -109,6 +109,16 @@ namespace UltimateSnake.GameObjects
                 return;
             }
 
+            // Set all the positions of all the body-parts to the one ahead of it
+            for (int i = this.bodyParts.Count - 1; i > 0; i--)
+            {
+                this.bodyParts[i] = new Point(this.bodyParts[i - 1]);
+            }
+
+            this.bodyParts[0] = new Point(this.position);
+
+            this.Movement();
+
             // If the snake runs into itself, it dies
             if (this.bodyParts.Any(bodyPart => this.position.X == bodyPart.X && this.position.Y == bodyPart.Y))
             {
@@ -116,17 +126,6 @@ namespace UltimateSnake.GameObjects
 
                 return;
             }
-
-            // Set all the positions of all the body-parts to the one ahead of it
-            for (int i = this.bodyParts.Count - 1; i > 0; i--)
-            {
-                this.bodyParts[i].X = this.bodyParts[i - 1].X;
-                this.bodyParts[i].Y = this.bodyParts[i - 1].Y;
-            }
-
-            this.bodyParts[0] = this.position;
-
-            this.Movement();
 
             foreach (Point bodyPart in this.bodyParts)
             {
