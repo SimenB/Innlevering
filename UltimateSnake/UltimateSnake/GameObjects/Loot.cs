@@ -57,22 +57,29 @@ namespace UltimateSnake.GameObjects
         {
             // TODO: Don't spawn on snake
             Random random = new Random();
+            bool acceptable = false;
 
-            int x = 0, y = 0;
             Point temp;
 
-//             while (true)
-//             {
+            do
+            {
+                acceptable = false;
                 temp = new Point(random.Next(Program.WindowSize.X), random.Next(Program.WindowSize.Y));
 
-//                 foreach (Point bodyPart in Snake.Instance.BodyParts)
-//                 {
-//                     if (Point.Intersects(bodyPart, temp))
-//                     {
-//                         
-//                     }
-//                 }
-//             }
+                foreach (Point bodyPart in Snake.Instance.BodyParts)
+                {
+                    if (Point.Intersects(temp, bodyPart))
+                    {
+                        acceptable = false;
+                        break;
+                    }
+                    else
+                    {
+                        acceptable = true;
+                    }
+                }
+            }
+            while (!acceptable);
 
             return temp;
         }
