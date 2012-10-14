@@ -46,6 +46,11 @@ namespace UltimateSnake.GameObjects
         private readonly InputHandler input = InputHandler.Instance;
 
         /// <summary>
+        /// The position of the last body-part, so it's removed
+        /// </summary>
+        private Point positionOfLast;
+
+        /// <summary>
         /// The direction the snake is traveling in
         /// </summary>
         private Direction direction;
@@ -61,11 +66,13 @@ namespace UltimateSnake.GameObjects
 
             Console.SetCursorPosition(this.position.X, this.position.Y);
             
-            for (var i = this.bodyParts.Count - 1; i > 1; i--)
+            for (var i = this.bodyParts.Count - 1; i > 0; i--)
             {
                 this.bodyParts[i].X = this.bodyParts[i - 1].X;
                 this.bodyParts[i].Y = this.bodyParts[i - 1].X;
             }
+
+            this.positionOfLast = this.bodyParts.Last();
 
             this.Alive = true;
 
@@ -99,7 +106,7 @@ namespace UltimateSnake.GameObjects
         public void Update()
         {
             // If the snake is outside of the game-window, it's dead
-            if (this.position.X < 0 || this.position.X > Program.WindowSize.X || this.position.Y < 0 || this.position.Y > Program.WindowSize.Y)
+            if (this.position.X < 0 || this.position.X > Program.WindowSize.X || this.position.Y < 0 || this.position.Y > Program.WindowSize.Y - 2)
             {
                 this.Alive = false;
 
@@ -125,6 +132,8 @@ namespace UltimateSnake.GameObjects
             }
 
             this.Draw();
+
+            this.positionOfLast = this.bodyParts.Last();
         }
 
         /// <summary>
@@ -141,6 +150,9 @@ namespace UltimateSnake.GameObjects
                 Console.SetCursorPosition(bodyPart.X, bodyPart.Y);
                 Console.Write("O");
             }
+
+            Console.SetCursorPosition(this.positionOfLast.X, this.positionOfLast.Y);
+            Console.Write(" ");
         }
 
         /// <summary>
