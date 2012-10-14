@@ -8,6 +8,7 @@
 // --------------------------------------------------------------------------------------------------------------------
 
 // TODO: The whole shebang. This is very much a placeholder
+// TODO: The keystrokes stack up and are all executed (try spamming up-left-up-left-up-left a lot of times, then keep playing...)
 
 namespace UltimateSnake.Utilities
 {
