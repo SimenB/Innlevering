@@ -1,6 +1,10 @@
 ﻿namespace UltimateSnake.MVC
 {
+    using System.Linq;
+
     using GameObjects;
+
+    using UltimateSnake.Utilities;
 
     class Model
     {
@@ -19,6 +23,16 @@
         {
             Snake.Instance.Update();
             Loot.Instance.Update();
+
+            this.CheckCollison();
+        }
+
+        private void CheckCollison()
+        {
+            if (Point.Intersects(Snake.Instance.Position, Loot.Instance.Position))
+            {
+                Snake.Instance.BodyParts.Add(new Point(Snake.Instance.BodyParts.Last()));
+            }
         }
     }
 }
