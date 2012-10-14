@@ -11,7 +11,8 @@ namespace UltimateSnake.GameObjects
 {
     using System;
     using System.Collections.Generic;
-    using System.Diagnostics.CodeAnalysis;
+
+    using UltimateSnake.Utilities;
 
     /// <summary>
     /// The snake

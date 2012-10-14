@@ -14,6 +14,7 @@ namespace UltimateSnake
 
     using UltimateSnake.GameObjects;
     using UltimateSnake.MVC;
+    using UltimateSnake.Utilities;
 
     /// <summary>
     /// The program.
