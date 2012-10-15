@@ -7,7 +7,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{131da4c9-74cc-4c76-9e38-fb6650aa72f4}</ProjectGuid>
     <ArchitectureToolsVersion>2.0.0.0</ArchitectureToolsVersion>
-    <Name>SnakeModelProject</Name>
+    <Name>SnakeUML</Name>
     <RootNamespace>SnakeModelProject</RootNamespace>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
