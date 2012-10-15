@@ -39,7 +39,6 @@ namespace UltimateSnake.GameObjects
 
         public static Loot Instance
         {
-            // TODO: Move to middle of screen
             get { return instance ?? (instance = new Loot(GetRandomPosition())); }
         }
 
@@ -75,7 +74,7 @@ namespace UltimateSnake.GameObjects
 
         private static Point GetRandomPosition()
         {
-            // TODO: Don't spawn on snake
+            // TODO: Optimize
             Random random = new Random();
             var acceptable = false;
 

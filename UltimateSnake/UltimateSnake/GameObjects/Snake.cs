@@ -22,11 +22,6 @@ namespace UltimateSnake.GameObjects
     public class Snake
     {   
         /// <summary>
-        /// The movement speed of the snake
-        /// </summary>
-        private const int MovementSpeed = 1;
-
-        /// <summary>
         /// The instance of the snake (singleton)
         /// </summary>
         private static Snake instance;
@@ -169,20 +164,19 @@ namespace UltimateSnake.GameObjects
                 }
             }
 
-            // TODO: This is not how movement speed works in snake :P fuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
             switch (this.CurrentDirection)
             {
                 case Direction.Up:
-                    this.Position.Y -= MovementSpeed;
+                    this.Position.Y--;
                     break;
                 case Direction.Right:
-                    this.Position.X += MovementSpeed;
+                    this.Position.X++;
                     break;
                 case Direction.Down:
-                    this.Position.Y += MovementSpeed;
+                    this.Position.Y++;
                     break;
                 case Direction.Left:
-                    this.Position.X -= MovementSpeed;
+                    this.Position.X--;
                     break;
             }
         }
