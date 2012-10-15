@@ -24,7 +24,19 @@
             Snake.Instance.Draw();
         }
 
-        public static void DrawAt(Point postition, char sign, String color)
+        /// <summary>
+        /// Draw the specified char at the specified position in the specified color
+        /// </summary>
+        /// <param name="position">
+        /// The position.
+        /// </param>
+        /// <param name="sign">
+        /// The sign.
+        /// </param>
+        /// <param name="color">
+        /// The color.
+        /// </param>
+        public static void DrawAt(Point position, char sign, string color)
         {
             ConsoleColor cColor;
 
@@ -32,12 +44,16 @@
             {
                 cColor = ConsoleColor.Green;
             }
-            else
+            else if (color.Equals("Red"))
             {
                 cColor = ConsoleColor.Red;
             }
+            else
+            {
+                cColor = ConsoleColor.White;
+            }
 
-            Console.SetCursorPosition(postition.X, postition.Y);
+            Console.SetCursorPosition(position.X, position.Y);
 
             Console.ForegroundColor = cColor;
 

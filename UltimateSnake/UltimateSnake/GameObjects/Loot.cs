@@ -11,6 +11,8 @@ namespace UltimateSnake.GameObjects
 {
     using System;
 
+    using UltimateSnake.MVC;
+
     using Utilities;
 
     /// <summary>
@@ -63,10 +65,7 @@ namespace UltimateSnake.GameObjects
         /// </summary>
         public void Draw()
         {
-            // TODO: SetCursorPosition should only happen on being eaten (in Update)
-            Console.SetCursorPosition(this.Position.X, this.Position.Y);
-            Console.ForegroundColor = ConsoleColor.Red;
-            Console.Write(this.Sign);
+            Model.Instance.DrawAt(this.Position, this.Sign, "Red");
         }
 
         public void NewLoot()
@@ -84,7 +83,6 @@ namespace UltimateSnake.GameObjects
 
             do
             {
-                acceptable = false;
                 temp = new Point(random.Next(Program.WindowSize.X), random.Next(Program.WindowSize.Y));
 
                 foreach (var bodyPart in Snake.Instance.BodyParts)
@@ -94,10 +92,8 @@ namespace UltimateSnake.GameObjects
                         acceptable = false;
                         break;
                     }
-                    else
-                    {
-                        acceptable = true;
-                    }
+
+                    acceptable = true;
                 }
             }
             while (!acceptable);

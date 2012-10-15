@@ -9,7 +9,6 @@
 
 namespace UltimateSnake.GameObjects
 {
-    using System;
     using System.Collections.Generic;
     using System.Linq;
 
@@ -50,9 +49,6 @@ namespace UltimateSnake.GameObjects
             this.BodyParts = new List<Point> { new Point(), new Point(), new Point(), new Point(), new Point() };
 
             this.Position = new Point(Program.WindowSize.X / 2, Program.WindowSize.Y / 2);
-
-            // TODO: Set start-position in view, somehow
-            Console.SetCursorPosition(this.Position.X, this.Position.Y);
             
             for (int i = this.BodyParts.Count - 1; i > 0; i--)
             {

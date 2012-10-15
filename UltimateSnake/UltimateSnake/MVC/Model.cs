@@ -1,6 +1,5 @@
 ﻿namespace UltimateSnake.MVC
 {
-    using System;
     using System.Linq;
 
     using GameObjects;
@@ -48,7 +47,7 @@
             Loot.Instance.NewLoot();
         }
 
-        public void DrawAt(Point postition, char sign, String color)
+        public void DrawAt(Point postition, char sign, string color)
         {
             View.DrawAt(postition, sign, color);
         }
