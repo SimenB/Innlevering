@@ -137,7 +137,7 @@ namespace UltimateSnake.GameObjects
 
             foreach (Point bodyPart in this.BodyParts)
             {
-                Model.DrawAt(bodyPart, '0', "Green");
+                Model.DrawAt(bodyPart, 'O', "Green");
             }
 
             // Remove the body-part at the end of the snake
