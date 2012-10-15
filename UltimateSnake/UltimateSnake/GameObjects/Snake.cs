@@ -120,6 +120,7 @@ namespace UltimateSnake.GameObjects
                 this.Alive = false;
             }
 
+            // BUG: The bottom right corner
             // If the snake is outside of the game-window, it dies
             if (this.Position.X < 0 || this.Position.X >= Program.WindowSize.X || this.Position.Y < 0 || this.Position.Y >= Program.WindowSize.Y)
             {
