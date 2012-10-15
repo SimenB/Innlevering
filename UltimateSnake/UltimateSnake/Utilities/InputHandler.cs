@@ -30,7 +30,6 @@ namespace UltimateSnake.Utilities
         /// </summary>
         private InputHandler()
         {
-            this.DirectionToMove = Snake.Direction.Right;
         }
 
         /// <summary>
@@ -56,96 +55,90 @@ namespace UltimateSnake.Utilities
                 return;
             }
 
-            var buttonPressed = Console.ReadKey(true);
-            
+            ConsoleKeyInfo buttonPressed = Console.ReadKey(true);
+      
             // Empty the buffer
-            if (Console.KeyAvailable)
+            while (Console.KeyAvailable)
             {
-                Console.ReadKey(true);
+               /* Console.ReadKey(true);*/
+                buttonPressed = Console.ReadKey(true);
             }
 
             switch (buttonPressed.Key)
             {
                 case ConsoleKey.UpArrow:
                 case ConsoleKey.W:
+                case ConsoleKey.NumPad8:
                     this.DirectionToMove = Snake.Direction.Up;
                     break;
                 case ConsoleKey.RightArrow:
                 case ConsoleKey.D:
+                case ConsoleKey.NumPad6:
                     this.DirectionToMove = Snake.Direction.Right;
                     break;
                 case ConsoleKey.DownArrow:
                 case ConsoleKey.S:
+                case ConsoleKey.NumPad2:
                     this.DirectionToMove = Snake.Direction.Down;
                     break;
                 case ConsoleKey.LeftArrow:
                 case ConsoleKey.A:
+                case ConsoleKey.NumPad4:
                     this.DirectionToMove = Snake.Direction.Left;
                     break;
+                case ConsoleKey.NumPad1:
+                    if (Snake.Instance.CurrentDirection == Snake.Direction.Left || Snake.Instance.CurrentDirection == Snake.Direction.Right)
+                    {
+                        this.DirectionToMove = Snake.Direction.Down;
+                    }
+                    else if (Snake.Instance.CurrentDirection == Snake.Direction.Down || Snake.Instance.CurrentDirection == Snake.Direction.Up)
+                    {
+                        this.DirectionToMove = Snake.Direction.Left;
+                    }
+                    break;
+                case ConsoleKey.NumPad3:
+                    if (Snake.Instance.CurrentDirection == Snake.Direction.Left || Snake.Instance.CurrentDirection == Snake.Direction.Right)
+                    {
+                        this.DirectionToMove = Snake.Direction.Down;
+                    }
+                    else if (Snake.Instance.CurrentDirection == Snake.Direction.Down || Snake.Instance.CurrentDirection == Snake.Direction.Up)
+                    {
+                        this.DirectionToMove = Snake.Direction.Right;
+                    }
+                    break;
+                case ConsoleKey.NumPad7:
+                    if (Snake.Instance.CurrentDirection == Snake.Direction.Left || Snake.Instance.CurrentDirection == Snake.Direction.Right)
+                    {
+                        this.DirectionToMove = Snake.Direction.Up;
+                    }
+                    else if (Snake.Instance.CurrentDirection == Snake.Direction.Down || Snake.Instance.CurrentDirection == Snake.Direction.Up)
+                    {
+                        this.DirectionToMove = Snake.Direction.Left;
+                    }
+                    break;
+                case ConsoleKey.NumPad9:
+                    if (Snake.Instance.CurrentDirection == Snake.Direction.Left || Snake.Instance.CurrentDirection == Snake.Direction.Right)
+                    {
+                        this.DirectionToMove = Snake.Direction.Up;
+                    }
+                    else if (Snake.Instance.CurrentDirection == Snake.Direction.Down || Snake.Instance.CurrentDirection == Snake.Direction.Up)
+                    {
+                        this.DirectionToMove = Snake.Direction.Right;
+                    }
+                    break;
                 case ConsoleKey.Escape:
+                case ConsoleKey.End:
                     Environment.Exit(0);
                     break;
                 case ConsoleKey.Spacebar:
+                case ConsoleKey.NumPad5:
                     Program.Paused = !Program.Paused;
+                    this.DirectionToMove = Snake.Instance.CurrentDirection;
+                    break;
+                default:
                     this.DirectionToMove = Snake.Instance.CurrentDirection;
                     break;
             }
         }
-
-        ////         #region Fields
-        ////         KeyboardState KeyState = new KeyboardState();
-        ////         Keys[] currentkeys;
-        ////         Keys[] previouskeys;
-        ////         #endregion
-        //// 
-        ////         #region Update
-        ////         /// <summary>
-        ////         /// Updates the current keyboard state, and performs the appropriate actions according to the 
-        ////         /// currently pressed buttons.
-        ////         /// </summary>
-        ////         public void Update()
-        ////         {
-        ////             this.currentkeys = this.KeyState.GetPressedKeys();
-        ////             if (this.previouskeys == this.currentkeys)
-        ////             {
-        ////                 goto end;
-        ////             }
-        ////             for (int i = 0; i < this.currentkeys.Length; i++)
-        ////             {
-        ////                 switch (this.currentkeys[i])
-        ////                 {
-        ////                     case Keys.W:
-        ////                         ActionW();
-        ////                         break;
-        ////                     case Keys.A:
-        ////                         ActionA();
-        ////                         break;
-        ////                     case Keys.S:
-        ////                         ActionS();
-        ////                         break;
-        ////                     case Keys.D:
-        ////                         ActionD();
-        ////                         break;
-        ////                     case Keys.Space:
-        ////                         ActiSpace();
-        ////                         break;
-        ////                     case Keys.Left:
-        ////                         ActionLeft();
-        ////                         break;
-        ////                     case Keys.Right:
-        ////                         ActionRight();
-        ////                         break;
-        ////                     case Keys.Up:
-        ////                         ActionUp();
-        ////                         break;
-        ////                     case Keys.Down:
-        ////                         ActionDown();
-        ////                         break;
-        ////                 }
-        ////             }
-        ////             end:
-        ////             this.previouskeys = this.currentkeys;
-        ////         }
-        ////         #endregion
     }
 }

@@ -3,8 +3,7 @@
     using System.Linq;
 
     using GameObjects;
-
-    using UltimateSnake.Utilities;
+    using Utilities;
 
     public class Model
     {
@@ -19,7 +18,7 @@
             get { return instance ?? (instance = new Model()); }
         }
 
-        public void Update()
+        public static void Update()
         {
             if (Program.Paused)
             {
@@ -29,13 +28,13 @@
             Snake.Instance.Update();
             Loot.Instance.Update();
 
-            this.CheckCollision();
+            CheckCollision();
         }
 
         /// <summary>
         /// Checks if the snake eats the loot
         /// </summary>
-        private void CheckCollision()
+        private static void CheckCollision()
         {
             if (!Point.Intersects(Snake.Instance.Position, Loot.Instance.Position))
             {
@@ -47,9 +46,9 @@
             Loot.Instance.NewLoot();
         }
 
-        public void DrawAt(Point postition, char sign, string color)
+        public static void DrawAt(Point position, char sign, string color)
         {
-            View.DrawAt(postition, sign, color);
+            View.DrawAt(position, sign, color);
         }
     }
 }

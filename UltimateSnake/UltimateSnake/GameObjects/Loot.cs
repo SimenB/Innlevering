@@ -11,7 +11,7 @@ namespace UltimateSnake.GameObjects
 {
     using System;
 
-    using UltimateSnake.MVC;
+    using MVC;
 
     using Utilities;
 
@@ -65,7 +65,7 @@ namespace UltimateSnake.GameObjects
         /// </summary>
         public void Draw()
         {
-            Model.Instance.DrawAt(this.Position, this.Sign, "Red");
+            Model.DrawAt(this.Position, this.Sign, "Red");
         }
 
         public void NewLoot()

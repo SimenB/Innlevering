@@ -29,7 +29,7 @@ namespace UltimateSnake
         /// </summary>
         public static Point WindowSize
         {
-            get { return new Point(Console.WindowWidth - 2, Console.WindowHeight - 2); }
+            get { return new Point(Console.WindowWidth, Console.WindowHeight); }
         }
 
         /// <summary>
@@ -45,9 +45,9 @@ namespace UltimateSnake
         /// </param>
         public static void Main(string[] args)
         {
-            Preload();
+            //Preload();
 
-            player.PlayLooping();
+           // player.PlayLooping();
 
             GameLoop();
         }
@@ -112,6 +112,9 @@ namespace UltimateSnake
 
             do
             {
+                // Check for pause
+                Controller.Instance.Update();
+
                 if (stopwatch.ElapsedMilliseconds < 100)
                 {
                     continue;
@@ -119,13 +122,12 @@ namespace UltimateSnake
 
                 stopwatch.Restart();
 
-                // CMV for the win
+                Model.Update();
 
-                // Check for pause
-                Controller.Instance.Update();
-
-                Model.Instance.Update();
-                View.Draw();
+                if (snake.Alive)
+                {
+                    View.Draw();
+                }
             }
             while (snake.Alive);
         }

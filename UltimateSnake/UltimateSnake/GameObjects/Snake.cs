@@ -104,14 +104,6 @@ namespace UltimateSnake.GameObjects
         {
             this.positionLastFrame = this.BodyParts.Last();
 
-            // If the snake is outside of the game-window, it's dead
-            if (this.Position.X < 1 || this.Position.X > Program.WindowSize.X || this.Position.Y < 1 || this.Position.Y > Program.WindowSize.Y)
-            {
-                this.Alive = false;
-
-                return;
-            }
-
             // Set all the positions of all the body-parts to the one ahead of it
             for (int i = this.BodyParts.Count - 1; i > 0; i--)
             {
@@ -127,6 +119,12 @@ namespace UltimateSnake.GameObjects
             {
                 this.Alive = false;
             }
+
+            // If the snake is outside of the game-window, it dies
+            if (this.Position.X < 0 || this.Position.X >= Program.WindowSize.X || this.Position.Y < 0 || this.Position.Y >= Program.WindowSize.Y)
+            {
+                this.Alive = false;
+            }
         }
 
         /// <summary>
@@ -134,15 +132,15 @@ namespace UltimateSnake.GameObjects
         /// </summary>
         public void Draw()
         {
-            Model.Instance.DrawAt(this.Position, '@', "Green");
+            Model.DrawAt(this.Position, '@', "Green");
 
             foreach (Point bodyPart in this.BodyParts)
             {
-                Model.Instance.DrawAt(bodyPart, '0', "Green");
+                Model.DrawAt(bodyPart, '0', "Green");
             }
 
             // Remove the body-part at the end of the snake
-            Model.Instance.DrawAt(this.positionLastFrame, ' ', "Green");
+            Model.DrawAt(this.positionLastFrame, ' ', "Green");
         }
 
         /// <summary>

@@ -24,18 +24,6 @@
             Snake.Instance.Draw();
         }
 
-        /// <summary>
-        /// Draw the specified char at the specified position in the specified color
-        /// </summary>
-        /// <param name="position">
-        /// The position.
-        /// </param>
-        /// <param name="sign">
-        /// The sign.
-        /// </param>
-        /// <param name="color">
-        /// The color.
-        /// </param>
         public static void DrawAt(Point position, char sign, string color)
         {
             ConsoleColor cColor;
