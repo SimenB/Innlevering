@@ -5,9 +5,7 @@
 // <summary>
 //   Defines the Program type.
 // </summary>
-// --------------------------------------------------------------------------------------------------------------------
-
-using System.Reflection;
+// -------------------------------------------------------------------------------------------------------------------
 
 namespace UltimateSnake
 {
@@ -24,7 +22,7 @@ namespace UltimateSnake
     /// </summary>
     public static class Program
     {
-        // TODO: Set custom size of the window, mebbi?
+        private static System.Media.SoundPlayer player;
 
         /// <summary>
         /// Gets the size of the window (remember that the console uses rows and columns, NOT pixels)
@@ -38,8 +36,6 @@ namespace UltimateSnake
         /// Gets or sets a value indicating whether the game is paused.
         /// </summary>
         public static bool Paused { get; set; }
-
-        private static System.Media.SoundPlayer player;
 
         /// <summary>
         /// The main.
@@ -77,7 +73,7 @@ namespace UltimateSnake
             // Print middle-aligned text
             var text = "LOADING... PREPARE YOURSELF!";
 
-            Console.SetCursorPosition(Console.WindowWidth / 2 - text.Length / 2, Console.WindowHeight / 2 - 1);
+            Console.SetCursorPosition((Console.WindowWidth / 2) - (text.Length / 2), (Console.WindowHeight / 2) - 1);
             Console.WriteLine(text);
 
             // Load the background music
@@ -90,15 +86,16 @@ namespace UltimateSnake
             // Remove the text and print new
             Console.Clear();
             text = "Lol jk";
-            Console.SetCursorPosition(Console.WindowWidth / 2 - text.Length / 2, Console.WindowHeight / 2 - 1);
+            Console.SetCursorPosition((Console.WindowWidth / 2) - (text.Length / 2), (Console.WindowHeight / 2) - 1);
             Console.WriteLine(text);
 
             // Give the player time to read
             Thread.Sleep(400);
 
-            // Make the background black again
+            // Make the background black and the text green.
             Console.BackgroundColor = ConsoleColor.Black;
             Console.Clear();
+            Console.ForegroundColor = ConsoleColor.Green;
         }
 
         /// <summary>
@@ -106,11 +103,7 @@ namespace UltimateSnake
         /// </summary>
         private static void GameLoop()
         {
-            Console.CursorVisible = false;
-            Console.ForegroundColor = ConsoleColor.Green;
-
-            // Limits the update loop to 10 updates per second
-            
+            // Limits the update loop to one update per 100 milliseconds (10 fps LOL)
             // TODO: This should be used to define movement speed of the snake, which should always move the same amount of pixels per update
             var stopwatch = new Stopwatch();
             stopwatch.Start();
@@ -119,7 +112,7 @@ namespace UltimateSnake
 
             do
             {
-                if (stopwatch.ElapsedMilliseconds < 80)
+                if (stopwatch.ElapsedMilliseconds < 100)
                 {
                     continue;
                 }
@@ -133,7 +126,8 @@ namespace UltimateSnake
 
                 Model.Instance.Update();
                 View.Draw();
-            } while (snake.Alive);
+            }
+            while (snake.Alive);
         }
     }
 }
