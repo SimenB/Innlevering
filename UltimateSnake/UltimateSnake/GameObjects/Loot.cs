@@ -87,7 +87,7 @@ namespace UltimateSnake.GameObjects
 
                 foreach (var bodyPart in Snake.Instance.BodyParts)
                 {
-                    if (Point.Intersects(temp, bodyPart))
+                    if (temp == bodyPart)
                     {
                         acceptable = false;
                         break;
