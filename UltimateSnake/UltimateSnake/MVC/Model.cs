@@ -1,5 +1,6 @@
 ﻿namespace UltimateSnake.MVC
 {
+    using System;
     using System.Linq;
 
     using GameObjects;
@@ -45,6 +46,11 @@
             Snake.Instance.BodyParts.Add(new Point(Snake.Instance.BodyParts.Last()));
 
             Loot.Instance.NewLoot();
+        }
+
+        public void DrawAt(Point postition, char sign, String color)
+        {
+            View.DrawAt(postition, sign, color);
         }
     }
 }

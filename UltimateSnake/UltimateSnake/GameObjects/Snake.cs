@@ -13,6 +13,8 @@ namespace UltimateSnake.GameObjects
     using System.Collections.Generic;
     using System.Linq;
 
+    using UltimateSnake.MVC;
+
     using Utilities;
 
     /// <summary>
@@ -49,9 +51,10 @@ namespace UltimateSnake.GameObjects
 
             this.Position = new Point(Program.WindowSize.X / 2, Program.WindowSize.Y / 2);
 
+            // TODO: Set start-position in view, somehow
             Console.SetCursorPosition(this.Position.X, this.Position.Y);
             
-            for (var i = this.BodyParts.Count - 1; i > 0; i--)
+            for (int i = this.BodyParts.Count - 1; i > 0; i--)
             {
                 this.BodyParts[i].X = this.BodyParts[i - 1].X;
                 this.BodyParts[i].Y = this.BodyParts[i - 1].Y;
@@ -114,7 +117,7 @@ namespace UltimateSnake.GameObjects
             }
 
             // Set all the positions of all the body-parts to the one ahead of it
-            for (var i = this.BodyParts.Count - 1; i > 0; i--)
+            for (int i = this.BodyParts.Count - 1; i > 0; i--)
             {
                 this.BodyParts[i] = new Point(this.BodyParts[i - 1]);
             }
@@ -135,19 +138,15 @@ namespace UltimateSnake.GameObjects
         /// </summary>
         public void Draw()
         {
-            Console.ForegroundColor = ConsoleColor.Green;
-
-            Console.SetCursorPosition(this.Position.X, this.Position.Y);
-            Console.Write("@");
+            Model.Instance.DrawAt(this.Position, '@', "Green");
 
             foreach (Point bodyPart in this.BodyParts)
             {
-                Console.SetCursorPosition(bodyPart.X, bodyPart.Y);
-                Console.Write("0");
+                Model.Instance.DrawAt(bodyPart, '0', "Green");
             }
 
-            Console.SetCursorPosition(this.positionLastFrame.X, this.positionLastFrame.Y);
-            Console.Write(" ");
+            // Remove the body-part at the end of the snake
+            Model.Instance.DrawAt(this.positionLastFrame, ' ', "Green");
         }
 
         /// <summary>
