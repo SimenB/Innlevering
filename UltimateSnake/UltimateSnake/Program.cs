@@ -45,9 +45,8 @@ namespace UltimateSnake
         /// </param>
         public static void Main(string[] args)
         {
-            //Preload();
-
-           // player.PlayLooping();
+            // Preload();
+            // player.PlayLooping();
 
             GameLoop();
         }

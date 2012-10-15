@@ -48,13 +48,23 @@
             Snake.Instance.Draw();
         }
 
+        /// <summary>
+        /// Draw a char
+        /// </summary>
+        /// <param name="position">
+        /// The position to draw
+        /// </param>
+        /// <param name="sign">
+        /// The char to draw
+        /// </param>
+        /// <param name="color">
+        /// The color to draw the char
+        /// </param>
         public static void DrawAt(Utilities.Point position, char sign, string color)
         {
             Console.SetCursorPosition(position.X, position.Y);
 
-            Color c = Color.FromName(color);
-
-            Console.ForegroundColor = ColorMapping[c];
+            Console.ForegroundColor = ColorMapping[Color.FromName(color)];
 
             Console.Write(sign);
         }
