@@ -11,6 +11,7 @@ namespace UltimateSnake
 {
     using System;
     using System.Diagnostics;
+    using System.Threading;
 
     using GameObjects;
     using MVC;
@@ -36,6 +37,8 @@ namespace UltimateSnake
         /// </summary>
         public static bool Paused { get; set; }
 
+        private static System.Media.SoundPlayer player;
+
         /// <summary>
         /// The main.
         /// </summary>
@@ -44,7 +47,57 @@ namespace UltimateSnake
         /// </param>
         public static void Main(string[] args)
         {
+            Preload();
+
+            player.PlayLooping();
+
             GameLoop();
+        }
+
+        private static void Preload()
+        {
+            // "Square" window
+            Console.SetWindowSize(Console.WindowWidth, Console.WindowWidth / 2);
+
+            // Get rid of the scrollbar
+            Console.SetBufferSize(Console.WindowWidth, Console.WindowWidth / 2);
+
+            // Dark red background-color
+            Console.BackgroundColor = ConsoleColor.DarkRed;
+            Console.Clear();
+
+            // Remove the cursor
+            Console.CursorVisible = false;
+
+            // Cyan font color
+            Console.ForegroundColor = ConsoleColor.Cyan;
+
+            // Print middle-aligned text
+            var text = "LOADING... PREPARE YOURSELF!";
+
+            Console.SetCursorPosition(Console.WindowWidth / 2 - text.Length / 2, Console.WindowHeight / 2 - 1);
+            Console.WriteLine(text);
+
+            // Load the background music
+            //player = new System.Media.SoundPlayer { SoundLocation = "../../Sound/Philter - Spellbound In 8-bit.wav" };
+            player = new System.Media.SoundPlayer(Resources.Philter___Spellbound_In_8_Bit);
+            player.Load();
+
+            // Pretend to be actually doing something
+            Thread.Sleep(2250);
+
+            // Remove the text and print new
+            Console.Clear();
+            text = "Lol jk";
+            Console.SetCursorPosition(Console.WindowWidth / 2 - text.Length / 2, Console.WindowHeight / 2 - 1);
+            Console.WriteLine(text);
+
+            // Give the player time to read
+            Thread.Sleep(400);
+
+            // Make the background black again
+            Console.BackgroundColor = ConsoleColor.Black;
+            Console.Clear();
         }
 
         /// <summary>
@@ -58,14 +111,14 @@ namespace UltimateSnake
             // Limits the update loop to 10 updates per second
             
             // TODO: This should be used to define movement speed of the snake, which should always move the same amount of pixels per update
-            Stopwatch stopwatch = new Stopwatch();
+            var stopwatch = new Stopwatch();
             stopwatch.Start();
 
-            Snake snake = Snake.Instance;
+            var snake = Snake.Instance;
 
-            while (snake.Alive)
+            do
             {
-                if (stopwatch.ElapsedMilliseconds < 100)
+                if (stopwatch.ElapsedMilliseconds < 80)
                 {
                     continue;
                 }
@@ -78,13 +131,8 @@ namespace UltimateSnake
                 Controller.Instance.Update();
 
                 Model.Instance.Update();
-                View.Instance.Draw();
-                
-                if (!snake.Alive)
-                {
-                    break;
-                }
-            }
+                View.Draw();
+            } while (snake.Alive);
         }
     }
 }

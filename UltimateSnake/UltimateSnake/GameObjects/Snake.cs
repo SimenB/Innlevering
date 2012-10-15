@@ -51,7 +51,7 @@ namespace UltimateSnake.GameObjects
 
             Console.SetCursorPosition(this.Position.X, this.Position.Y);
             
-            for (int i = this.BodyParts.Count - 1; i > 0; i--)
+            for (var i = this.BodyParts.Count - 1; i > 0; i--)
             {
                 this.BodyParts[i].X = this.BodyParts[i - 1].X;
                 this.BodyParts[i].Y = this.BodyParts[i - 1].Y;
@@ -114,7 +114,7 @@ namespace UltimateSnake.GameObjects
             }
 
             // Set all the positions of all the body-parts to the one ahead of it
-            for (int i = this.BodyParts.Count - 1; i > 0; i--)
+            for (var i = this.BodyParts.Count - 1; i > 0; i--)
             {
                 this.BodyParts[i] = new Point(this.BodyParts[i - 1]);
             }

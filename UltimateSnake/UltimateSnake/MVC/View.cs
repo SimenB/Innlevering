@@ -1,10 +1,8 @@
-﻿
-
-namespace UltimateSnake.MVC
+﻿namespace UltimateSnake.MVC
 {
     using GameObjects;
 
-    class View
+    public class View
     {
         private static View instance;
 
@@ -17,7 +15,7 @@ namespace UltimateSnake.MVC
             get { return instance ?? (instance = new View()); }
         }
 
-        public void Draw()
+        public static void Draw()
         {
             Loot.Instance.Draw();
             Snake.Instance.Draw();

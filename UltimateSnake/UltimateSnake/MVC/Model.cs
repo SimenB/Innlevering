@@ -6,7 +6,7 @@
 
     using UltimateSnake.Utilities;
 
-    class Model
+    public class Model
     {
         private static Model instance;
 
@@ -37,12 +37,14 @@
         /// </summary>
         private void CheckCollision()
         {
-            if (Point.Intersects(Snake.Instance.Position, Loot.Instance.Position))
+            if (!Point.Intersects(Snake.Instance.Position, Loot.Instance.Position))
             {
-                Snake.Instance.BodyParts.Add(new Point(Snake.Instance.BodyParts.Last()));
-
-                Loot.Instance.NewLoot();
+                return;
             }
+            
+            Snake.Instance.BodyParts.Add(new Point(Snake.Instance.BodyParts.Last()));
+
+            Loot.Instance.NewLoot();
         }
     }
 }
