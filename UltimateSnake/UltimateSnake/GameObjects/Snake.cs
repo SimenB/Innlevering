@@ -141,7 +141,7 @@ namespace UltimateSnake.GameObjects
             }
 
             // Remove the body-part at the end of the snake
-            Model.DrawAt(this.positionLastFrame, ' ', "Green");
+            Model.DrawAt(this.positionLastFrame, ' ', "Black");
         }
 
         /// <summary>

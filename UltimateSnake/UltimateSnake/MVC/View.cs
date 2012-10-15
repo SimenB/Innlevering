@@ -1,13 +1,37 @@
 ﻿namespace UltimateSnake.MVC
 {
     using System;
+    using System.Collections.Generic;
+    using System.Drawing;
 
     using GameObjects;
-    using Utilities;
 
     public class View
     {
         private static View instance;
+
+        /// <summary>
+        /// A mapping of colors
+        /// </summary>
+        private static readonly Dictionary<Color, ConsoleColor> ColorMapping = new Dictionary<Color, ConsoleColor>()
+        { 
+            { Color.Black,          ConsoleColor.Black }, 
+            { Color.Blue,           ConsoleColor.Blue },
+            { Color.Cyan,           ConsoleColor.Cyan },
+            { Color.DarkBlue,       ConsoleColor.DarkBlue },
+            { Color.DarkCyan,       ConsoleColor.DarkCyan },
+            { Color.DarkGray,       ConsoleColor.DarkGray },
+            { Color.DarkGreen,      ConsoleColor.DarkGreen },
+            { Color.DarkMagenta,    ConsoleColor.DarkMagenta },
+            { Color.DarkRed,        ConsoleColor.DarkRed },
+            // { Color.DarkYellow,     ConsoleColor.DarkYellow },
+            { Color.Gray,           ConsoleColor.Gray },
+            { Color.Green,          ConsoleColor.Green },
+            { Color.Magenta,        ConsoleColor.Magenta },
+            { Color.Red,            ConsoleColor.Red },
+            { Color.White,          ConsoleColor.White },
+            { Color.Yellow,         ConsoleColor.Yellow }
+        };
 
         private View()
         {
@@ -24,26 +48,13 @@
             Snake.Instance.Draw();
         }
 
-        public static void DrawAt(Point position, char sign, string color)
+        public static void DrawAt(Utilities.Point position, char sign, string color)
         {
-            ConsoleColor cColor;
-
-            if (color.Equals("Green"))
-            {
-                cColor = ConsoleColor.Green;
-            }
-            else if (color.Equals("Red"))
-            {
-                cColor = ConsoleColor.Red;
-            }
-            else
-            {
-                cColor = ConsoleColor.White;
-            }
-
             Console.SetCursorPosition(position.X, position.Y);
 
-            Console.ForegroundColor = cColor;
+            Color c = Color.FromName(color);
+
+            Console.ForegroundColor = ColorMapping[c];
 
             Console.Write(sign);
         }
