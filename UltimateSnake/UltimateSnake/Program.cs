@@ -7,6 +7,8 @@
 // </summary>
 // --------------------------------------------------------------------------------------------------------------------
 
+using System.Reflection;
+
 namespace UltimateSnake
 {
     using System;
@@ -79,7 +81,6 @@ namespace UltimateSnake
             Console.WriteLine(text);
 
             // Load the background music
-            //player = new System.Media.SoundPlayer { SoundLocation = "../../Sound/Philter - Spellbound In 8-bit.wav" };
             player = new System.Media.SoundPlayer(Resources.Philter___Spellbound_In_8_Bit);
             player.Load();
 
