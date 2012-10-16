@@ -1,4 +1,13 @@
-﻿namespace UltimateSnake.MVC
+﻿// --------------------------------------------------------------------------------------------------------------------
+// <copyright file="View.cs" company="MarSimJør">
+//   Copyright © 2012
+// </copyright>
+// <summary>
+//   Defines the View type.
+// </summary>
+// --------------------------------------------------------------------------------------------------------------------
+
+namespace UltimateSnake.MVC
 {
     using System;
     using System.Collections.Generic;
@@ -6,10 +15,8 @@
 
     using GameObjects;
 
-    public class View
+    public static class View
     {
-        private static View instance;
-
         /// <summary>
         /// A mapping of colors
         /// </summary>
@@ -32,15 +39,6 @@
             { Color.White,          ConsoleColor.White },
             { Color.Yellow,         ConsoleColor.Yellow }
         };
-
-        private View()
-        {
-        }
-
-        public static View Instance
-        {
-            get { return instance ?? (instance = new View()); }
-        }
 
         public static void Draw()
         {
