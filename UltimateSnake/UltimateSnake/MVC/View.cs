@@ -6,8 +6,6 @@
 
     using GameObjects;
 
-    using UltimateSnake.Utilities;
-
     public class View
     {
         private static View instance;
