@@ -24,6 +24,8 @@ namespace UltimateSnake
     {
         private static System.Media.SoundPlayer player;
 
+        private const int fps = 10;
+
         /// <summary>
         /// Gets the size of the window (remember that the console uses rows and columns, NOT pixels)
         /// </summary>
@@ -107,8 +109,6 @@ namespace UltimateSnake
         /// </summary>
         private static void GameLoop()
         {
-            // Limits the update loop to one update per 100 milliseconds (10 fps LOL)
-            // TODO: This should be used to define movement speed of the snake, which should always move the same amount of pixels per update
             var stopwatch = new Stopwatch();
             stopwatch.Start();
 
@@ -119,7 +119,7 @@ namespace UltimateSnake
                 // Check for pause
                 Controller.Instance.Update();
 
-                if (stopwatch.ElapsedMilliseconds < 100)
+                if (stopwatch.ElapsedMilliseconds < 1000 / fps)
                 {
                     continue;
                 }
