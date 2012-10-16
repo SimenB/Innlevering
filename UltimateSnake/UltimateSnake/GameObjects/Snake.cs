@@ -1,4 +1,5 @@
-﻿// --------------------------------------------------------------------------------------------------------------------
+﻿using UltimateSnake.Utilities;
+// --------------------------------------------------------------------------------------------------------------------
 // <copyright file="Snake.cs" company="MarSimJør">
 //   Copyright © 2012
 // </copyright>
@@ -37,18 +38,21 @@ namespace UltimateSnake.GameObjects
         private Point positionLastFrame;
 
         /// <summary>
+        /// A list of all of the snake's components
+        /// </summary>
+        public List<DrawableGameObject> theSnake { get; private set; }
+
+        /// <summary>
         /// Prevents a default instance of the <see cref="Snake"/> class from being created.
         /// </summary>
         private Snake()
         {
-            this.BodyParts = new List<Point> { new Point(), new Point(), new Point(), new Point(), new Point() };
+            this.theSnake = new List<DrawableGameObject> { new SnakeHead(new Point(Program.WindowSize.X / 2, Program.WindowSize.Y / 2)), new SnakeBody(), new SnakeBody(), new SnakeBody() };
 
-            this.Position = new Point(Program.WindowSize.X / 2, Program.WindowSize.Y / 2);
-            
-            for (int i = this.BodyParts.Count - 1; i > 0; i--)
+            for (int i = this.theSnake.Count - 1; i > 0; i--)
             {
-                this.BodyParts[i].X = this.BodyParts[i - 1].X;
-                this.BodyParts[i].Y = this.BodyParts[i - 1].Y;
+                this.theSnake[i].Position.X = this.theSnake[i - 1].Position.X;
+                this.theSnake[i].Position.Y = this.theSnake[i - 1].Position.Y;
             }
 
             this.Alive = true;
@@ -77,15 +81,22 @@ namespace UltimateSnake.GameObjects
         /// </summary>
         public Direction CurrentDirection { get; private set; }
 
-        /// <summary>
-        /// Gets a list of the position of each body-part
-        /// </summary>
-        public List<Point> BodyParts { get; private set; }
+        public List<DrawableGameObject> GetGameObject()
+        {
+            /*
+            Model.DrawAt(this.Position, '@', "Green");
 
-        /// <summary>
-        /// Gets the position of the head of the snake
-        /// </summary>
-        public Point Position { get; private set; }
+            foreach (Point bodyPart in this.BodyParts)
+            {
+                Model.DrawAt(bodyPart, 'O', "Green");
+            }
+
+            // Remove the body-part at the end of the snake
+            Model.DrawAt(this.positionLastFrame, ' ', "Black");
+             * */
+
+            return this.theSnake;
+        }
 
         /// <summary>
         /// Gets a value indicating whether the snake is alive or not
@@ -97,46 +108,30 @@ namespace UltimateSnake.GameObjects
         /// </summary>
         public void Update()
         {
-            this.positionLastFrame = this.BodyParts.Last();
-
             // Set all the positions of all the body-parts to the one ahead of it
-            for (int i = this.BodyParts.Count - 1; i > 0; i--)
+            for (int i = this.theSnake.Count - 1; i > 0; i--)
             {
-                this.BodyParts[i] = new Point(this.BodyParts[i - 1]);
+                this.theSnake[i].Position.X = this.theSnake[i - 1].Position.X;
+                this.theSnake[i].Position.Y = this.theSnake[i - 1].Position.Y;
             }
-
-            this.BodyParts[0] = new Point(this.Position);
 
             this.Movement();
 
             // If the snake runs into itself, it dies
-            if (this.BodyParts.Any(bodyPart => this.Position.X == bodyPart.X && this.Position.Y == bodyPart.Y))
+            for (int i = 1; i < this.theSnake.Count; i++)
             {
-                this.Alive = false;
+                if (this.theSnake[0].Position == this.theSnake[i].Position)
+                {
+                    this.Alive = false;
+                }
             }
 
             // BUG: The bottom right corner
             // If the snake is outside of the game-window, it dies
-            if (this.Position.X < 0 || this.Position.X >= Program.WindowSize.X || this.Position.Y < 0 || this.Position.Y >= Program.WindowSize.Y)
+            if (this.theSnake[0].Position.X < 0 || this.theSnake[0].Position.X >= Program.WindowSize.X || this.theSnake[0].Position.Y < 0 || this.theSnake[0].Position.Y >= Program.WindowSize.Y)
             {
                 this.Alive = false;
             }
-        }
-
-        /// <summary>
-        /// The draw.
-        /// </summary>
-        public void Draw()
-        {
-            Model.DrawAt(this.Position, '@', "Green");
-
-            foreach (Point bodyPart in this.BodyParts)
-            {
-                Model.DrawAt(bodyPart, 'O', "Green");
-            }
-
-            // Remove the body-part at the end of the snake
-            Model.DrawAt(this.positionLastFrame, ' ', "Black");
         }
 
         /// <summary>
@@ -167,16 +162,16 @@ namespace UltimateSnake.GameObjects
             switch (this.CurrentDirection)
             {
                 case Direction.Up:
-                    this.Position.Y--;
+                    this.theSnake[0].Position.Y--;
                     break;
                 case Direction.Right:
-                    this.Position.X++;
+                    this.theSnake[0].Position.X++;
                     break;
                 case Direction.Down:
-                    this.Position.Y++;
+                    this.theSnake[0].Position.Y++;
                     break;
                 case Direction.Left:
-                    this.Position.X--;
+                    this.theSnake[0].Position.X--;
                     break;
             }
         }

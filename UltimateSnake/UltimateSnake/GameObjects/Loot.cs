@@ -18,7 +18,7 @@ namespace UltimateSnake.GameObjects
     /// <summary>
     /// The loot
     /// </summary>
-    public class Loot
+    public class Loot : DrawableGameObject
     {
         private static Loot instance;
 
@@ -34,37 +34,13 @@ namespace UltimateSnake.GameObjects
         private Loot(Point position, char sign = '$')
         {
             this.Position = position;
-            this.Sign = sign;
+            this.Texture = sign;
+            this.Color = "Red";
         }
 
         public static Loot Instance
         {
             get { return instance ?? (instance = new Loot(GetRandomPosition())); }
-        }
-
-        /// <summary>
-        /// The sign
-        /// </summary>
-        public char Sign { get; set; }
-
-        /// <summary>
-        /// The position of the loot
-        /// </summary>
-        public Point Position { get; private set; }
-
-        /// <summary>
-        /// The update.
-        /// </summary>
-        public void Update()
-        {
-        }
-
-        /// <summary>
-        /// The draw.
-        /// </summary>
-        public void Draw()
-        {
-            Model.DrawAt(this.Position, this.Sign, "Red");
         }
 
         public void NewLoot()
@@ -84,9 +60,9 @@ namespace UltimateSnake.GameObjects
             {
                 temp = new Point(random.Next(Program.WindowSize.X), random.Next(Program.WindowSize.Y));
 
-                foreach (var bodyPart in Snake.Instance.BodyParts)
+                foreach (var bodyPart in Snake.Instance.theSnake)
                 {
-                    if (temp == bodyPart)
+                    if (temp == bodyPart.Position)
                     {
                         acceptable = false;
                         break;
@@ -98,6 +74,11 @@ namespace UltimateSnake.GameObjects
             while (!acceptable);
 
             return temp;
+        }
+
+        public DrawableGameObject GetGameObject()
+        {
+            return this;
         }
     }
 }

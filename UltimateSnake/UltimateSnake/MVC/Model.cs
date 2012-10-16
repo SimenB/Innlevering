@@ -26,7 +26,6 @@
             }
 
             Snake.Instance.Update();
-            Loot.Instance.Update();
 
             CheckCollision();
         }
@@ -36,19 +35,12 @@
         /// </summary>
         private static void CheckCollision()
         {
-            if (Snake.Instance.Position != Loot.Instance.Position)
+            if (Snake.Instance.theSnake[0].Position != Loot.Instance.Position)
             {
                 return;
             }
-            
-            Snake.Instance.BodyParts.Add(new Point(Snake.Instance.BodyParts.Last()));
 
             Loot.Instance.NewLoot();
-        }
-
-        public static void DrawAt(Point position, char sign, string color)
-        {
-            View.DrawAt(position, sign, color);
         }
     }
 }

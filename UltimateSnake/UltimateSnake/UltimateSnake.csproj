@@ -57,7 +57,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="GameObjects\DrawableGameObject.cs" />
     <Compile Include="GameObjects\Loot.cs" />
+    <Compile Include="GameObjects\SnakeBody.cs" />
+    <Compile Include="GameObjects\SnakeHead.cs" />
     <Compile Include="MVC\Controller.cs" />
     <Compile Include="Resources.Designer.cs">
       <AutoGen>True</AutoGen>

@@ -44,29 +44,41 @@
 
         public static void Draw()
         {
-            Loot.Instance.Draw();
-            Snake.Instance.Draw();
+            Draw(Loot.Instance.GetGameObject());
+            Draw(Snake.Instance.GetGameObject());
         }
 
         /// <summary>
         /// Draw a char
         /// </summary>
-        /// <param name="position">
-        /// The position to draw
+        /// <param name="obj">
+        /// The obj.
         /// </param>
-        /// <param name="sign">
-        /// The char to draw
-        /// </param>
-        /// <param name="color">
-        /// The color to draw the char
-        /// </param>
-        public static void DrawAt(Utilities.Point position, char sign, string color)
+        public static void Draw(DrawableGameObject obj)
         {
-            Console.SetCursorPosition(position.X, position.Y);
+            Console.SetCursorPosition(obj.Position.X, obj.Position.Y);
 
-            Console.ForegroundColor = ColorMapping[Color.FromName(color)];
+            Console.ForegroundColor = ColorMapping[Color.FromName(obj.Color)];
 
-            Console.Write(sign);
+            Console.Write((char)obj.Texture);
+        }
+
+        /// <summary>
+        /// Draw a char
+        /// </summary>
+        /// <param name="objList">
+        /// The object List.
+        /// </param>
+        public static void Draw(IEnumerable<DrawableGameObject> objList)
+        {
+            foreach (DrawableGameObject gameObject in objList)
+            {
+                Console.SetCursorPosition(gameObject.Position.X, gameObject.Position.Y);
+
+                Console.ForegroundColor = ColorMapping[Color.FromName(gameObject.Color)];
+
+                Console.Write((char)gameObject.Texture);
+            }
         }
     }
 }

@@ -121,12 +121,9 @@ namespace UltimateSnake
 
                 stopwatch.Restart();
 
-                Model.Update();
+                View.Draw();
 
-                if (snake.Alive)
-                {
-                    View.Draw();
-                }
+                Model.Update();
             }
             while (snake.Alive);
         }
