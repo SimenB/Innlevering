@@ -48,10 +48,10 @@ namespace UltimateSnake.GameObjects
         private Snake()
         {
             this.theSnake = new List<DrawableGameObject> {
-                new SnakeHead(new Point(Program.WindowSize.X / 2, Program.WindowSize.Y / 2)),
+                new SnakeHead(new Point(Program.MidScreen)),
                 new SnakeBody(),
                 new SnakeBody(),
-                new SnakeBody() ,
+                new SnakeBody(),
                 new Blank()
             };
 

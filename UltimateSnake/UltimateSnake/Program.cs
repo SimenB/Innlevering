@@ -32,6 +32,11 @@ namespace UltimateSnake
             get { return new Point(Console.WindowWidth, Console.WindowHeight); }
         }
 
+        public static Point MidScreen
+        {
+            get { return new Point(WindowSize.X / 2, WindowSize.Y / 2); }
+        }
+
         /// <summary>
         /// Gets or sets a value indicating whether the game is paused.
         /// </summary>
@@ -121,9 +126,9 @@ namespace UltimateSnake
 
                 stopwatch.Restart();
 
-                View.Draw();
-
                 Model.Update();
+
+                View.Draw();
             }
             while (snake.Alive);
         }

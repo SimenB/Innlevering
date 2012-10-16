@@ -54,9 +54,9 @@
         /// Draw a char
         /// </summary>
         /// <param name="obj">
-        /// The object to be drawn
+        /// The obj.
         /// </param>
-        private static void Draw(DrawableGameObject obj)
+        public static void Draw(DrawableGameObject obj)
         {
             Console.SetCursorPosition(obj.Position.X, obj.Position.Y);
 
@@ -69,9 +69,9 @@
         /// Draw a char
         /// </summary>
         /// <param name="objList">
-        /// A list of all objects to be drawn
+        /// The object List.
         /// </param>
-        private static void Draw(IEnumerable<DrawableGameObject> objList)
+        public static void Draw(IEnumerable<DrawableGameObject> objList)
         {
             foreach (DrawableGameObject gameObject in objList)
             {

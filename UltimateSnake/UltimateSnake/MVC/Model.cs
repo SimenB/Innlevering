@@ -25,9 +25,9 @@
                 return;
             }
 
-            Snake.Instance.Update();
-
             CheckCollision();
+
+            Snake.Instance.Update();
         }
 
         /// <summary>
@@ -40,9 +40,7 @@
                 return;
             }
 
-            int length = Snake.Instance.theSnake.Count;
-
-            Snake.Instance.theSnake[length - 1] = new SnakeBody();
+            Snake.Instance.theSnake[Snake.Instance.theSnake.Count - 1] = new SnakeBody();
 
             Snake.Instance.theSnake.Add(new Blank());
 
