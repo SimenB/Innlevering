@@ -47,7 +47,13 @@ namespace UltimateSnake.GameObjects
         /// </summary>
         private Snake()
         {
-            this.theSnake = new List<DrawableGameObject> { new SnakeHead(new Point(Program.WindowSize.X / 2, Program.WindowSize.Y / 2)), new SnakeBody(), new SnakeBody(), new SnakeBody() };
+            this.theSnake = new List<DrawableGameObject> {
+                new SnakeHead(new Point(Program.WindowSize.X / 2, Program.WindowSize.Y / 2)),
+                new SnakeBody(),
+                new SnakeBody(),
+                new SnakeBody() ,
+                new Blank()
+            };
 
             for (int i = this.theSnake.Count - 1; i > 0; i--)
             {
@@ -83,18 +89,6 @@ namespace UltimateSnake.GameObjects
 
         public List<DrawableGameObject> GetGameObject()
         {
-            /*
-            Model.DrawAt(this.Position, '@', "Green");
-
-            foreach (Point bodyPart in this.BodyParts)
-            {
-                Model.DrawAt(bodyPart, 'O', "Green");
-            }
-
-            // Remove the body-part at the end of the snake
-            Model.DrawAt(this.positionLastFrame, ' ', "Black");
-             * */
-
             return this.theSnake;
         }
 
@@ -117,8 +111,8 @@ namespace UltimateSnake.GameObjects
 
             this.Movement();
 
-            // If the snake runs into itself, it dies
-            for (int i = 1; i < this.theSnake.Count; i++)
+            // If the head of the snake runs into another part of itself, it dies
+            for (int i = 1; i < this.theSnake.Count - 1; i++)
             {
                 if (this.theSnake[0].Position == this.theSnake[i].Position)
                 {

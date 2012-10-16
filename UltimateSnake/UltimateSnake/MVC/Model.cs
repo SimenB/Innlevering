@@ -40,6 +40,12 @@
                 return;
             }
 
+            int length = Snake.Instance.theSnake.Count;
+
+            Snake.Instance.theSnake[length - 1] = new SnakeBody();
+
+            Snake.Instance.theSnake.Add(new Blank());
+
             Loot.Instance.NewLoot();
         }
     }

@@ -17,8 +17,7 @@ namespace UltimateSnake.GameObjects
             this.Color = "Green";
         }
 
-        public SnakeBody()
-            : this(new Point())
+        public SnakeBody() : this(new Point())
         {
         }
     }

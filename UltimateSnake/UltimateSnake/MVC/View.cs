@@ -6,6 +6,8 @@
 
     using GameObjects;
 
+    using UltimateSnake.Utilities;
+
     public class View
     {
         private static View instance;
@@ -52,9 +54,9 @@
         /// Draw a char
         /// </summary>
         /// <param name="obj">
-        /// The obj.
+        /// The object to be drawn
         /// </param>
-        public static void Draw(DrawableGameObject obj)
+        private static void Draw(DrawableGameObject obj)
         {
             Console.SetCursorPosition(obj.Position.X, obj.Position.Y);
 
@@ -67,17 +69,13 @@
         /// Draw a char
         /// </summary>
         /// <param name="objList">
-        /// The object List.
+        /// A list of all objects to be drawn
         /// </param>
-        public static void Draw(IEnumerable<DrawableGameObject> objList)
+        private static void Draw(IEnumerable<DrawableGameObject> objList)
         {
             foreach (DrawableGameObject gameObject in objList)
             {
-                Console.SetCursorPosition(gameObject.Position.X, gameObject.Position.Y);
-
-                Console.ForegroundColor = ColorMapping[Color.FromName(gameObject.Color)];
-
-                Console.Write((char)gameObject.Texture);
+                Draw(gameObject);
             }
         }
     }
