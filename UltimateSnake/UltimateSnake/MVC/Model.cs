@@ -44,7 +44,7 @@
 
             Snake.Instance.theSnake.Add(new Blank());
 
-            Loot.Instance.NewLoot();
+            Loot.NewLoot();
         }
     }
 }

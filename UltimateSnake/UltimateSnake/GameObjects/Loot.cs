@@ -11,8 +11,6 @@ namespace UltimateSnake.GameObjects
 {
     using System;
 
-    using MVC;
-
     using Utilities;
 
     /// <summary>
@@ -20,6 +18,9 @@ namespace UltimateSnake.GameObjects
     /// </summary>
     public class Loot : DrawableGameObject
     {
+        /// <summary>
+        /// The instance.
+        /// </summary>
         private static Loot instance;
 
         /// <summary>
@@ -36,23 +37,49 @@ namespace UltimateSnake.GameObjects
             this.Position = position;
             this.Texture = sign;
             this.Color = "Red";
+            this.HasChanged = true;
         }
 
+        /// <summary>
+        /// Gets the instance.
+        /// </summary>
         public static Loot Instance
         {
-            get { return instance ?? (instance = new Loot(GetRandomPosition())); }
+            get { return instance ?? (instance = new Loot(RandomPosition())); }
         }
 
-        public void NewLoot()
+        /// <summary>
+        /// Add a new loot to the game-screen
+        /// </summary>
+        public static void NewLoot()
         {
-            instance = new Loot(GetRandomPosition());
+            instance = new Loot(RandomPosition());
         }
 
-        private static Point GetRandomPosition()
+        /// <summary>
+        /// Returns what to draw
+        /// </summary>
+        /// <returns>
+        /// The <see cref="DrawableGameObject"/>.
+        /// </returns>
+        public DrawableGameObject GetGameObject()
+        {
+            this.HasChanged = false;
+
+            return this;
+        }
+
+        /// <summary>
+        /// Sets a position at random on the game-screen
+        /// </summary>
+        /// <returns>
+        /// The <see cref="Point"/>.
+        /// </returns>
+        private static Point RandomPosition()
         {
             // TODO: Optimize
             Random random = new Random();
-            var acceptable = false;
+            bool acceptable = false;
 
             Point temp;
 
@@ -74,11 +101,6 @@ namespace UltimateSnake.GameObjects
             while (!acceptable);
 
             return temp;
-        }
-
-        public DrawableGameObject GetGameObject()
-        {
-            return this;
         }
     }
 }

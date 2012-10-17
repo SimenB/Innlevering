@@ -18,5 +18,7 @@ namespace UltimateSnake.GameObjects
         public object Texture { get; protected set; }
 
         public string Color { get; protected set; }
+
+        public bool HasChanged { get; protected set; }
     }
 }
