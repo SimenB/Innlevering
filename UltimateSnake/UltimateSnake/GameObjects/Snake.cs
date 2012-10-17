@@ -47,13 +47,14 @@ namespace UltimateSnake.GameObjects
         /// </summary>
         private Snake()
         {
-            this.theSnake = new List<DrawableGameObject> {
-                new SnakeHead(new Point(Program.MidScreen)),
-                new SnakeBody(),
-                new SnakeBody(),
-                new SnakeBody(),
-                new Blank()
-            };
+            this.theSnake = new List<DrawableGameObject>
+                {
+                    new SnakeHead(new Point(Program.MidScreen)),
+                    new SnakeBody(),
+                    new SnakeBody(),
+                    new SnakeBody(),
+                    new Blank()
+                };
 
             for (int i = this.theSnake.Count - 1; i > 0; i--)
             {
