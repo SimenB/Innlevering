@@ -56,11 +56,10 @@ namespace UltimateSnake.Utilities
             }
 
             ConsoleKeyInfo buttonPressed = Console.ReadKey(true);
-      
-            // Empty the buffer
+
+            // Always use the last input
             while (Console.KeyAvailable)
             {
-               /* Console.ReadKey(true);*/
                 buttonPressed = Console.ReadKey(true);
             }
 
@@ -87,44 +86,60 @@ namespace UltimateSnake.Utilities
                     this.DirectionToMove = Snake.Direction.Left;
                     break;
                 case ConsoleKey.NumPad1:
-                    if (Snake.Instance.CurrentDirection == Snake.Direction.Left || Snake.Instance.CurrentDirection == Snake.Direction.Right)
+                    switch (Snake.Instance.CurrentDirection)
                     {
-                        this.DirectionToMove = Snake.Direction.Down;
+                        case Snake.Direction.Right:
+                        case Snake.Direction.Left:
+                            this.DirectionToMove = Snake.Direction.Down;
+                            break;
+                        case Snake.Direction.Up:
+                        case Snake.Direction.Down:
+                            this.DirectionToMove = Snake.Direction.Left;
+                            break;
                     }
-                    else if (Snake.Instance.CurrentDirection == Snake.Direction.Down || Snake.Instance.CurrentDirection == Snake.Direction.Up)
-                    {
-                        this.DirectionToMove = Snake.Direction.Left;
-                    }
+
                     break;
                 case ConsoleKey.NumPad3:
-                    if (Snake.Instance.CurrentDirection == Snake.Direction.Left || Snake.Instance.CurrentDirection == Snake.Direction.Right)
+                    switch (Snake.Instance.CurrentDirection)
                     {
-                        this.DirectionToMove = Snake.Direction.Down;
+                        case Snake.Direction.Right:
+                        case Snake.Direction.Left:
+                            this.DirectionToMove = Snake.Direction.Down;
+                            break;
+                        case Snake.Direction.Up:
+                        case Snake.Direction.Down:
+                            this.DirectionToMove = Snake.Direction.Right;
+                            break;
                     }
-                    else if (Snake.Instance.CurrentDirection == Snake.Direction.Down || Snake.Instance.CurrentDirection == Snake.Direction.Up)
-                    {
-                        this.DirectionToMove = Snake.Direction.Right;
-                    }
+
                     break;
                 case ConsoleKey.NumPad7:
-                    if (Snake.Instance.CurrentDirection == Snake.Direction.Left || Snake.Instance.CurrentDirection == Snake.Direction.Right)
+                    switch (Snake.Instance.CurrentDirection)
                     {
-                        this.DirectionToMove = Snake.Direction.Up;
+                        case Snake.Direction.Right:
+                        case Snake.Direction.Left:
+                            this.DirectionToMove = Snake.Direction.Up;
+                            break;
+                        case Snake.Direction.Up:
+                        case Snake.Direction.Down:
+                            this.DirectionToMove = Snake.Direction.Left;
+                            break;
                     }
-                    else if (Snake.Instance.CurrentDirection == Snake.Direction.Down || Snake.Instance.CurrentDirection == Snake.Direction.Up)
-                    {
-                        this.DirectionToMove = Snake.Direction.Left;
-                    }
+
                     break;
                 case ConsoleKey.NumPad9:
-                    if (Snake.Instance.CurrentDirection == Snake.Direction.Left || Snake.Instance.CurrentDirection == Snake.Direction.Right)
+                    switch (Snake.Instance.CurrentDirection)
                     {
-                        this.DirectionToMove = Snake.Direction.Up;
+                        case Snake.Direction.Right:
+                        case Snake.Direction.Left:
+                            this.DirectionToMove = Snake.Direction.Up;
+                            break;
+                        case Snake.Direction.Up:
+                        case Snake.Direction.Down:
+                            this.DirectionToMove = Snake.Direction.Right;
+                            break;
                     }
-                    else if (Snake.Instance.CurrentDirection == Snake.Direction.Down || Snake.Instance.CurrentDirection == Snake.Direction.Up)
-                    {
-                        this.DirectionToMove = Snake.Direction.Right;
-                    }
+
                     break;
                 case ConsoleKey.Escape:
                 case ConsoleKey.End:
