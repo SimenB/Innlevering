@@ -51,7 +51,7 @@ namespace UltimateSnake.GameObjects
         /// <summary>
         /// Add a new loot to the game-screen
         /// </summary>
-        public static void NewLoot()
+        public static void AddNewLoot()
         {
             instance = new Loot(RandomPosition());
         }
@@ -77,12 +77,12 @@ namespace UltimateSnake.GameObjects
         /// </returns>
         private static Point RandomPosition()
         {
-            // TODO: Optimize
             Random random = new Random();
             bool acceptable = false;
 
             Point temp;
 
+            // TODO: Optimize
             do
             {
                 temp = new Point(random.Next(Program.WindowSize.X), random.Next(Program.WindowSize.Y));
