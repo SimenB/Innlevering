@@ -57,6 +57,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ConsoleSnakeGame.cs" />
     <Compile Include="GameObjects\Blank.cs" />
     <Compile Include="GameObjects\DrawableGameObject.cs" />
     <Compile Include="GameObjects\Loot.cs" />
@@ -69,6 +70,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Include="SnakeGame.cs" />
     <Compile Include="Utilities\InputHandler.cs" />
     <Compile Include="MVC\Model.cs" />
     <Compile Include="Program.cs" />

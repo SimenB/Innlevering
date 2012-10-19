@@ -85,7 +85,7 @@ namespace UltimateSnake.GameObjects
             // TODO: Optimize
             do
             {
-                temp = new Point(random.Next(Program.WindowSize.X), random.Next(Program.WindowSize.Y));
+                temp = new Point(random.Next(SnakeGame.WindowSize.X), random.Next(SnakeGame.WindowSize.Y));
 
                 foreach (var bodyPart in Snake.Instance.theSnake)
                 {

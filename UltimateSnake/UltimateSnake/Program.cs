@@ -45,7 +45,7 @@ namespace UltimateSnake
             // Preload();
             // player.PlayLooping();
 
-            GameLoop();
+            ConsoleSnakeGame.GameLoop();
         }
 
         private static void Preload()
@@ -92,37 +92,6 @@ namespace UltimateSnake
             Console.BackgroundColor = ConsoleColor.Black;
             Console.Clear();
             Console.ForegroundColor = ConsoleColor.Green;
-        }
-
-        /// <summary>
-        /// The game loop
-        /// </summary>
-        private static void GameLoop()
-        {
-            var stopwatch = new Stopwatch();
-            stopwatch.Start();
-
-            var consoleView = ConsoleView.Instance;
-
-            var snake = SnakeGame.Instance;
-
-            do
-            {
-                // Check for pause
-                Controller.Instance.Update();
-
-                if (stopwatch.ElapsedMilliseconds < 1000 / FPS)
-                {
-                    continue;
-                }
-
-                stopwatch.Restart();
-
-                consoleView.Draw();
-
-                Model.Update();
-            }
-            while (snake.Alive);
         }
     }
 }

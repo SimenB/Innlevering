@@ -49,7 +49,7 @@ namespace UltimateSnake.GameObjects
         {
             this.theSnake = new List<DrawableGameObject>
                 {
-                    new SnakeHead(new Point(Program.MidScreen)),
+                    new SnakeHead(new Point(SnakeGame.MidScreen)),
                     new SnakeBody(),
                     new SnakeBody(),
                     new SnakeBody(),
@@ -123,7 +123,7 @@ namespace UltimateSnake.GameObjects
 
             // BUG: The bottom right corner
             // If the snake is outside of the game-window, it dies
-            if (this.theSnake[0].Position.X < 0 || this.theSnake[0].Position.X >= Program.WindowSize.X || this.theSnake[0].Position.Y < 0 || this.theSnake[0].Position.Y >= Program.WindowSize.Y)
+            if (this.theSnake[0].Position.X < 0 || this.theSnake[0].Position.X >= SnakeGame.WindowSize.X || this.theSnake[0].Position.Y < 0 || this.theSnake[0].Position.Y >= SnakeGame.WindowSize.Y)
             {
                 this.Alive = false;
             }
