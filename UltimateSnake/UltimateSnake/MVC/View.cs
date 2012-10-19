@@ -9,7 +9,6 @@
 
 namespace UltimateSnake.MVC
 {
-    using System;
     using System.Collections.Generic;
     using System.Drawing;
 
@@ -17,18 +16,19 @@ namespace UltimateSnake.MVC
 
     public abstract class View
     {
-        protected static View instance;
-        
         /// <summary>
-        /// A mapping of colors
+        /// The instance.
+        /// </summary>
+        protected static View instance;
+
+        /// <summary>
+        /// Gets or sets a mapping of colors
         /// </summary>
         protected abstract Dictionary<Color, object> ColorMapping { get; set; }
 
         /// <summary>
-        /// Gets the instance. If it's not initialized, do so
+        /// Draw all draw-able objects
         /// </summary>
-        public static View Instance { get; protected set; }
-
         public void Draw()
         {
             this.Draw(Loot.Instance.GetGameObject());
@@ -47,9 +47,9 @@ namespace UltimateSnake.MVC
         /// Draw a char
         /// </summary>
         /// <param name="objList">
-        /// The object List.
+        /// The list of objects to draw
         /// </param>
-        protected void Draw(IEnumerable<DrawableGameObject> objList)
+        private void Draw(IEnumerable<DrawableGameObject> objList)
         {
             foreach (DrawableGameObject gameObject in objList)
             {

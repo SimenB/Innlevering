@@ -2,7 +2,7 @@
 {
     using Utilities;
 
-    internal class Controller
+    public class Controller
     {
         private static Controller instance;
 

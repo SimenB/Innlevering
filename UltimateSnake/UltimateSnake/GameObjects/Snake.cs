@@ -1,6 +1,6 @@
 ﻿using UltimateSnake.Utilities;
 // --------------------------------------------------------------------------------------------------------------------
-// <copyright file="Snake.cs" company="MarSimJør">
+// <copyright file="SnakeGame.cs" company="MarSimJør">
 //   Copyright © 2012
 // </copyright>
 // <summary>

@@ -43,7 +43,7 @@ namespace UltimateSnake.MVC
         /// <summary>
         /// Gets the instance.
         /// </summary>
-        public static new View Instance
+        public static View Instance
         {
             get { return instance ?? (instance = new ConsoleView()); }
         }

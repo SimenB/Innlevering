@@ -30,22 +30,6 @@ namespace UltimateSnake
         private const int FPS = 10;
 
         /// <summary>
-        /// Gets the size of the window (remember that the console uses rows and columns, NOT pixels)
-        /// </summary>
-        public static Point WindowSize
-        {
-            get { return new Point(Console.WindowWidth, Console.WindowHeight); }
-        }
-
-        /// <summary>
-        /// Gets the mid-point of the screen
-        /// </summary>
-        public static Point MidScreen
-        {
-            get { return new Point(WindowSize.X / 2, WindowSize.Y / 2); }
-        }
-
-        /// <summary>
         /// Gets or sets a value indicating whether the game is paused.
         /// </summary>
         public static bool Paused { get; set; }
@@ -120,7 +104,7 @@ namespace UltimateSnake
 
             var consoleView = ConsoleView.Instance;
 
-            var snake = Snake.Instance;
+            var snake = SnakeGame.Instance;
 
             do
             {

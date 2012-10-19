@@ -1,9 +1,6 @@
 ﻿namespace UltimateSnake.MVC
 {
-    using System.Linq;
-
     using GameObjects;
-    using Utilities;
 
     public class Model
     {
