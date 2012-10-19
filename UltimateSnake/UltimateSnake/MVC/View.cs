@@ -15,51 +15,33 @@ namespace UltimateSnake.MVC
 
     using GameObjects;
 
-    public static class View
+    public abstract class View
     {
+        protected static View instance;
+        
         /// <summary>
         /// A mapping of colors
         /// </summary>
-        private static readonly Dictionary<Color, ConsoleColor> ColorMapping = new Dictionary<Color, ConsoleColor>()
-        { 
-            { Color.Black,          ConsoleColor.Black }, 
-            { Color.Blue,           ConsoleColor.Blue },
-            { Color.Cyan,           ConsoleColor.Cyan },
-            { Color.DarkBlue,       ConsoleColor.DarkBlue },
-            { Color.DarkCyan,       ConsoleColor.DarkCyan },
-            { Color.DarkGray,       ConsoleColor.DarkGray },
-            { Color.DarkGreen,      ConsoleColor.DarkGreen },
-            { Color.DarkMagenta,    ConsoleColor.DarkMagenta },
-            { Color.DarkRed,        ConsoleColor.DarkRed },
-            // { Color.DarkYellow,     ConsoleColor.DarkYellow },
-            { Color.Gray,           ConsoleColor.Gray },
-            { Color.Green,          ConsoleColor.Green },
-            { Color.Magenta,        ConsoleColor.Magenta },
-            { Color.Red,            ConsoleColor.Red },
-            { Color.White,          ConsoleColor.White },
-            { Color.Yellow,         ConsoleColor.Yellow }
-        };
+        protected abstract Dictionary<Color, object> ColorMapping { get; set; }
 
-        public static void Draw()
+        /// <summary>
+        /// Gets the instance. If it's not initialized, do so
+        /// </summary>
+        public static View Instance { get; protected set; }
+
+        public void Draw()
         {
-            Draw(Loot.Instance.GetGameObject());
-            Draw(Snake.Instance.GetGameObject());
+            this.Draw(Loot.Instance.GetGameObject());
+            this.Draw(Snake.Instance.GetGameObject());
         }
 
         /// <summary>
         /// Draw a char
         /// </summary>
         /// <param name="obj">
-        /// The obj.
+        /// The object to draw
         /// </param>
-        public static void Draw(DrawableGameObject obj)
-        {
-            Console.SetCursorPosition(obj.Position.X, obj.Position.Y);
-
-            Console.ForegroundColor = ColorMapping[Color.FromName(obj.Color)];
-
-            Console.Write((char)obj.Texture);
-        }
+        protected abstract void Draw(DrawableGameObject obj);
 
         /// <summary>
         /// Draw a char
@@ -67,11 +49,11 @@ namespace UltimateSnake.MVC
         /// <param name="objList">
         /// The object List.
         /// </param>
-        public static void Draw(IEnumerable<DrawableGameObject> objList)
+        protected void Draw(IEnumerable<DrawableGameObject> objList)
         {
             foreach (DrawableGameObject gameObject in objList)
             {
-                Draw(gameObject);
+                this.Draw(gameObject);
             }
         }
     }

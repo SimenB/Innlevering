@@ -24,7 +24,10 @@ namespace UltimateSnake
     {
         private static System.Media.SoundPlayer player;
 
-        private const int fps = 10;
+        /// <summary>
+        /// The number of frames per second
+        /// </summary>
+        private const int FPS = 10;
 
         /// <summary>
         /// Gets the size of the window (remember that the console uses rows and columns, NOT pixels)
@@ -34,6 +37,9 @@ namespace UltimateSnake
             get { return new Point(Console.WindowWidth, Console.WindowHeight); }
         }
 
+        /// <summary>
+        /// Gets the mid-point of the screen
+        /// </summary>
         public static Point MidScreen
         {
             get { return new Point(WindowSize.X / 2, WindowSize.Y / 2); }
@@ -112,6 +118,8 @@ namespace UltimateSnake
             var stopwatch = new Stopwatch();
             stopwatch.Start();
 
+            var consoleView = ConsoleView.Instance;
+
             var snake = Snake.Instance;
 
             do
@@ -119,14 +127,14 @@ namespace UltimateSnake
                 // Check for pause
                 Controller.Instance.Update();
 
-                if (stopwatch.ElapsedMilliseconds < 1000 / fps)
+                if (stopwatch.ElapsedMilliseconds < 1000 / FPS)
                 {
                     continue;
                 }
 
                 stopwatch.Restart();
 
-                View.Draw();
+                consoleView.Draw();
 
                 Model.Update();
             }
