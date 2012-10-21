@@ -6,6 +6,11 @@
     {
         private static Model instance;
 
+        /// <summary>
+        /// Gets or sets a value indicating whether the game is paused.
+        /// </summary>
+        public static bool Paused { get; set; }
+
         private Model()
         {
         }
@@ -17,7 +22,7 @@
 
         public static void Update()
         {
-            if (Program.Paused)
+            if (Paused)
             {
                 return;
             }

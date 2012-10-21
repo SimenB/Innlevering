@@ -15,6 +15,8 @@ namespace UltimateSnake.Utilities
 
     using GameObjects;
 
+    using UltimateSnake.MVC;
+
     /// <summary>
     /// The input handler
     /// </summary>
@@ -147,7 +149,7 @@ namespace UltimateSnake.Utilities
                     break;
                 case ConsoleKey.Spacebar:
                 case ConsoleKey.NumPad5:
-                    Program.Paused = !Program.Paused;
+                    Model.Paused = !Model.Paused;
                     this.DirectionToMove = Snake.Instance.CurrentDirection;
                     break;
                 default:

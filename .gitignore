@@ -96,6 +96,9 @@ DocProject/Help/html
 # Click-Once directory
 publish
 
+# TFS
+$tf*
+
 # Others
 [Bb]in
 [Oo]bj
