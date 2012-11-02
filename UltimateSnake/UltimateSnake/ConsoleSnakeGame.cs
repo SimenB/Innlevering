@@ -26,17 +26,19 @@ namespace UltimateSnake
 
         private ConsoleSnakeGame()
         {
-            // Preload();
-            // player.PlayLooping();
         }
 
-        private static void Preload()
+        public static new void StartGame()
         {
+            WindowSize = new Point(Console.WindowWidth, Console.WindowHeight);
+            MidScreen = new Point(WindowSize.X / 2, WindowSize.Y / 2);
+            FPS = 10;
+
             // "Square" window
-            Console.SetWindowSize(Console.WindowWidth, Console.WindowWidth / 2);
+            Console.SetWindowSize(WindowSize.X, WindowSize.Y);
 
             // Get rid of the scrollbar
-            Console.SetBufferSize(Console.WindowWidth, Console.WindowWidth / 2);
+            Console.SetBufferSize(WindowSize.X, WindowSize.Y);
 
             // Dark red background-color
             Console.BackgroundColor = ConsoleColor.DarkRed;
@@ -55,8 +57,8 @@ namespace UltimateSnake
             Console.WriteLine(text);
 
             // Load the background music
-            ConsoleSnakeGame.player = new System.Media.SoundPlayer(Resources.Philter___Spellbound_In_8_Bit);
-            ConsoleSnakeGame.player.Load();
+            player = new System.Media.SoundPlayer(Resources.Philter___Spellbound_In_8_Bit);
+            player.Load();
 
             // Pretend to be actually doing something
             Thread.Sleep(2250);
@@ -73,15 +75,13 @@ namespace UltimateSnake
             // Make the background black and the text green.
             Console.BackgroundColor = ConsoleColor.Black;
             Console.Clear();
-            Console.ForegroundColor = ConsoleColor.Green;
+
+            // After setting up the game, enter the game-loop
+            GameLoop();
         }
 
         public static void GameLoop()
         {
-            WindowSize = new Point(Console.WindowWidth, Console.WindowHeight);
-            MidScreen = new Point(WindowSize.X / 2, WindowSize.Y / 2);
-            FPS = 10;
-
             var stopwatch = new Stopwatch();
             stopwatch.Start();
 

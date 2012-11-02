@@ -2,23 +2,12 @@
 {
     using GameObjects;
 
-    public class Model
+    public static class Model
     {
-        private static Model instance;
-
         /// <summary>
         /// Gets or sets a value indicating whether the game is paused.
         /// </summary>
         public static bool Paused { get; set; }
-
-        private Model()
-        {
-        }
-
-        public static Model Instance
-        {
-            get { return instance ?? (instance = new Model()); }
-        }
 
         public static void Update()
         {
@@ -42,9 +31,7 @@
                 return;
             }
 
-            Snake.Instance.theSnake[Snake.Instance.theSnake.Count - 1] = new SnakeBody();
-
-            Snake.Instance.theSnake.Add(new Blank());
+            Snake.AddBodyPart();
 
             Loot.AddNewLoot();
         }

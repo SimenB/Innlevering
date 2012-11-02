@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace UltimateSnake
+﻿namespace UltimateSnake
 {
     using UltimateSnake.Utilities;
 
@@ -24,5 +18,12 @@ namespace UltimateSnake
         /// Gets or sets the mid-point of the screen
         /// </summary>
         protected static int FPS { get; set; }
+
+        /// <summary>
+        /// Start the game
+        /// </summary>
+        public static void StartGame()
+        {
+        }
     }
 }

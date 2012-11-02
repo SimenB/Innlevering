@@ -129,6 +129,13 @@ namespace UltimateSnake.GameObjects
             }
         }
 
+        public static void AddBodyPart()
+        {
+            Instance.theSnake[Instance.theSnake.Count - 1] = new SnakeBody();
+
+            Instance.theSnake.Add(new Blank());
+        }
+
         /// <summary>
         /// The movement method. To make the update method easier to read
         /// </summary>

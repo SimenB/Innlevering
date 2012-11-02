@@ -22,7 +22,7 @@ namespace UltimateSnake
         /// </param>
         public static void Main(string[] args)
         {
-            ConsoleSnakeGame.GameLoop();
+            ConsoleSnakeGame.StartGame();
         }
     }
 }
