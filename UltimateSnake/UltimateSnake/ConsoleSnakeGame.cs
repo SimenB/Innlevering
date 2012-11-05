@@ -61,7 +61,7 @@ namespace UltimateSnake
             player.Load();
 
             // Pretend to be actually doing something
-            Thread.Sleep(2250);
+            //Thread.Sleep(2250);
 
             // Remove the text and print new
             Console.Clear();
@@ -70,7 +70,7 @@ namespace UltimateSnake
             Console.WriteLine(text);
 
             // Give the player time to read
-            Thread.Sleep(400);
+            //Thread.Sleep(400);
 
             // Make the background black and the text green.
             Console.BackgroundColor = ConsoleColor.Black;

@@ -22,12 +22,7 @@ namespace UltimateSnake.GameObjects
         /// The instance of the snake (singleton)
         /// </summary>
         private static Snake instance;
-
-        /// <summary>
-        /// The input-handler instance
-        /// </summary>
-        private readonly InputHandler input = InputHandler.Instance;
-
+        
         /// <summary>
         /// Prevents a default instance of the <see cref="Snake"/> class from being created.
         /// </summary>
@@ -141,23 +136,23 @@ namespace UltimateSnake.GameObjects
         /// </summary>
         private void Movement()
         {
-            if (this.input.DirectionToMove != this.CurrentDirection)
+            if (InputHandler.DirectionToMove != this.CurrentDirection)
             {
-                if (this.CurrentDirection == Direction.Up && this.input.DirectionToMove != Direction.Down)
+                if (this.CurrentDirection == Direction.Up && InputHandler.DirectionToMove != Direction.Down)
                 {
-                    this.CurrentDirection = this.input.DirectionToMove;
+                    this.CurrentDirection = InputHandler.DirectionToMove;
                 }
-                else if (this.CurrentDirection == Direction.Right && this.input.DirectionToMove != Direction.Left)
+                else if (this.CurrentDirection == Direction.Right && InputHandler.DirectionToMove != Direction.Left)
                 {
-                    this.CurrentDirection = this.input.DirectionToMove;
+                    this.CurrentDirection = InputHandler.DirectionToMove;
                 }
-                else if (this.CurrentDirection == Direction.Down && this.input.DirectionToMove != Direction.Up)
+                else if (this.CurrentDirection == Direction.Down && InputHandler.DirectionToMove != Direction.Up)
                 {
-                    this.CurrentDirection = this.input.DirectionToMove;
+                    this.CurrentDirection = InputHandler.DirectionToMove;
                 }
-                else if (this.CurrentDirection == Direction.Left && this.input.DirectionToMove != Direction.Right)
+                else if (this.CurrentDirection == Direction.Left && InputHandler.DirectionToMove != Direction.Right)
                 {
-                    this.CurrentDirection = this.input.DirectionToMove;
+                    this.CurrentDirection = InputHandler.DirectionToMove;
                 }
             }
 
