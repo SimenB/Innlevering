@@ -19,7 +19,7 @@ namespace UltimateSnake.MVC
     {
         private ConsoleView()
         {
-            this.ColorMapping = new Dictionary<Color, object>()
+            this.ColorMap = new Dictionary<Color, object>()
             { 
                 { Color.Black,          ConsoleColor.Black }, 
                 { Color.Blue,           ConsoleColor.Blue },
@@ -51,7 +51,7 @@ namespace UltimateSnake.MVC
         /// <summary>
         /// Gets or sets the color mapping.
         /// </summary>
-        protected override Dictionary<Color, object> ColorMapping { get; set; }
+        protected override Dictionary<Color, object> ColorMap { get; set; }
 
         /// <summary>
         /// Draw a char
@@ -63,7 +63,7 @@ namespace UltimateSnake.MVC
         {
             Console.SetCursorPosition(obj.Position.X, obj.Position.Y);
 
-            Console.ForegroundColor = (ConsoleColor)this.ColorMapping[Color.FromName(obj.Color)];
+            Console.ForegroundColor = (ConsoleColor)this.ColorMap[Color.FromName(obj.Color)];
 
             Console.Write((char)obj.Texture);
         }

@@ -24,7 +24,7 @@ namespace UltimateSnake.MVC
         /// <summary>
         /// Gets or sets a mapping of colors
         /// </summary>
-        protected abstract Dictionary<Color, object> ColorMapping { get; set; }
+        protected virtual Dictionary<Color, object> ColorMap { get; set; }
 
         /// <summary>
         /// Draw all draw-able objects

@@ -82,7 +82,7 @@ namespace UltimateSnake
 
         public static void GameLoop()
         {
-            var stopwatch = new Stopwatch();
+            Stopwatch stopwatch = new Stopwatch();
             stopwatch.Start();
 
             do

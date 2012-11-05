@@ -26,7 +26,7 @@
         /// </summary>
         private static void CheckCollision()
         {
-            if (Snake.Instance.theSnake[0].Position != Loot.Instance.Position)
+            if (Snake.Instance.TheSnake[0].Position != Loot.Instance.Position)
             {
                 return;
             }

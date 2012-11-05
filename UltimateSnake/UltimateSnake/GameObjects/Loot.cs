@@ -87,7 +87,7 @@ namespace UltimateSnake.GameObjects
             {
                 temp = new Point(random.Next(SnakeGame.WindowSize.X), random.Next(SnakeGame.WindowSize.Y));
 
-                foreach (var bodyPart in Snake.Instance.theSnake)
+                foreach (var bodyPart in Snake.Instance.TheSnake)
                 {
                     if (temp == bodyPart.Position)
                     {
