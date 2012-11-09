@@ -27,12 +27,11 @@ namespace UltimateSnake.MVC
         protected virtual Dictionary<Color, object> ColorMap { get; set; }
 
         /// <summary>
-        /// Draw all draw-able objects
+        /// Draw for every view available
         /// </summary>
-        public void Draw()
+        public static void DrawAll()
         {
-            this.Draw(Loot.Instance.GetGameObject());
-            this.Draw(Snake.Instance.GetGameObject());
+            ConsoleView.Draw();
         }
 
         /// <summary>

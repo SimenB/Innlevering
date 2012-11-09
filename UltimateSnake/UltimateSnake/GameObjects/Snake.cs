@@ -77,18 +77,6 @@ namespace UltimateSnake.GameObjects
         public bool Alive { get; private set; }
 
         /// <summary>
-        /// Add a new body-part to the snake
-        /// </summary>
-        public static void AddBodyPart()
-        {
-//             Instance.TheSnake[Instance.TheSnake.Count - 1] = new SnakeBody();
-// 
-//             Instance.TheSnake.Add(new Blank());
-
-            instance.TheSnake.Add(new SnakeBody());
-        }
-
-        /// <summary>
         /// The get game object.
         /// </summary>
         /// <returns>
@@ -122,7 +110,6 @@ namespace UltimateSnake.GameObjects
                 }
             }
 
-            // BUG: The bottom right corner (This has to do with ho the console works)
             // If the snake is outside of the game-window, it dies
             if (this.TheSnake[0].Position.X < 0 || this.TheSnake[0].Position.X >= SnakeGame.WindowSize.X || this.TheSnake[0].Position.Y < 0 || this.TheSnake[0].Position.Y >= SnakeGame.WindowSize.Y)
             {

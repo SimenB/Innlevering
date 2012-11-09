@@ -29,15 +29,11 @@ namespace UltimateSnake.GameObjects
         /// <param name="position">
         /// The position.
         /// </param>
-        /// <param name="sign">
-        /// The sign.
-        /// </param>
-        private Loot(Point position, char sign = '$')
+        private Loot(Point position)
         {
             this.Position = position;
-            this.Texture = sign;
+            this.ConsoleTexture = '$';
             this.Color = "Red";
-            this.HasChanged = true;
         }
 
         /// <summary>
@@ -51,45 +47,42 @@ namespace UltimateSnake.GameObjects
         /// <summary>
         /// Add a new loot to the game-screen
         /// </summary>
-        public static void AddNewLoot()
+        public static void MoveLoot()
         {
             instance = new Loot(RandomPosition());
         }
 
         /// <summary>
-        /// Returns what to draw
+        /// Get all elements to draw
         /// </summary>
         /// <returns>
         /// The <see cref="DrawableGameObject"/>.
         /// </returns>
         public DrawableGameObject GetGameObject()
         {
-            this.HasChanged = false;
-
             return this;
         }
 
         /// <summary>
-        /// Sets a position at random on the game-screen
+        /// Generates a position on the game-screen
         /// </summary>
         /// <returns>
-        /// The <see cref="Point"/>.
+        /// A position not occupied by the snake
         /// </returns>
         private static Point RandomPosition()
         {
             Random random = new Random();
+            Point position;
             bool acceptable = false;
 
-            Point temp;
-
-            // TODO: Optimize
             do
             {
-                temp = new Point(random.Next(SnakeGame.WindowSize.X), random.Next(SnakeGame.WindowSize.Y));
+                position = new Point(random.Next(SnakeGame.WindowSize.X), random.Next(SnakeGame.WindowSize.Y));
 
+                // Body-part can be both SnakeHead and SnakeBody, so 'var' woks
                 foreach (var bodyPart in Snake.Instance.TheSnake)
                 {
-                    if (temp == bodyPart.Position)
+                    if (position == bodyPart.Position)
                     {
                         acceptable = false;
                         break;
@@ -100,7 +93,7 @@ namespace UltimateSnake.GameObjects
             }
             while (!acceptable);
 
-            return temp;
+            return position;
         }
     }
 }
