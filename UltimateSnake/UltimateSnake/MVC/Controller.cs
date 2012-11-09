@@ -17,7 +17,7 @@
 
         public void Update()
         {
-            InputHandler.Update();
+            Input.UpdateInput();
         }
     }
 }

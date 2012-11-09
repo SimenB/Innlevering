@@ -1,132 +1,100 @@
-// --------------------------------------------------------------------------------------------------------------------
-// <copyright file="InputHandler.cs" company="MarSimJør">
-//   Copyright © 2012
+ï»¿// --------------------------------------------------------------------------------------------------------------------
+// <copyright file="InputHandler.cs" company="MarSimJÃ¸r">
+//   Copyright Â© 2012
 // </copyright>
 // <summary>
-//   The input handler
+//   Defines the InputHandler type.
 // </summary>
 // --------------------------------------------------------------------------------------------------------------------
-
-// TODO: The whole shebang. This is very much a placeholder
 
 namespace UltimateSnake.Utilities
 {
     using System;
 
-    using GameObjects;
-
-    using UltimateSnake.MVC;
-
     /// <summary>
-    /// The input handler
+    /// A class containing handling of all types of input
     /// </summary>
-    public abstract class InputHandler
+    public static class InputHandler
     {
         /// <summary>
-        /// Gets the direction to move.
+        /// Check all input-types supported
         /// </summary>
-        public static Snake.Direction DirectionToMove { get; protected set; }
-
-        public enum Input
+        public static bool CheckAllInputs()
         {
-            Up, UpperRight, Right, LowerRight, Down, LowerLeft, Left, UpperLeft, Quit, Pause
-        }
+            bool newInput;
 
-        public static Input ChosenKey { get; set; }
+            // Only one type of input available now
+            newInput = CheckConsoleInput();
 
-        public static void ChangeDirection()
-        {
-            
+            return newInput;
         }
 
         /// <summary>
-        /// The update.
+        /// Check input from the console
         /// </summary>
-        public static void Update()
+        /// <returns>
+        /// Whether there is new input available
+        /// </returns>
+        private static bool CheckConsoleInput()
         {
-            ConsoleInput.CheckConsoleInput();
-
-            switch (ChosenKey)
+            if (!Console.KeyAvailable)
             {
-                case Input.Up:
-                    DirectionToMove = Snake.Direction.Up;
-                    break;
-                case Input.Right:
-                    DirectionToMove = Snake.Direction.Right;
-                    break;
-                case Input.Down:
-                    DirectionToMove = Snake.Direction.Down;
-                    break;
-                case Input.Left:
-                    DirectionToMove = Snake.Direction.Left;
-                    break;
-                case Input.LowerLeft:
-                    switch (Snake.Instance.CurrentDirection)
-                    {
-                        case Snake.Direction.Right:
-                        case Snake.Direction.Left:
-                            DirectionToMove = Snake.Direction.Down;
-                            break;
-                        case Snake.Direction.Up:
-                        case Snake.Direction.Down:
-                            DirectionToMove = Snake.Direction.Left;
-                            break;
-                    }
+                return false;
+            }
 
-                    break;
-                case Input.LowerRight:
-                    switch (Snake.Instance.CurrentDirection)
-                    {
-                        case Snake.Direction.Right:
-                        case Snake.Direction.Left:
-                            DirectionToMove = Snake.Direction.Down;
-                            break;
-                        case Snake.Direction.Up:
-                        case Snake.Direction.Down:
-                            DirectionToMove = Snake.Direction.Right;
-                            break;
-                    }
+            ConsoleKeyInfo buttonPressed = Console.ReadKey(true);
 
-                    break;
-                case Input.UpperLeft:
-                    switch (Snake.Instance.CurrentDirection)
-                    {
-                        case Snake.Direction.Right:
-                        case Snake.Direction.Left:
-                            DirectionToMove = Snake.Direction.Up;
-                            break;
-                        case Snake.Direction.Up:
-                        case Snake.Direction.Down:
-                            DirectionToMove = Snake.Direction.Left;
-                            break;
-                    }
+            // Always use the last input
+            while (Console.KeyAvailable)
+            {
+                buttonPressed = Console.ReadKey(true);
+            }
 
+            switch (buttonPressed.Key)
+            {
+                case ConsoleKey.UpArrow:
+                case ConsoleKey.W:
+                case ConsoleKey.NumPad8:
+                    Input.ChosenAction = Input.AvailableInput.Up;
                     break;
-                case Input.UpperRight:
-                    switch (Snake.Instance.CurrentDirection)
-                    {
-                        case Snake.Direction.Right:
-                        case Snake.Direction.Left:
-                            DirectionToMove = Snake.Direction.Up;
-                            break;
-                        case Snake.Direction.Up:
-                        case Snake.Direction.Down:
-                            DirectionToMove = Snake.Direction.Right;
-                            break;
-                    }
-
+                case ConsoleKey.RightArrow:
+                case ConsoleKey.D:
+                case ConsoleKey.NumPad6:
+                    Input.ChosenAction = Input.AvailableInput.Right;
                     break;
-                case Input.Quit:
-                    Environment.Exit(0);
+                case ConsoleKey.DownArrow:
+                case ConsoleKey.S:
+                case ConsoleKey.NumPad2:
+                    Input.ChosenAction = Input.AvailableInput.Down;
                     break;
-                case Input.Pause:
-                    Model.Paused = !Model.Paused;
-                    DirectionToMove = Snake.Instance.CurrentDirection;
+                case ConsoleKey.LeftArrow:
+                case ConsoleKey.A:
+                case ConsoleKey.NumPad4:
+                    Input.ChosenAction = Input.AvailableInput.Left;
                     break;
-                default:
-                    DirectionToMove = Snake.Instance.CurrentDirection;
+                case ConsoleKey.NumPad1:
+                    Input.ChosenAction = Input.AvailableInput.LowerLeft;
+                    break;
+                case ConsoleKey.NumPad3:
+                    Input.ChosenAction = Input.AvailableInput.LowerRight;
+                    break;
+                case ConsoleKey.NumPad7:
+                    Input.ChosenAction = Input.AvailableInput.UpperLeft;
+                    break;
+                case ConsoleKey.NumPad9:
+                    Input.ChosenAction = Input.AvailableInput.UpperRight;
+                    break;
+                case ConsoleKey.Escape:
+                case ConsoleKey.End:
+                    Input.ChosenAction = Input.AvailableInput.Quit;
+                    break;
+                case ConsoleKey.Spacebar:
+                case ConsoleKey.NumPad5:
+                    Input.ChosenAction = Input.AvailableInput.Pause;
                     break;
             }
+
+            return true;
         }
     }
 }

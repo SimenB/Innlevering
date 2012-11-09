@@ -28,7 +28,10 @@ namespace UltimateSnake
         {
         }
 
-        public static new void StartGame()
+        /// <summary>
+        /// Start a game of Snake a la Console
+        /// </summary>
+        public static void StartGame()
         {
             WindowSize = new Point(Console.WindowWidth, Console.WindowHeight);
             MidScreen = new Point(WindowSize.X / 2, WindowSize.Y / 2);
@@ -75,33 +78,6 @@ namespace UltimateSnake
             // Make the background black and the text green.
             Console.BackgroundColor = ConsoleColor.Black;
             Console.Clear();
-
-            // After setting up the game, enter the game-loop
-            GameLoop();
-        }
-
-        public static void GameLoop()
-        {
-            Stopwatch stopwatch = new Stopwatch();
-            stopwatch.Start();
-
-            do
-            {
-                // Check for pause
-                Controller.Instance.Update();
-
-                if (stopwatch.ElapsedMilliseconds < 1000 / FPS)
-                {
-                    continue;
-                }
-
-                stopwatch.Restart();
-
-                ConsoleView.Instance.Draw();
-
-                Model.Update();
-            }
-            while (Snake.Instance.Alive);
         }
     }
 }

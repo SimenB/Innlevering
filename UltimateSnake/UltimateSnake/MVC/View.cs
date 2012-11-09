@@ -49,7 +49,7 @@ namespace UltimateSnake.MVC
         /// <param name="objList">
         /// The list of objects to draw
         /// </param>
-        private void Draw(IEnumerable<DrawableGameObject> objList)
+        protected virtual void Draw(List<DrawableGameObject> objList)
         {
             foreach (DrawableGameObject gameObject in objList)
             {

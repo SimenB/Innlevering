@@ -67,5 +67,25 @@ namespace UltimateSnake.MVC
 
             Console.Write((char)obj.Texture);
         }
+
+        /// <summary>
+        /// Draw a char
+        /// </summary>
+        /// <param name="objList">
+        /// The list of objects to draw
+        /// </param>
+        protected override void Draw(List<DrawableGameObject> objList)
+        {
+            Point lastPosition, lastPositionLastFrame;
+
+            foreach (DrawableGameObject gameObject in objList)
+            {
+                this.Draw(gameObject);
+
+               // lastPosition = new Point(gameObject.Position);
+            }
+
+           // this.Draw(Blank);
+        }
     }
 }

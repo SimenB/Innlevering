@@ -75,8 +75,8 @@
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <Compile Include="SnakeGame.cs" />
-    <Compile Include="Utilities\ConsoleInput.cs" />
     <Compile Include="Utilities\InputHandler.cs" />
+    <Compile Include="Utilities\Input.cs" />
     <Compile Include="MVC\Model.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

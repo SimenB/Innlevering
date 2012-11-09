@@ -17,13 +17,8 @@
         /// <summary>
         /// Gets or sets the mid-point of the screen
         /// </summary>
-        protected static int FPS { get; set; }
+        public static int FPS { get; set; }
 
-        /// <summary>
-        /// Start the game
-        /// </summary>
-        public static void StartGame()
-        {
-        }
+
     }
 }

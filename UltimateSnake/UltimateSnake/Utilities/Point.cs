@@ -60,11 +60,35 @@ namespace UltimateSnake.Utilities
         /// </summary>
         public int Y { get; set; }
 
+        /// <summary>
+        /// The ==.
+        /// </summary>
+        /// <param name="p1">
+        /// The first point
+        /// </param>
+        /// <param name="p2">
+        /// The second point
+        /// </param>
+        /// <returns>
+        /// Whether or not the 2 points are equal
+        /// </returns>
         public static bool operator ==(Point p1, Point p2)
         {
             return p1.X == p2.X && p1.Y == p2.Y;
         }
 
+        /// <summary>
+        /// The !=.
+        /// </summary>
+        /// <param name="p1">
+        /// The first point
+        /// </param>
+        /// <param name="p2">
+        /// The second point
+        /// </param>
+        /// <returns>
+        /// Whether the two points are unequal
+        /// </returns>
         public static bool operator !=(Point p1, Point p2)
         {
             return p1.X != p2.X || p1.Y != p2.Y;
