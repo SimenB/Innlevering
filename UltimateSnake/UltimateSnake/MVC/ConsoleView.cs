@@ -17,6 +17,8 @@ namespace UltimateSnake.MVC
 
     public class ConsoleView : View
     {
+        Utilities.Point lastPosition, lastPositionLastFrame = new Utilities.Point();
+
         private ConsoleView()
         {
             this.ColorMap = new Dictionary<Color, object>()
@@ -76,16 +78,16 @@ namespace UltimateSnake.MVC
         /// </param>
         protected override void Draw(List<DrawableGameObject> objList)
         {
-            Point lastPosition, lastPositionLastFrame;
-
             foreach (DrawableGameObject gameObject in objList)
             {
                 this.Draw(gameObject);
-
-               // lastPosition = new Point(gameObject.Position);
+                
+                this.lastPosition = new Utilities.Point(gameObject.Position);
             }
+            
+            this.Draw(new Blank(this.lastPositionLastFrame));
 
-           // this.Draw(Blank);
+            this.lastPositionLastFrame = this.lastPosition;
         }
     }
 }

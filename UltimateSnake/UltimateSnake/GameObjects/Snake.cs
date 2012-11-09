@@ -33,8 +33,7 @@ namespace UltimateSnake.GameObjects
                     new SnakeHead(new Point(SnakeGame.MidScreen)),
                     new SnakeBody(),
                     new SnakeBody(),
-                    new SnakeBody(),
-                    new Blank()
+                    new SnakeBody()
                 };
 
             for (int i = this.TheSnake.Count - 1; i > 0; i--)
@@ -44,8 +43,6 @@ namespace UltimateSnake.GameObjects
             }
 
             this.Alive = true;
-
-            this.CurrentDirection = Direction.Left;
         }
 
         /// <summary>
@@ -84,9 +81,11 @@ namespace UltimateSnake.GameObjects
         /// </summary>
         public static void AddBodyPart()
         {
-            Instance.TheSnake[Instance.TheSnake.Count - 1] = new SnakeBody();
+//             Instance.TheSnake[Instance.TheSnake.Count - 1] = new SnakeBody();
+// 
+//             Instance.TheSnake.Add(new Blank());
 
-            Instance.TheSnake.Add(new Blank());
+            instance.TheSnake.Add(new SnakeBody());
         }
 
         /// <summary>
@@ -115,7 +114,7 @@ namespace UltimateSnake.GameObjects
             this.Movement();
 
             // If the head of the snake runs into another part of itself, it dies
-            for (int i = 1; i < this.TheSnake.Count - 1; i++)
+            for (int i = 1; i < this.TheSnake.Count; i++)
             {
                 if (this.TheSnake[0].Position == this.TheSnake[i].Position)
                 {
@@ -123,7 +122,7 @@ namespace UltimateSnake.GameObjects
                 }
             }
 
-            // BUG: The bottom right corner
+            // BUG: The bottom right corner (This has to do with ho the console works)
             // If the snake is outside of the game-window, it dies
             if (this.TheSnake[0].Position.X < 0 || this.TheSnake[0].Position.X >= SnakeGame.WindowSize.X || this.TheSnake[0].Position.Y < 0 || this.TheSnake[0].Position.Y >= SnakeGame.WindowSize.Y)
             {

@@ -10,11 +10,7 @@
 namespace UltimateSnake
 {
     using System;
-    using System.Diagnostics;
-    using System.Threading;
 
-    using GameObjects;
-    using MVC;
     using Utilities;
 
     /// <summary>

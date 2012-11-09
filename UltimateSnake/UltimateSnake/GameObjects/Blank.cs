@@ -19,11 +19,15 @@ namespace UltimateSnake.GameObjects
         /// <summary>
         /// Initializes a new instance of the <see cref="Blank"/> class.
         /// </summary>
-        public Blank()
+        public Blank() : this(new Point())
         {
-            this.Position = new Point();
+        }
+
+        public Blank(Point pos)
+        {
             this.Color = "Black";
             this.Texture = ' ';
+            this.Position = pos;
         }
     }
 }
