@@ -62,18 +62,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ConsoleSnakeGame.cs" />
-    <Compile Include="GameObjects\Blank.cs" />
+    <Compile Include="GameObjects\ConsoleBlank.cs" />
     <Compile Include="GameObjects\DrawableGameObject.cs" />
     <Compile Include="GameObjects\Loot.cs" />
     <Compile Include="GameObjects\SnakeBody.cs" />
     <Compile Include="GameObjects\SnakeHead.cs" />
     <Compile Include="MVC\Controller.cs" />
     <Compile Include="MVC\View.cs" />
-    <Compile Include="Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Resources.resx</DependentUpon>
-    </Compile>
     <Compile Include="SnakeGame.cs" />
     <Compile Include="Utilities\InputHandler.cs" />
     <Compile Include="Utilities\Input.cs" />
@@ -86,12 +81,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Resources.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
-    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.5">
