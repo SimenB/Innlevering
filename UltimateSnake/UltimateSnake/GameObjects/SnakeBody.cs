@@ -19,21 +19,11 @@ namespace UltimateSnake.GameObjects
         /// <summary>
         /// Initializes a new instance of the <see cref="SnakeBody"/> class.
         /// </summary>
-        /// <param name="p">
-        /// The position
-        /// </param>
-        public SnakeBody(Point p)
+        public SnakeBody()
         {
-            this.Position = p;
-            this.Texture = 'O';
             this.Color = "Green";
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the <see cref="SnakeBody"/> class.
-        /// </summary>
-        public SnakeBody() : this(new Point())
-        {
+            this.Position = new Point();
+            this.ConsoleTexture = 'O';
         }
     }
 }

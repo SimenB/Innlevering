@@ -1,5 +1,5 @@
 ﻿// --------------------------------------------------------------------------------------------------------------------
-// <copyright file="ConsoleView.cs" company="MarSimJør">
+// <copyright file="ConsoleView.cs" company="MarSim">
 //   Copyright © 2012
 // </copyright>
 // <summary>
@@ -15,13 +15,29 @@ namespace UltimateSnake.MVC
 
     using GameObjects;
 
-    public class ConsoleView : View
-    {
-        Utilities.Point lastPosition, lastPositionLastFrame = new Utilities.Point();
+    // BUG: The bottom right corner (This has to do with how the console works)
 
+    /// <summary>
+    /// The console-view
+    /// </summary>
+    public sealed class ConsoleView : View
+    {
+        /// <summary>
+        /// The instance.
+        /// </summary>
+        private static readonly ConsoleView Instance = new ConsoleView();
+
+        /// <summary>
+        /// The position  of the last element this, and the last frame
+        /// </summary>
+        private Utilities.Point lastPosition, lastPositionLastFrame = new Utilities.Point();
+
+        /// <summary>
+        /// Prevents a default instance of the <see cref="ConsoleView"/> class from being created.
+        /// </summary>
         private ConsoleView()
         {
-            this.ColorMap = new Dictionary<Color, object>()
+            this.ColorMap = new Dictionary<Color, object>
             { 
                 { Color.Black,          ConsoleColor.Black }, 
                 { Color.Blue,           ConsoleColor.Blue },
@@ -43,17 +59,18 @@ namespace UltimateSnake.MVC
         }
 
         /// <summary>
-        /// Gets the instance.
-        /// </summary>
-        public static View Instance
-        {
-            get { return instance ?? (instance = new ConsoleView()); }
-        }
-
-        /// <summary>
         /// Gets or sets the color mapping.
         /// </summary>
         protected override Dictionary<Color, object> ColorMap { get; set; }
+
+        /// <summary>
+        /// Draw all draw-able objects
+        /// </summary>
+        public static void Draw()
+        {
+            Instance.Draw(Loot.Instance.GetGameObject());
+            Instance.Draw(Snake.Instance.GetGameObject());
+        }
 
         /// <summary>
         /// Draw a char
@@ -67,7 +84,7 @@ namespace UltimateSnake.MVC
 
             Console.ForegroundColor = (ConsoleColor)this.ColorMap[Color.FromName(obj.Color)];
 
-            Console.Write((char)obj.Texture);
+            Console.Write(obj.ConsoleTexture);
         }
 
         /// <summary>
@@ -85,7 +102,7 @@ namespace UltimateSnake.MVC
                 this.lastPosition = new Utilities.Point(gameObject.Position);
             }
             
-            this.Draw(new Blank(this.lastPositionLastFrame));
+            this.Draw(new ConsoleBlank(this.lastPositionLastFrame));
 
             this.lastPositionLastFrame = this.lastPosition;
         }

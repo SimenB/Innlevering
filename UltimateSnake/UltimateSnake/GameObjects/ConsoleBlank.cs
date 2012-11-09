@@ -1,5 +1,5 @@
 ﻿// --------------------------------------------------------------------------------------------------------------------
-// <copyright file="Blank.cs" company="MarSimJør">
+// <copyright file="ConsoleBlank.cs" company="MarSimJør">
 //   Copyright © 2012
 // </copyright>
 // <summary>
@@ -14,16 +14,16 @@ namespace UltimateSnake.GameObjects
     /// <summary>
     /// A blank spot, used to overwrite the end of the snake
     /// </summary>
-    public class Blank : DrawableGameObject
+    public class ConsoleBlank : DrawableGameObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="Blank"/> class.
+        /// Initializes a new instance of the <see cref="ConsoleBlank"/> class.
         /// </summary>
-        public Blank() : this(new Point())
+        public ConsoleBlank() : this(new Point())
         {
         }
 
-        public Blank(Point pos)
+        public ConsoleBlank(Point pos)
         {
             this.Color = "Black";
             this.Texture = ' ';

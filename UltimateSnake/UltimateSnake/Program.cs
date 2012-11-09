@@ -51,7 +51,7 @@ namespace UltimateSnake
 
                 stopwatch.Restart();
 
-                ConsoleView.Instance.Draw();
+                View.DrawAll();
 
                 Model.Update();
             }

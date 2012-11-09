@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace UltimateSnake.GameObjects
+﻿namespace UltimateSnake.GameObjects
 {
     using UltimateSnake.Utilities;
 
@@ -13,7 +7,7 @@ namespace UltimateSnake.GameObjects
         public SnakeHead(Point p)
         {
             this.Position = p;
-            this.Texture = '@';
+            this.ConsoleTexture = '@';
             this.Color = "Green";
         }
 
