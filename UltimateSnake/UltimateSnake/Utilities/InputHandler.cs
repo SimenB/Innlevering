@@ -19,6 +19,9 @@ namespace UltimateSnake.Utilities
         /// <summary>
         /// Check all input-types supported
         /// </summary>
+        /// <returns>
+        /// Whether there is new input available
+        /// </returns>
         public static bool CheckAllInputs()
         {
             bool newInput;

@@ -9,7 +9,7 @@
         </Rule>
       </Rules>
       <AnalyzerSettings>
-        <StringProperty Name="CompanyName">MarSimJør</StringProperty>
+        <StringProperty Name="CompanyName">MarSim</StringProperty>
         <StringProperty Name="Copyright">Copyright © 2012</StringProperty>
       </AnalyzerSettings>
     </Analyzer>

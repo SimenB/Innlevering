@@ -1,7 +1,19 @@
-﻿namespace UltimateSnake.MVC
+﻿// --------------------------------------------------------------------------------------------------------------------
+// <copyright file="Model.cs" company="MarSim">
+//   Copyright © 2012
+// </copyright>
+// <summary>
+//   The model for the game. Contains all data
+// </summary>
+// --------------------------------------------------------------------------------------------------------------------
+
+namespace UltimateSnake.MVC
 {
     using GameObjects;
 
+    /// <summary>
+    /// The model for the game. Contains all data
+    /// </summary>
     public static class Model
     {
         /// <summary>
@@ -9,6 +21,9 @@
         /// </summary>
         public static bool Paused { get; set; }
 
+        /// <summary>
+        /// The update.
+        /// </summary>
         public static void Update()
         {
             if (Paused)
@@ -31,9 +46,9 @@
                 return;
             }
 
-            Snake.AddBodyPart();
+            Snake.Instance.TheSnake.Add(new SnakeBody());
 
-            Loot.AddNewLoot();
+            Loot.MoveLoot();
         }
     }
 }

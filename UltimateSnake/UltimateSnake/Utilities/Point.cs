@@ -12,7 +12,7 @@ namespace UltimateSnake.Utilities
     /// <summary>
     /// The point
     /// </summary>
-    public class Point
+    public sealed class Point
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="Point"/> class.
