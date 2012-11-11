@@ -9,28 +9,28 @@
 
 namespace UltimateSnake
 {
-    using UltimateSnake.GameObjects;
-    using UltimateSnake.Utilities;
+    using GameObjects;
+    using Utilities;
 
     /// <summary>
-    /// A class which defines the size of the game-board and FPS
+    /// A class which defines the size of the game-board and FramesPerSecond
     /// </summary>
     public abstract class SnakeGame
     {
         /// <summary>
-        /// Gets or sets the size of the window (remember that the console uses rows and columns, NOT pixels)
+        /// Gets or sets the size of the window (remember that the console uses rows and columns, NOT pixels).
         /// </summary>
         public static Point WindowSize { get; protected set; }
 
         /// <summary>
-        /// Gets or sets the mid-point of the screen
+        /// Gets or sets the mid-point of the screen.
         /// </summary>
         public static Point MidScreen { get; protected set; }
 
         /// <summary>
-        /// Gets or sets the mid-point of the screen
+        /// Gets or sets the frames per second.
         /// </summary>
-        public static int FPS { get; protected set; }
+        public static int FramesPerSecond { get; protected set; }
 
         /// <summary>
         /// Gets or sets a value indicating whether the game is paused.
@@ -53,7 +53,7 @@ namespace UltimateSnake
         }
 
         /// <summary>
-        /// Checks if the snake eats the loot
+        /// Checks if the snake eats the loot.
         /// </summary>
         private static void CheckCollision()
         {

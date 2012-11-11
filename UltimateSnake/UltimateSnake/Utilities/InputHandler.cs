@@ -17,32 +17,27 @@ namespace UltimateSnake.Utilities
     public static class InputHandler
     {
         /// <summary>
+        /// Gets or sets a value indicating whether new input is available.
+        /// </summary>
+        public static bool NewInputAvailable { get; set; }
+
+        /// <summary>
         /// Check all input-types supported
         /// </summary>
-        /// <returns>
-        /// Whether there is new input available
-        /// </returns>
-        public static bool CheckAllInputs()
+        public static void CheckAllInputs()
         {
-            bool newInput;
-
             // Only one type of input available now
-            newInput = CheckConsoleInput();
-
-            return newInput;
+            CheckConsoleInput();
         }
 
         /// <summary>
         /// Check input from the console
         /// </summary>
-        /// <returns>
-        /// Whether there is new input available
-        /// </returns>
-        private static bool CheckConsoleInput()
+        private static void CheckConsoleInput()
         {
             if (!Console.KeyAvailable)
             {
-                return false;
+                return;
             }
 
             ConsoleKeyInfo buttonPressed = Console.ReadKey(true);
@@ -97,7 +92,7 @@ namespace UltimateSnake.Utilities
                     break;
             }
 
-            return true;
+            NewInputAvailable = true;
         }
     }
 }

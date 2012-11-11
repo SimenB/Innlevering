@@ -1,5 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" dslVersion="1.0.0.0" Id="d3a93f15-4f86-41e9-88e5-834e162253ed" name="UltimateSnake" linkedPackageId="35d05203-facb-454d-a9b6-2c34a96c701e" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
+  <profileInstances>
+    <packageHasProfileInstances Id="bd5d0753-6564-4759-a254-50af283025f9">
+      <profileInstance Id="5eb13ff4-e143-48b7-ae32-f19525466582" name="CSharpProfile">
+        <elementDefinition Id="c3be5c04-f747-4af5-bf69-ce76c9a6ee7b" />
+      </profileInstance>
+      <elementDefinition Id="e4dc6368-82b6-436e-beda-4ea67f2b8669" />
+    </packageHasProfileInstances>
+  </profileInstances>
   <packagedElements>
     <logicalClassDesignerModelHasTypes>
       <class Id="662e2f28-5d24-42e9-b5d0-c1e68ad92122" name="Model" isAbstract="false" isLeaf="false" isActiveClass="false">

@@ -68,6 +68,11 @@ namespace UltimateSnake.Architecture
         /// </summary>
         public static void Draw()
         {
+            if (SnakeGame.Paused)
+            {
+                return;
+            }
+
             Instance.Draw(Loot.Instance.GetGameObject());
             Instance.Draw(Snake.Instance.GetGameObject());
         }

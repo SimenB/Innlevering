@@ -30,10 +30,12 @@ namespace UltimateSnake
         /// </summary>
         public static void StartGame()
         {
+            Console.CursorVisible = false;
+
             WindowSize = new Point(Console.WindowWidth, Console.WindowHeight);
             MidScreen = new Point(WindowSize.X / 2, WindowSize.Y / 2);
-            FPS = 10;
-
+            FramesPerSecond = 10;
+            
             // "Square" window
             Console.SetWindowSize(WindowSize.X, WindowSize.Y);
 

@@ -11,9 +11,9 @@ namespace UltimateSnake
 {
     using System.Diagnostics;
 
-    using UltimateSnake.Architecture;
-    using UltimateSnake.GameObjects;
-    using UltimateSnake.Utilities;
+    using Architecture;
+    using GameObjects;
+    using Utilities;
 
     /// <summary>
     /// The program.
@@ -45,7 +45,7 @@ namespace UltimateSnake
                 // Check for pause
                 Input.Update();
 
-                if (stopwatch.ElapsedMilliseconds < 1000 / SnakeGame.FPS)
+                if (stopwatch.ElapsedMilliseconds < 1000 / SnakeGame.FramesPerSecond)
                 {
                     continue;
                 }

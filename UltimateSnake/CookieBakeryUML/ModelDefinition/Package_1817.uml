@@ -1,0 +1,1406 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+  dslVersion="1.0.0.0"
+  Id="d55377d5-0529-42e1-8f3b-2c6734e65e57"
+  name="CookieBakery"
+  visibility="Private" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <referencesInternal>
+    <reference
+      Id="8c3d5b2f-4841-4900-8502-e272f63f1b88"
+      handle="viewcode://./CodeSchema_Namespace?Namespace%3DCookieBakery"
+      tag="ViewCode" />
+  </referencesInternal>
+  <packagedElements>
+    <packageHasNamedElement>
+      <class
+        Id="ee752cb8-0587-4f77-8827-83da766879d0"
+        name="Person"
+        isAbstract="false"
+        isLeaf="true"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="7fcdec06-5a6e-435b-8b8b-01a6d9a3eb03"
+            handle="viewcode://./CodeSchema_Class?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FMartin%2FDocuments%2FGitHub%2FInnlevering%2FUltimateSnake%2FCookieBakery%2Fbin%2FDebug%2FCookieBakery.exe Namespace%3DCookieBakery Type%3DPerson"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="0a6274ee-f4ef-4303-beb3-6c69ddc09c14"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="b4542187-7733-4bc5-8ac2-b10facff7446">
+                <propertyInstance
+                  Id="cdb72777-e4f8-43f6-8cc5-d3f7592f5853"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="9218c4f7-9e20-4f21-a1b0-c4c7bf189166">
+                <propertyInstance
+                  Id="131f2a31-c6c0-48cf-9984-297949118055"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="4e4a4a1c-aa20-4150-8cc9-6b60ebf66abd">
+                <propertyInstance
+                  Id="33b3ec7f-0652-4ce8-b854-54e61c85b049"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="7e8ac459-cafd-41c0-91d5-bc2833c5b2c7">
+                <propertyInstance
+                  Id="cd64ea94-f3a3-45ba-8fd2-42d6c21805fb"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="044f0448-6388-4325-a1cb-95949d97acab">
+                <propertyInstance
+                  Id="35decfc8-36df-47ff-9bf5-9b68293e657c"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <ownedAttributesInternal>
+          <property
+            Id="939d2a13-1fc4-436e-9cd4-5c6352153508"
+            name="Name"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="02556bb0-f1e4-478a-b08b-80be5352f05c"
+                handle="viewcode://./CodeSchema_Property?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FMartin%2FDocuments%2FGitHub%2FInnlevering%2FUltimateSnake%2FCookieBakery%2Fbin%2FDebug%2FCookieBakery.exe Namespace%3DCookieBakery Type%3DPerson Member%3DName"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="03c85cd2-343f-4289-8918-2d63232d23e8"
+                name="property"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="0b55c183-676b-4ffa-896f-66d5ad8c5515">
+                    <propertyInstance
+                      Id="e6a6b91b-e28f-42ef-8e02-1457456ef74c"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="3fd572d1-0095-4654-9d09-f1ea878a6369">
+                    <propertyInstance
+                      Id="9477c29a-8629-40ad-9e0d-2b918c77b10e"
+                      name="Get"
+                      value="public" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="8ab9c6e4-1ca5-4778-8fd9-a7476a72861f">
+                    <propertyInstance
+                      Id="ef1882da-9bdc-49dd-ba9a-96ab3e7a2ca1"
+                      name="HasBody"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="0618aaca-19f7-411b-bff5-4a966e62d1a4">
+                    <propertyInstance
+                      Id="aac6688b-093b-4ef9-ab6e-5dd9a6b4fed3"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="e4486310-ad14-4669-b6ee-4e0418a1f400">
+                    <propertyInstance
+                      Id="d1821078-7f67-4678-8c79-524bb1443801"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="e39cf795-f90a-4557-a22c-9b0d28924488">
+                    <propertyInstance
+                      Id="960df018-5ed9-44fc-bef2-afd0a392224d"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="6c8f7587-586c-41be-b024-bbc5d457a507">
+                    <propertyInstance
+                      Id="bc3bb263-34d8-4cca-b41e-332120ada4c9"
+                      name="Set"
+                      value="public" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <primitiveTypeMoniker
+                Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                LastKnownName="String"
+                LastKnownLocation="CookieBakeryUML.uml" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="6a7a7b42-cbaf-486c-a084-7a7e28361732"
+            name="Person"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="167d2c36-a429-48a3-bd87-9c1080c9e203"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FMartin%2FDocuments%2FGitHub%2FInnlevering%2FUltimateSnake%2FCookieBakery%2Fbin%2FDebug%2FCookieBakery.exe Namespace%3DCookieBakery Type%3DPerson Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.0%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="f7ebec88-a1a5-4f39-881a-f8ed6b27234c"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="73368748-0c8a-4a18-b016-9a59e7deea3b">
+                    <propertyInstance
+                      Id="ffab23ec-dc19-4350-98e0-53e27fc2c184"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="e081fe62-243b-458e-9475-0a325a5e2c21">
+                    <propertyInstance
+                      Id="a788d91f-9de7-4f9c-b05f-3a8820606204"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="82d686c4-a5f5-4f5b-afc6-0807bac0ee19">
+                    <propertyInstance
+                      Id="1bbd0649-c280-4de7-9d45-7f324aff9345"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="33a58e59-25db-4f01-9811-afdf4302f8b1">
+                    <propertyInstance
+                      Id="fbc3a35d-392d-46b0-b886-d1b73856c461"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="3c31d8a3-a565-438b-9714-fe9d02887e39">
+                    <propertyInstance
+                      Id="986f6873-384e-4d04-baac-7a2cc7d8814e"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="2da78264-9c19-4a22-bc13-083fbb88a982">
+                    <propertyInstance
+                      Id="cd77fc56-7e69-4221-b953-a962934d2f86"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="59341cc4-b1c4-48e4-a3b0-0ec0f97e0c35"
+                  name="name"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="e69c50f3-00ca-423d-8bd8-6dc99608f4cc"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FMartin%2FDocuments%2FGitHub%2FInnlevering%2FUltimateSnake%2FCookieBakery%2Fbin%2FDebug%2FCookieBakery.exe Namespace%3DCookieBakery Type%3DPerson Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.0%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)]) ParameterIdentifier%3Dname"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                      LastKnownName="String"
+                      LastKnownLocation="CookieBakeryUML.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="44e120fb-68be-45dc-a419-3e011340ade0"
+            name="Person"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="923ffc3f-59c0-4cba-93c0-caaac9f8b2d4"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FMartin%2FDocuments%2FGitHub%2FInnlevering%2FUltimateSnake%2FCookieBakery%2Fbin%2FDebug%2FCookieBakery.exe Namespace%3DCookieBakery Type%3DPerson Member%3D.ctor"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="abc72b31-2f33-45ab-985b-5e00f418c97f"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="dfcfcfa8-92e1-4f3c-858b-9f134518e672">
+                    <propertyInstance
+                      Id="ffc97dad-b008-4323-a625-138014ef5112"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="cab0b586-e8af-4ace-b934-49c368e24f11">
+                    <propertyInstance
+                      Id="5f9c17f0-70a8-4c38-ae56-586babf9ea3c"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="59d5d026-c1da-4763-b767-8183af1211d0">
+                    <propertyInstance
+                      Id="51c2c387-d06a-4fe7-ba97-feb84f112d7a"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="34fdf6de-48c5-4340-8a18-c5c0d87f509d">
+                    <propertyInstance
+                      Id="c7e88022-d0c1-4469-97f3-33ced9882fdb"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="7428250a-83e0-4db6-bf94-36238472255d">
+                    <propertyInstance
+                      Id="53afd6da-c286-4391-a488-445ea692e2dc"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="87c47d58-e130-48e0-81c7-1ec7348303a0">
+                    <propertyInstance
+                      Id="1f87eb10-1ae9-4f73-8225-76a0211f1e2b"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="5e1f0b02-e525-4176-8988-e1936e2bfa75"
+        name="Program"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="e4718d43-d03e-4345-aca9-65898fca9c6f"
+            handle="viewcode://./CodeSchema_Class?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FMartin%2FDocuments%2FGitHub%2FInnlevering%2FUltimateSnake%2FCookieBakery%2Fbin%2FDebug%2FCookieBakery.exe Namespace%3DCookieBakery Type%3DProgram"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="0723f40f-df88-447d-8f52-f2b027c8bc83"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="969b5da5-7e76-4e5d-bca8-96d27a9af1da">
+                <propertyInstance
+                  Id="fb063a65-fd6c-4e58-85be-350fc670bd95"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="9bb5e3a8-4225-4b97-9167-5ce1a1687108">
+                <propertyInstance
+                  Id="c2b7425d-e0a1-4d55-815b-183257fd3449"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="96b56e57-730a-423d-b944-9717cc44725a">
+                <propertyInstance
+                  Id="17d32414-7df7-45a3-a140-faf36e5c08f2"
+                  name="IsStatic"
+                  value="True" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="627d7a26-bfc3-4eef-89a8-f3c01f865d48">
+                <propertyInstance
+                  Id="cbc6f4e7-8261-4920-af7c-41843364f7d7"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="125beb2c-56bb-4709-93ea-faf8d8482fc3">
+                <propertyInstance
+                  Id="2118cddd-68b3-45ae-9e18-8dda689d6c34"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <ownedAttributesInternal>
+          <property
+            Id="ac8151d1-723a-4de6-98ae-6f9082381c0f"
+            name="DelayBakeCookie"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="true"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="9411a46f-6e92-40ed-a404-3ac6abb4b7c5"
+                handle="viewcode://./CodeSchema_Field?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FMartin%2FDocuments%2FGitHub%2FInnlevering%2FUltimateSnake%2FCookieBakery%2Fbin%2FDebug%2FCookieBakery.exe Namespace%3DCookieBakery Type%3DProgram Member%3DDelayBakeCookie"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="4df3837a-9cd2-4263-a86c-f7cb12ec3d32"
+                name="field"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="bb58679d-4463-41aa-9c15-249dbd70666a">
+                    <propertyInstance
+                      Id="f5b2d1f4-eeeb-476b-bef8-ea23fd37da6d"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="d58944a8-9cb1-4d33-b240-b2e3ae59ee3f">
+                    <propertyInstance
+                      Id="ac36a739-9faa-4741-981f-b4fcd5a3607a"
+                      name="IsConst"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="2f024f4d-84ff-4d57-8f00-610483ada1c1">
+                    <propertyInstance
+                      Id="c602e396-db86-445b-95a4-5213632a267a"
+                      name="IsNullable"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="dcb34c87-0810-4a8a-b2ad-ea00c7a838f1">
+                    <propertyInstance
+                      Id="b3aaead2-b95b-4356-8130-e431443561ad"
+                      name="IsVolatile"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="70cd1aee-f5f2-4489-a680-eba0417d0093">
+                    <propertyInstance
+                      Id="4e87c9a1-71f5-4bfb-9615-b3856caa453a"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+          </property>
+          <property
+            Id="5fbcc0a0-cfe3-4016-9eff-0a1f5587386c"
+            name="DelayGrabCookie"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="true"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="37f3c560-be4b-4e58-b849-147f15a0b906"
+                handle="viewcode://./CodeSchema_Field?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FMartin%2FDocuments%2FGitHub%2FInnlevering%2FUltimateSnake%2FCookieBakery%2Fbin%2FDebug%2FCookieBakery.exe Namespace%3DCookieBakery Type%3DProgram Member%3DDelayGrabCookie"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="8f70ac31-275e-42a5-ba40-1181c435f377"
+                name="field"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="6f6b1a45-8610-4e5d-ab93-efa7ca5df270">
+                    <propertyInstance
+                      Id="404c957b-9cba-4fd2-8a1f-ec7de4c0d5bd"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="864cc190-231b-4d0d-832d-5e1535e6dc0d">
+                    <propertyInstance
+                      Id="83c2806b-1fc3-4030-a113-bc9bdd61bfdb"
+                      name="IsConst"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="156b47ff-b63e-40d6-b79c-9f0011c649e9">
+                    <propertyInstance
+                      Id="6a7296e2-a46d-482a-a0bf-fbb3d0d486b4"
+                      name="IsNullable"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="ca50b822-8414-4023-a45d-26ce3a0b35d2">
+                    <propertyInstance
+                      Id="c362ffce-145f-456a-bc4d-a39a276a6e73"
+                      name="IsVolatile"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="cb91cf16-e85d-486a-a7cd-5606a42ed277">
+                    <propertyInstance
+                      Id="19177ba6-4cb2-49b1-9f37-9e51e0f80568"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="fba9631d-d6a0-4456-8384-424bc46f08a4"
+            name="GrabCookies"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="true"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="df9d73ce-7964-4e8f-8bd6-528c459873e1"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FMartin%2FDocuments%2FGitHub%2FInnlevering%2FUltimateSnake%2FCookieBakery%2Fbin%2FDebug%2FCookieBakery.exe Namespace%3DCookieBakery Type%3DProgram Member%3D(Name%3DGrabCookies OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.0%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DObject)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="b0bfd7ce-8e50-479e-b64b-39f1fc2849d5"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="ecf56505-3cae-40ec-85a4-e3bb8829cec3">
+                    <propertyInstance
+                      Id="516d4330-1ac2-4a0c-8c71-409edc24a1fb"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="01225327-f2b5-4c7c-9095-426d88798c86">
+                    <propertyInstance
+                      Id="b2e93ab6-6df7-470f-bc45-5840a62d85c6"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="20456170-b2f3-44a7-8f2c-683cfccd0481">
+                    <propertyInstance
+                      Id="fe141222-2cab-480a-87e4-2af2c7b668a3"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="89ce2632-c09d-47f5-8a3e-00940e3d21c2">
+                    <propertyInstance
+                      Id="ef738ded-5338-41e2-97bd-b6a824942722"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="7238a160-aa2d-46c6-a1cd-340b4fd390ce">
+                    <propertyInstance
+                      Id="54f574dc-3add-4d12-899a-7f0e573636c0"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="780a82f2-187b-4c6d-a61b-611290fa5d41">
+                    <propertyInstance
+                      Id="434a2508-987e-4556-a8a9-83d7b64e615e"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="7f888a36-b800-461f-aa9b-0ed5b71e46e1"
+                  name="obj"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="0be91f39-bb92-4dd4-98f0-031848d2a7e1"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FMartin%2FDocuments%2FGitHub%2FInnlevering%2FUltimateSnake%2FCookieBakery%2Fbin%2FDebug%2FCookieBakery.exe Namespace%3DCookieBakery Type%3DProgram Member%3D(Name%3DGrabCookies OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.0%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DObject)]) ParameterIdentifier%3Dobj"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="26551aa5-5aee-4a89-8541-1aa3578618f3"
+                      LastKnownName="Object"
+                      LastKnownLocation="Package1_1817.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="8169131b-1afb-47fb-bd81-ed3279a0dde3"
+            name="BakeCookies"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="true"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="d6b2013e-7ec0-462e-a8a9-f8a09d110df1"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FMartin%2FDocuments%2FGitHub%2FInnlevering%2FUltimateSnake%2FCookieBakery%2Fbin%2FDebug%2FCookieBakery.exe Namespace%3DCookieBakery Type%3DProgram Member%3DBakeCookies"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="d4f33405-ef1d-49bc-b4c7-eb3eb8979329"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="184e56fc-e0df-4ed0-b3bd-a625087f5c6f">
+                    <propertyInstance
+                      Id="f0b4b7bf-3d39-4652-a91c-098a050aa987"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="b5c40b27-f131-44a2-b802-4202b20c3b28">
+                    <propertyInstance
+                      Id="d05e8aff-e484-4496-820c-863299f861b6"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="c5207789-41d6-4e61-835f-a87516cf111d">
+                    <propertyInstance
+                      Id="393cdbdf-6c1d-4023-8f5c-cf25dae12497"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="08667aef-466b-459e-ac64-3e4248a004ef">
+                    <propertyInstance
+                      Id="837bfe27-4eec-40bd-ab99-9c6972caa083"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="1a9c5166-c341-4335-b1d8-944a7356d95c">
+                    <propertyInstance
+                      Id="d40f7ef3-b24b-44f7-be5f-b1e089af06f2"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="456a5536-ca9a-4927-b7e5-96c28c434ff4">
+                    <propertyInstance
+                      Id="bf7ea9c3-defe-4223-add5-c0091db9a1c3"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+          </operation>
+          <operation
+            Id="8c8dd922-32a2-49f7-a9dd-62b088cf68cc"
+            name="Main"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="true"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="67090c1c-d431-4961-9579-584e6c47e3f1"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FMartin%2FDocuments%2FGitHub%2FInnlevering%2FUltimateSnake%2FCookieBakery%2Fbin%2FDebug%2FCookieBakery.exe Namespace%3DCookieBakery Type%3DProgram Member%3DMain"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="d966f256-0103-4c15-af8e-ce918f607593"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="5bdd3785-7b49-4b89-9712-386309f4e93b">
+                    <propertyInstance
+                      Id="2bf42c7b-b675-49b2-865a-60a9e7fde718"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="b7ec0a95-521d-4de4-b8ed-c9b2afd16446">
+                    <propertyInstance
+                      Id="1bd2bb16-4d0f-4e34-9540-dbce256c8ad5"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="bd33bb85-162a-49fa-a3f0-fe6dffdb2e2b">
+                    <propertyInstance
+                      Id="c10fe454-faac-428a-86ff-3b7daeeaddab"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="0d96ef51-a613-46dc-a44b-bcf5b79babcc">
+                    <propertyInstance
+                      Id="21c68df0-f818-4867-b906-6c55830f97e9"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="305d37eb-a089-43f5-8097-640f38ab0179">
+                    <propertyInstance
+                      Id="1ad0bf12-fd02-4767-a82f-3281ed243b05"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="67747334-6bd1-4aa6-ac09-e2996311a726">
+                    <propertyInstance
+                      Id="c740751f-cb2f-4886-a8ca-ffbc5ffe3b2c"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="a680334d-c85e-4636-962a-b29f97fa17d6"
+        name="Cookie"
+        visibility="Private"
+        isAbstract="false"
+        isLeaf="true"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="edd13159-7440-4041-927a-64a30680ec3f"
+            handle="viewcode://./CodeSchema_Class?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FMartin%2FDocuments%2FGitHub%2FInnlevering%2FUltimateSnake%2FCookieBakery%2Fbin%2FDebug%2FCookieBakery.exe Namespace%3DCookieBakery Type%3D(Name%3DCookie ParentType%3DBakery)"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="7ad47d41-1d18-49aa-8bc8-7a6bdb4f4c5d"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="a192a8cd-be57-4902-9db8-b806cf2c71a8">
+                <propertyInstance
+                  Id="74f67a6c-1133-4715-b498-95985e5c8e6b"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="aa80b473-b88a-4a81-b3be-a58a31031a9e">
+                <propertyInstance
+                  Id="1a608275-9ac7-47cb-b7f6-b13b80744f62"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="aec647c6-aa77-4d94-9fa0-708a2fb15f91">
+                <propertyInstance
+                  Id="aad0acfd-6db2-44e3-b591-bc39c195ae48"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="3aff6911-3c34-4dc9-a854-dea09dfcf1ac">
+                <propertyInstance
+                  Id="fa106520-71d3-44a4-894a-2a654283b403"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="e38943c1-1db6-4c1e-ad71-5e122cb973d5">
+                <propertyInstance
+                  Id="16615329-3f3f-442d-9154-990fef900a36"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="43f7b5cb-c4d9-47ee-bdf7-0a63d9a9c5d1"
+            name="Cookie"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="4c857a65-228a-40b8-a0b6-6a8e7715103d"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FMartin%2FDocuments%2FGitHub%2FInnlevering%2FUltimateSnake%2FCookieBakery%2Fbin%2FDebug%2FCookieBakery.exe Namespace%3DCookieBakery Type%3D(Name%3DCookie ParentType%3DBakery) Member%3D.ctor"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="a3c16403-f31c-4290-ba26-3a199f621f6a"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="c5d2a7cc-5553-4a63-bf38-685281e0a2d1">
+                    <propertyInstance
+                      Id="1c5dcbc4-2808-4f3c-97b8-b324332258a7"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="a36d053c-8b4d-4da5-81eb-1bc3170a44a9">
+                    <propertyInstance
+                      Id="ab1022cb-05ee-4bf4-ac15-843302e73d2f"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="1c59c9f9-5f15-42fd-87ae-23721a535c2c">
+                    <propertyInstance
+                      Id="57346c9d-1548-4665-869b-2611fe0da380"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="22684783-d028-4395-bb08-0e93de92b02c">
+                    <propertyInstance
+                      Id="788fa370-492f-48e4-9d13-b5a6db0452be"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="276872cf-18fc-4f73-8534-ae78892b04d1">
+                    <propertyInstance
+                      Id="27742558-174f-4536-af46-7df4654a5dec"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="4f05e60c-e3f3-4dea-9f0a-f84e84546a05">
+                    <propertyInstance
+                      Id="3f6e2d30-b451-4e5c-aa35-81dbced281c8"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="5c32306c-eb1e-4c8c-9be8-4f8223e3333d"
+        name="Bakery"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="591af210-36a2-40de-9347-1213924bbc53"
+            handle="viewcode://./CodeSchema_Class?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FMartin%2FDocuments%2FGitHub%2FInnlevering%2FUltimateSnake%2FCookieBakery%2Fbin%2FDebug%2FCookieBakery.exe Namespace%3DCookieBakery Type%3DBakery"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="41cb0625-0530-4823-a96a-039131cbb931"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="bbb33dc8-ddd2-4a32-9207-e5a1184f0f7d">
+                <propertyInstance
+                  Id="614a7f0d-3760-48ef-8e13-27a9b9681688"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="20859683-2917-4b1b-b399-1a26ab1fe6a1">
+                <propertyInstance
+                  Id="2c3c730d-ec4f-4923-a3f8-a211807fbdc1"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="9390e025-1a39-46c4-8407-550f4868070d">
+                <propertyInstance
+                  Id="e16ed845-fb5f-44c7-8bf6-a3a27b3a298b"
+                  name="IsStatic"
+                  value="True" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="69cbb4ed-6c4a-4c87-a053-e7a6ae2d78b2">
+                <propertyInstance
+                  Id="152da1b9-81ec-48a1-b065-c633b34fd0fe"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="8a09532c-0bfa-4fdc-b39c-66eb4e66467b">
+                <propertyInstance
+                  Id="20edbdf5-249b-480c-8189-500b3a889383"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <ownedAttributesInternal>
+          <property
+            Id="d7e39a7b-a6ba-4b7a-bdb3-25390ebd896c"
+            name="IsDailyQuotaNotBaked"
+            isLeaf="false"
+            isStatic="true"
+            isReadOnly="true"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="1332dff3-fcc2-42a2-97e0-fde8378d3efc"
+                handle="viewcode://./CodeSchema_Property?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FMartin%2FDocuments%2FGitHub%2FInnlevering%2FUltimateSnake%2FCookieBakery%2Fbin%2FDebug%2FCookieBakery.exe Namespace%3DCookieBakery Type%3DBakery Member%3DIsDailyQuotaNotBaked"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="2c7b9a6d-4902-4f29-bc90-ecf3bd418e7d"
+                name="property"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="7de5e789-6f58-4fc2-8701-76b188bee196">
+                    <propertyInstance
+                      Id="506592fd-261f-49df-b891-4c6d98ab09cb"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="670479e7-73a1-4376-b82b-211e346e9c0a">
+                    <propertyInstance
+                      Id="f9f1f051-95c1-4d94-9a60-301cd2e80c8d"
+                      name="Get"
+                      value="public" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="057aef94-61ae-4918-8a6d-586e194e89fc">
+                    <propertyInstance
+                      Id="dbaf9663-299d-49e5-93a5-fd0fefbf1ab6"
+                      name="HasBody"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="3b38a722-a474-4fd6-bc03-9087355d222e">
+                    <propertyInstance
+                      Id="e57cbbc6-bd4d-433f-9c90-2e71f27f3980"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="6095fd71-5622-4754-9434-63341cf7a112">
+                    <propertyInstance
+                      Id="c1a8cc3b-3abb-44e0-9ebf-02acd841b4b4"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="4bb7d0ef-97e1-4180-b9d4-0061d6c92aa4">
+                    <propertyInstance
+                      Id="c747cdf8-d8c9-4954-9c71-c56d4b49485d"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="87abe355-3b68-4092-ab6f-e73f2e14e5bf">
+                    <propertyInstance
+                      Id="1ae75a6b-2428-4ec1-b11c-c7d834498ec1"
+                      name="Set"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <primitiveTypeMoniker
+                Id="8943dc84-709e-4f62-b15a-a3273aa6f165"
+                LastKnownName="Boolean"
+                LastKnownLocation="CookieBakeryUML.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="c9019993-7db8-475c-aea3-083e043b60fa"
+            name="IsDailyQuotaNotSold"
+            isLeaf="false"
+            isStatic="true"
+            isReadOnly="true"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="58ce6ecf-cd4c-4f45-a0c3-59cfac2fa59d"
+                handle="viewcode://./CodeSchema_Property?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FMartin%2FDocuments%2FGitHub%2FInnlevering%2FUltimateSnake%2FCookieBakery%2Fbin%2FDebug%2FCookieBakery.exe Namespace%3DCookieBakery Type%3DBakery Member%3DIsDailyQuotaNotSold"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="012dd200-ce23-40d4-8f2e-ebd87721178f"
+                name="property"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="1a312fb2-0ae9-42cb-9ab3-495e7c36848b">
+                    <propertyInstance
+                      Id="8da87b8c-2928-4b3f-8cf4-d083f0a8a896"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="683ce31a-bb8f-4a97-a778-1f29b74c8022">
+                    <propertyInstance
+                      Id="1a89d985-6ad6-4615-861e-4b4355faac26"
+                      name="Get"
+                      value="public" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="d7c574e0-3b8e-4de7-8662-d8f57080c897">
+                    <propertyInstance
+                      Id="228f9142-7ac4-4591-b7e7-40085ac92184"
+                      name="HasBody"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="9e331baf-7437-49af-b8f7-ef9467f7635e">
+                    <propertyInstance
+                      Id="a7b2e40c-66c0-4db2-a8f6-afaff8e2e2ae"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="6c0e6dbc-86c8-40ec-9f4d-dc262d8f9190">
+                    <propertyInstance
+                      Id="51b2a440-0a2c-4d12-888a-b20f5598541e"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="c643a24d-c852-4c22-885c-cc18b86f5080">
+                    <propertyInstance
+                      Id="c45146d3-d289-4c77-ab48-018517791c2a"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="4bf48b70-2c2a-4964-b532-986afbe6e694">
+                    <propertyInstance
+                      Id="345fa4b8-3d84-4ff2-b856-872ead03b08d"
+                      name="Set"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <primitiveTypeMoniker
+                Id="8943dc84-709e-4f62-b15a-a3273aa6f165"
+                LastKnownName="Boolean"
+                LastKnownLocation="CookieBakeryUML.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="844ebf16-73d2-4a2b-8249-d18b9a1e32f8"
+            name="BakedCookies"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="true"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="07b65355-b3d6-49c4-9010-112489b74cb1"
+                handle="viewcode://./CodeSchema_Field?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FMartin%2FDocuments%2FGitHub%2FInnlevering%2FUltimateSnake%2FCookieBakery%2Fbin%2FDebug%2FCookieBakery.exe Namespace%3DCookieBakery Type%3DBakery Member%3DBakedCookies"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="fc36828e-dad4-47ca-bdcc-284fed31d5f0"
+                name="field"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="2ad7f357-a5a0-4ca3-a781-ab5a14dba0b7">
+                    <propertyInstance
+                      Id="118c2901-694d-4fbd-8e5b-fa4b8a4373c8"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="5c1324c8-fc0d-46b2-8d51-2cc14bb4001b">
+                    <propertyInstance
+                      Id="42a61b46-e9c7-4d4a-977c-f582b4469a56"
+                      name="IsConst"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="9c61b653-b4af-490d-9bc0-3194eef2b9fd">
+                    <propertyInstance
+                      Id="6f44774f-4009-4713-8112-090be58dec98"
+                      name="IsNullable"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="c8f69e77-42b5-4567-96b8-f230b29e35a2">
+                    <propertyInstance
+                      Id="cc3949e4-cbd1-49c3-b1b7-baa5985d04ca"
+                      name="IsVolatile"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="692c48da-ec73-476f-adf7-9a83ed3eea85">
+                    <propertyInstance
+                      Id="df78eadb-b5be-49fa-b1f8-a8fdf2170f24"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <classMoniker
+                Id="0372ff98-cfb1-46d3-9490-67986789be6e"
+                LastKnownName="List&lt;Bakery‎‎.Cookie‎&gt;"
+                LastKnownLocation="Package3_1817.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="11fedf84-23a2-4da0-a807-c75a5aaf39fc"
+            name="DailyQuota"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="true"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="f8fb716e-39e3-4f8d-b901-686aafdd9529"
+                handle="viewcode://./CodeSchema_Field?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FMartin%2FDocuments%2FGitHub%2FInnlevering%2FUltimateSnake%2FCookieBakery%2Fbin%2FDebug%2FCookieBakery.exe Namespace%3DCookieBakery Type%3DBakery Member%3DDailyQuota"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="bff89883-bb10-4b1f-9cc2-57f3795af467"
+                name="field"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="d4f24c3d-b804-42c9-9d6b-4f06e344429d">
+                    <propertyInstance
+                      Id="2544c94a-e73d-4625-ac47-008790a94eb3"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="908d9ceb-bf76-409e-9043-d738aeb5c97e">
+                    <propertyInstance
+                      Id="3bbbab49-9f53-4854-b915-0981516e684c"
+                      name="IsConst"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="28a4e79a-84ff-46b4-8682-60db7638c30b">
+                    <propertyInstance
+                      Id="8a1b5ae3-12c1-47d4-a381-2b1299bc72fa"
+                      name="IsNullable"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="04616f98-57bb-4867-96bd-144e25380e1c">
+                    <propertyInstance
+                      Id="de110e07-f230-4a5f-850e-739bf1aa5ffd"
+                      name="IsVolatile"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="6891e15b-ca74-4f28-9dbf-37d1ef7dcc5c">
+                    <propertyInstance
+                      Id="0d750ae2-3a5e-42ae-b971-87b6c240128c"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+          </property>
+          <property
+            Id="c6ebf4f5-e09b-42a6-9db0-87e3c85b2c5a"
+            name="cookiesSold"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="true"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="b7ef9810-6d07-4590-8f9f-ffc5cafa30ab"
+                handle="viewcode://./CodeSchema_Field?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FMartin%2FDocuments%2FGitHub%2FInnlevering%2FUltimateSnake%2FCookieBakery%2Fbin%2FDebug%2FCookieBakery.exe Namespace%3DCookieBakery Type%3DBakery Member%3DcookiesSold"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="1da79808-86f9-4fb7-9dcf-49ebdf7d336b"
+                name="field"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="18f82c61-5aac-4f55-b034-2ae57cc59ed3">
+                    <propertyInstance
+                      Id="ed51977c-aac2-412c-bf8e-67ae3787e54e"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="c6d093cc-7b7c-49ef-8ade-fd1374e71980">
+                    <propertyInstance
+                      Id="c1ba3c26-aa3d-4483-a535-7073298563fa"
+                      name="IsConst"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="0cd683ab-6a22-409a-a392-f4299c585e5e">
+                    <propertyInstance
+                      Id="91905390-a6c7-4b37-a10d-b07a9517201d"
+                      name="IsNullable"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="476f19a6-a018-4da1-b4ea-ae6ece159c2c">
+                    <propertyInstance
+                      Id="bf41231b-8f58-4a08-b6d3-b584b791470d"
+                      name="IsVolatile"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="79db7a1e-e521-4211-82e6-bd803c9ee6f7">
+                    <propertyInstance
+                      Id="10879399-6570-430c-a059-4ec4a75a9841"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <primitiveTypeMoniker
+                Id="220a3521-e091-4221-bae9-3ef9018e845c"
+                LastKnownName="Integer"
+                LastKnownLocation="CookieBakeryUML.uml" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="909b8d53-0a71-4be5-af5c-073c8fbdf866"
+            name="SellCookieTo"
+            isLeaf="false"
+            isStatic="true"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="a72ee5e7-ad62-4d07-b419-94bf3fadd5e9"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FMartin%2FDocuments%2FGitHub%2FInnlevering%2FUltimateSnake%2FCookieBakery%2Fbin%2FDebug%2FCookieBakery.exe Namespace%3DCookieBakery Type%3DBakery Member%3D(Name%3DSellCookieTo OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FMartin%2FDocuments%2FGitHub%2FInnlevering%2FUltimateSnake%2FCookieBakery%2Fbin%2FDebug%2FCookieBakery.exe Namespace%3DCookieBakery Type%3DPerson)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="aa76ca93-1f27-44ed-afc0-b5b53c778cb1"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="a5e1e759-079a-476e-aa57-cec97e0d8053">
+                    <propertyInstance
+                      Id="356c6cbd-04d0-43ea-a96a-4bc61ac3af88"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="28dc6e2e-7c18-4d52-b66b-42d15c308e97">
+                    <propertyInstance
+                      Id="98649f4f-6abe-411e-9347-5926af732c63"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="69bfbca3-5299-4175-ba2c-32b3b2682e7e">
+                    <propertyInstance
+                      Id="b197087e-8349-4607-a46d-9b52efafd420"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="dbf96ebd-d836-4d95-a3b0-479f59438352">
+                    <propertyInstance
+                      Id="d436430e-4dc4-4654-bcde-652dbd871b01"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="420b6832-c3f0-4ffc-9a56-e861d6a82027">
+                    <propertyInstance
+                      Id="f4ab3dd9-098f-4e71-8b47-f04e9cd3d22b"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="b9bd5cb7-9700-4b7a-8fd7-b0932a35b4c9">
+                    <propertyInstance
+                      Id="0546ff80-cb65-4c35-bbda-435fd16e49ce"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="20032d66-b189-4efa-a032-c6521510cb9a"
+                  name="customer"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="0b0767c8-1daa-4642-bc78-87ed44809787"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FMartin%2FDocuments%2FGitHub%2FInnlevering%2FUltimateSnake%2FCookieBakery%2Fbin%2FDebug%2FCookieBakery.exe Namespace%3DCookieBakery Type%3DBakery Member%3D(Name%3DSellCookieTo OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FMartin%2FDocuments%2FGitHub%2FInnlevering%2FUltimateSnake%2FCookieBakery%2Fbin%2FDebug%2FCookieBakery.exe Namespace%3DCookieBakery Type%3DPerson)]) ParameterIdentifier%3Dcustomer"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="ee752cb8-0587-4f77-8827-83da766879d0"
+                      LastKnownName="Person"
+                      LastKnownLocation="Package_1817.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="d50e5995-3492-4392-ac73-9ca710ba11f1"
+            name="BakeCookie"
+            isLeaf="false"
+            isStatic="true"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="29e81933-dedf-410b-ae8e-4326406ec35f"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FMartin%2FDocuments%2FGitHub%2FInnlevering%2FUltimateSnake%2FCookieBakery%2Fbin%2FDebug%2FCookieBakery.exe Namespace%3DCookieBakery Type%3DBakery Member%3DBakeCookie"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="d106f6cd-08b5-43ca-b537-4b1b3da37d62"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="644c3eae-7e87-477d-88b6-6d08faf19c6f">
+                    <propertyInstance
+                      Id="b8a8a492-2ab1-4add-813e-861dab473f9b"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="fbde3a65-f313-4adc-a911-3af26ad21d49">
+                    <propertyInstance
+                      Id="245371fd-5a9e-4f80-bf5a-7730f5d2141c"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="344f29d5-daa2-4d52-9eda-296460938826">
+                    <propertyInstance
+                      Id="672c987a-2422-47c9-a262-bf70de3068ba"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="e473872c-5f66-4af9-a022-9ef1e7e857d0">
+                    <propertyInstance
+                      Id="804d2813-c2df-4eda-8e78-52260888ebc6"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="d068215a-f9bf-4b55-b98a-77d62718333b">
+                    <propertyInstance
+                      Id="6e0e13f8-94a6-473f-b96e-df348efb2fb8"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="150a049b-6e0f-483c-b414-5b54e2d2dfd8">
+                    <propertyInstance
+                      Id="04e859ea-a688-41bc-b035-43dcb458092a"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+  </packagedElements>
+</package>

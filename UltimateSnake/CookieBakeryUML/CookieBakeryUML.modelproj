@@ -5,14 +5,10 @@
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{131da4c9-74cc-4c76-9e38-fb6650aa72f4}</ProjectGuid>
+    <ProjectGuid>{748a591b-5b32-47af-80f0-bdd1ace3e2b9}</ProjectGuid>
     <ArchitectureToolsVersion>2.0.0.0</ArchitectureToolsVersion>
-    <Name>SnakeUML</Name>
-    <RootNamespace>SnakeModelProject</RootNamespace>
-    <SccProjectName>SAK</SccProjectName>
-    <SccProvider>SAK</SccProvider>
-    <SccAuxPath>SAK</SccAuxPath>
-    <SccLocalPath>SAK</SccLocalPath>
+    <Name>CookieBakeryUML</Name>
+    <RootNamespace>CookieBakeryUML</RootNamespace>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <OutputPath>bin\Debug\</OutputPath>
@@ -26,49 +22,27 @@
   </PropertyGroup>
   <Import Project="$(VSToolsPath)\ArchitectureTools\Microsoft.VisualStudio.TeamArchitect.ModelingProject.targets" Condition="'$(VSToolsPath)' != ''" />
   <ItemGroup>
-    <Content Include="ModelDefinition\Package1_1843.uml">
+    <Content Include="CookieBakery.classdiagram">
       <SubType>Content</SubType>
     </Content>
-    <Content Include="ModelDefinition\Package2_1843.uml">
+    <Content Include="CookieBakery.classdiagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>CookieBakery.classdiagram</DependentUpon>
+    </Content>
+    <Content Include="ModelDefinition\Package1_1817.uml">
       <SubType>Content</SubType>
     </Content>
-    <Content Include="ModelDefinition\Package3_1843.uml">
+    <Content Include="ModelDefinition\Package2_1817.uml">
       <SubType>Content</SubType>
     </Content>
-    <Content Include="ModelDefinition\Package4_1843.uml">
+    <Content Include="ModelDefinition\Package3_1817.uml">
       <SubType>Content</SubType>
     </Content>
-    <Content Include="ModelDefinition\Package5_1843.uml">
+    <Content Include="ModelDefinition\Package_1817.uml">
       <SubType>Content</SubType>
-    </Content>
-    <Content Include="ModelDefinition\Package6_1843.uml">
-      <SubType>Content</SubType>
-    </Content>
-    <Content Include="ModelDefinition\Package7_1843.uml">
-      <SubType>Content</SubType>
-    </Content>
-    <Content Include="ModelDefinition\Package8_1843.uml">
-      <SubType>Content</SubType>
-    </Content>
-    <Content Include="ModelDefinition\Package_1843.uml">
-      <SubType>Content</SubType>
-    </Content>
-    <Content Include="Snake_Actual.classdiagram">
-      <SubType>Content</SubType>
-    </Content>
-    <Content Include="Snake_Actual.classdiagram.layout">
-      <SubType>Content</SubType>
-      <DependentUpon>Snake_Actual.classdiagram</DependentUpon>
-    </Content>
-    <Content Include="Snake_Initial.classdiagram">
-      <SubType>Content</SubType>
-    </Content>
-    <Content Include="Snake_Initial.classdiagram.layout">
-      <SubType>Content</SubType>
-      <DependentUpon>Snake_Initial.classdiagram</DependentUpon>
     </Content>
     <Folder Include="ModelDefinition\" />
-    <Content Include="ModelDefinition\SnakeModelProject.uml">
+    <Content Include="ModelDefinition\CookieBakeryUML.uml">
       <SubType>Content</SubType>
     </Content>
   </ItemGroup>

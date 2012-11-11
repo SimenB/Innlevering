@@ -16,6 +16,12 @@
         Id="532ea607-fb19-44b8-8502-3351b05452be"
         name="StandardProfileL3" />
     </packageHasProfileInstances>
+    <packageHasProfileInstances
+      Id="e4dc6368-82b6-436e-beda-4ea67f2b8669">
+      <profileInstance
+        Id="c3be5c04-f747-4af5-bf69-ce76c9a6ee7b"
+        name="CSharpProfile" />
+    </packageHasProfileInstances>
   </profileInstances>
   <packagedElements>
     <packageHasNamedElement>
@@ -975,6 +981,24 @@
       <undefinedType
         Id="0293f4c0-d51e-4df3-b8a9-08da7fed4fd9"
         name="vpod" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="3d944b88-4fe0-48dd-9d96-afd7182ebb23"
+        LastKnownName="CookieBakery"
+        LastKnownLocation="Package_1843.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="c0bc0684-31fc-4faa-90bf-c91857644eaf"
+        LastKnownName="System"
+        LastKnownLocation="Package1_1843.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="5f542843-be43-469f-aa68-431ba9db5338"
+        LastKnownName="UltimateSnake"
+        LastKnownLocation="Package4_1843.uml" />
     </packageHasNamedElement>
   </packagedElements>
   <primitiveType

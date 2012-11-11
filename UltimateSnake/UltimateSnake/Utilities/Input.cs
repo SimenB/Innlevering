@@ -13,8 +13,6 @@ namespace UltimateSnake.Utilities
 
     using GameObjects;
 
-    using UltimateSnake.Architecture;
-
     /// <summary>
     /// The input handler
     /// </summary>
@@ -43,7 +41,9 @@ namespace UltimateSnake.Utilities
         /// </summary>
         public static void Update()
         {
-            if (!InputHandler.CheckAllInputs())
+            InputHandler.CheckAllInputs();
+
+            if (!InputHandler.NewInputAvailable)
             {
                 return;
             }
@@ -129,6 +129,8 @@ namespace UltimateSnake.Utilities
                     DirectionToMove = Snake.Instance.CurrentDirection;
                     break;
             }
+
+            InputHandler.NewInputAvailable = false;
         }
     }
 }
