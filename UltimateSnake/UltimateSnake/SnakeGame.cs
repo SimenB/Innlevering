@@ -9,6 +9,7 @@
 
 namespace UltimateSnake
 {
+    using UltimateSnake.GameObjects;
     using UltimateSnake.Utilities;
 
     /// <summary>
@@ -30,5 +31,40 @@ namespace UltimateSnake
         /// Gets or sets the mid-point of the screen
         /// </summary>
         public static int FPS { get; protected set; }
+
+        /// <summary>
+        /// Gets or sets a value indicating whether the game is paused.
+        /// </summary>
+        public static bool Paused { get; set; }
+
+        /// <summary>
+        /// The update.
+        /// </summary>
+        public static void Update()
+        {
+            if (Paused)
+            {
+                return;
+            }
+
+            CheckCollision();
+
+            Snake.Instance.Update();
+        }
+
+        /// <summary>
+        /// Checks if the snake eats the loot
+        /// </summary>
+        private static void CheckCollision()
+        {
+            if (Snake.Instance.TheSnake[0].Position != Loot.Instance.Position)
+            {
+                return;
+            }
+
+            Snake.Instance.TheSnake.Add(new SnakeBody());
+
+            Loot.MoveLoot();
+        }
     }
 }

@@ -54,7 +54,7 @@ namespace UltimateSnake
 
                 View.DrawAll();
 
-                GameMonitor.Update();
+                SnakeGame.Update();
             }
             while (Snake.Instance.Alive);
         }

@@ -122,7 +122,7 @@ namespace UltimateSnake.Utilities
                     Environment.Exit(0);
                     break;
                 case AvailableInput.Pause:
-                    GameMonitor.Paused = !GameMonitor.Paused;
+                    SnakeGame.Paused = !SnakeGame.Paused;
                     DirectionToMove = Snake.Instance.CurrentDirection;
                     break;
                 default:
