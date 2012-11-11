@@ -1,4 +1,13 @@
-﻿namespace CookieBakery
+﻿// --------------------------------------------------------------------------------------------------------------------
+// <copyright file="Program.cs" company="MarSim">
+//   Copyright © 2012
+// </copyright>
+// <summary>
+//   The program containing the delays
+// </summary>
+// --------------------------------------------------------------------------------------------------------------------
+
+namespace CookieBakery
 {
     using System;
     using System.Threading;

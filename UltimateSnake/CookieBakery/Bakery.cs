@@ -1,4 +1,13 @@
-﻿namespace CookieBakery
+﻿// --------------------------------------------------------------------------------------------------------------------
+// <copyright file="Bakery.cs" company="MarSim">
+//   Copyright © 2012
+// </copyright>
+// <summary>
+//   Simulates a cookie bakery.
+// </summary>
+// --------------------------------------------------------------------------------------------------------------------
+
+namespace CookieBakery
 {
     using System;
     using System.Collections.Generic;
