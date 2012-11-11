@@ -12,7 +12,7 @@ namespace UltimateSnake.GameObjects
     using UltimateSnake.Utilities;
 
     /// <summary>
-    /// A draw-able game object
+    /// A drawable game object
     /// </summary>
     public abstract class DrawableGameObject
     {

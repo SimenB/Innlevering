@@ -64,7 +64,7 @@ namespace UltimateSnake
 
             Snake.Instance.TheSnake.Add(new SnakeBody());
 
-            Loot.MoveLoot();
+            Loot.MoveLootToRandomAcceptablePosition();
         }
     }
 }

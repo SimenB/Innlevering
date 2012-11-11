@@ -41,15 +41,15 @@ namespace UltimateSnake.GameObjects
         /// </summary>
         public static Loot Instance
         {
-            get { return instance ?? (instance = new Loot(RandomPosition())); }
+            get { return instance ?? (instance = new Loot(GetRandomAcceptablePosition())); }
         }
 
         /// <summary>
         /// Add a new loot to the game-screen
         /// </summary>
-        public static void MoveLoot()
+        public static void MoveLootToRandomAcceptablePosition()
         {
-            instance = new Loot(RandomPosition());
+            instance = new Loot(GetRandomAcceptablePosition());
         }
 
         /// <summary>
@@ -69,7 +69,7 @@ namespace UltimateSnake.GameObjects
         /// <returns>
         /// A position not occupied by the snake
         /// </returns>
-        private static Point RandomPosition()
+        private static Point GetRandomAcceptablePosition()
         {
             Random random = new Random();
             Point position;

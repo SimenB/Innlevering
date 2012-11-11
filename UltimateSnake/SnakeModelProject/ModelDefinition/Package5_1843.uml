@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm9="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner"
   dslVersion="1.0.0.0"
   Id="14a2ce80-f0ba-4c39-87de-c8df51e616a4"
   name="Utilities"
@@ -219,6 +219,7 @@
             sourceEndRoleName="Point"
             targetEndRoleName="Zero"
             isLeaf="false"
+            name="provides"
             isAbstract="false">
             <classMoniker
               Id="b595a8f2-ae7a-4425-8326-9603d621101d"
@@ -1007,13 +1008,32 @@
             </propertyInstances>
           </stereotypeInstance>
         </appliedStereotypesInternal>
+        <suppliersInternal>
+          <dependency
+            Id="77fde5f1-e638-45f5-a20d-0d8f4ec19df3"
+            name="&lt;&lt;use&gt;&gt;">
+            <enumerationMoniker
+              Id="cbe5ac27-df20-4822-bcf9-3deab33720c2"
+              LastKnownName="Direction"
+              LastKnownLocation="Package6_1843.uml" />
+          </dependency>
+          <dependency
+            Id="4da8bc67-285b-47c1-a5d9-52a9407a82ac"
+            name="&lt;&lt;use&gt;&gt;">
+            <enumerationMoniker
+              Id="cc227c3b-6623-4251-a962-ea7915064162"
+              LastKnownName="AvailableInput"
+              LastKnownLocation="Package5_1843.uml" />
+          </dependency>
+        </suppliersInternal>
         <targetEnds>
           <association
-            Id="cc7f7011-95b6-45e8-961a-f11095bb2e65"
+            Id="6d61e2a8-92dd-4a23-b101-9655d4de037b"
             isDerived="false"
             sourceEndRoleName="Input"
             targetEndRoleName="ChosenAction"
             isLeaf="false"
+            name="provides"
             isAbstract="false">
             <enumerationMoniker
               Id="cc227c3b-6623-4251-a962-ea7915064162"
@@ -1023,7 +1043,7 @@
             <relationshipOwnedElementsInternal>
               <associationHasOwnedEnds>
                 <memberEnd
-                  Id="a963bd50-9226-4be7-afee-f75041057ff9"
+                  Id="0921f15b-4886-49d1-a5e9-8ce299ecfa9b"
                   name="Input"
                   isLeaf="false"
                   isStatic="false"
@@ -1035,13 +1055,13 @@
                   isNavigableOwned="false">
                   <lowerValueInternal>
                     <literalString
-                      Id="ee241b61-1057-4f27-a981-ccd7b4485994"
+                      Id="08713147-74dc-4dca-b39e-2a73ef2bb0c4"
                       name="Lower"
                       value="*" />
                   </lowerValueInternal>
                   <upperValueInternal>
                     <literalString
-                      Id="edd8611a-fba3-482d-85a4-c4bcf7dab746"
+                      Id="703ac967-abf4-4931-abca-b65aa0b54487"
                       name="Upper"
                       value="*" />
                   </upperValueInternal>
@@ -1049,7 +1069,7 @@
               </associationHasOwnedEnds>
               <associationHasOwnedEnds>
                 <memberEnd
-                  Id="a2d62fb1-9a37-4f5d-895a-8e0eebe97a9b"
+                  Id="c22df67e-1bf8-4cdf-aec8-422c2abceeb4"
                   name="ChosenAction"
                   isLeaf="false"
                   isStatic="false"
@@ -1060,13 +1080,13 @@
                   isComposite="false">
                   <lowerValueInternal>
                     <literalString
-                      Id="30915c87-4cb4-41c9-8c3e-b07d2d777c46"
+                      Id="dcecba9f-c07d-4613-93ed-9379bc33ebdb"
                       name="Lower"
                       value="1" />
                   </lowerValueInternal>
                   <upperValueInternal>
                     <literalString
-                      Id="b2437c91-d7c2-48b9-93b0-72a4778eeb73"
+                      Id="4dff0f71-cbd7-4ff7-9ad9-66ad1757518b"
                       name="Upper"
                       value="1" />
                   </upperValueInternal>
@@ -1075,7 +1095,7 @@
             </relationshipOwnedElementsInternal>
           </association>
           <association
-            Id="a98bcf53-78f3-41ba-a159-5cd2750a294c"
+            Id="ffea6e3b-4a31-41c5-8271-06296d3265a0"
             isDerived="false"
             sourceEndRoleName="Input"
             targetEndRoleName="DirectionToMove"
@@ -1089,7 +1109,7 @@
             <relationshipOwnedElementsInternal>
               <associationHasOwnedEnds>
                 <memberEnd
-                  Id="cb2fa4de-46b4-497b-af31-319412866762"
+                  Id="6dba480b-6d84-407b-876c-e9167093b380"
                   name="Input"
                   isLeaf="false"
                   isStatic="false"
@@ -1101,13 +1121,13 @@
                   isNavigableOwned="false">
                   <lowerValueInternal>
                     <literalString
-                      Id="275459cb-19e8-4b76-9e25-d5b5f88a16f0"
+                      Id="d7b8aa24-fd96-4e3c-9bf1-714dcacdfa7b"
                       name="Lower"
                       value="*" />
                   </lowerValueInternal>
                   <upperValueInternal>
                     <literalString
-                      Id="e21dde64-503b-4642-beeb-d90607a29aa6"
+                      Id="800ef317-293b-498c-b6a9-245d6564c2fb"
                       name="Upper"
                       value="*" />
                   </upperValueInternal>
@@ -1115,7 +1135,7 @@
               </associationHasOwnedEnds>
               <associationHasOwnedEnds>
                 <memberEnd
-                  Id="7e0a72c0-0bef-4436-a9e3-8c360f3c9607"
+                  Id="7a513a45-0f9d-4433-994d-deed72863670"
                   name="DirectionToMove"
                   isLeaf="false"
                   isStatic="false"
@@ -1126,13 +1146,13 @@
                   isComposite="false">
                   <lowerValueInternal>
                     <literalString
-                      Id="5191d7c9-577b-423e-b228-275849601952"
+                      Id="0e15702b-7aae-4419-823d-0805bbb17d1e"
                       name="Lower"
                       value="1" />
                   </lowerValueInternal>
                   <upperValueInternal>
                     <literalString
-                      Id="5a8891a7-a95b-473e-83c6-da083f4eac40"
+                      Id="0eff77ef-bcad-4ac1-b098-895d5b83e192"
                       name="Upper"
                       value="1" />
                   </upperValueInternal>
