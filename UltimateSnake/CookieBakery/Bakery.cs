@@ -16,7 +16,7 @@
         /// <summary>
         /// The list of cookies.
         /// </summary>
-        private static readonly List<Cookie> Cookies = new List<Cookie>();
+        private static readonly List<Cookie> BakedCookies = new List<Cookie>();
 
         /// <summary>
         /// The amount of cookies that have been sold.
@@ -28,7 +28,7 @@
         /// </summary>
         public static bool IsDailyQuotaNotBaked
         {
-            get { return Cookies.Count < DailyQuota; }
+            get { return BakedCookies.Count < DailyQuota; }
         }
 
         /// <summary>
@@ -64,11 +64,11 @@
         /// </summary>
         public static void BakeCookie()
         {
-            lock (Cookies)
+            lock (BakedCookies)
             {
                 Console.ForegroundColor = ConsoleColor.Green;
-                Console.WriteLine("Bakery has baked cookie #{0}", Cookies.Count + 1);
-                Cookies.Add(new Cookie());
+                Console.WriteLine("Bakery has baked cookie #{0}", BakedCookies.Count + 1);
+                BakedCookies.Add(new Cookie());
             }
         }
 
@@ -86,10 +86,10 @@
         /// <param name="customer">The customer attempting to grab the cookie.</param>
         public static void SellCookieTo(Person customer)
         {
-            lock (Cookies)
+            lock (BakedCookies)
             {
             // Can't sell cookies that don't exist
-                if (Cookies.Count <= cookiesSold)
+                if (BakedCookies.Count <= cookiesSold)
                 {
                     Console.ForegroundColor = ConsoleColor.Cyan;
                     Console.WriteLine("\t\t\t\tNo cookie for {0}", customer.Name);
