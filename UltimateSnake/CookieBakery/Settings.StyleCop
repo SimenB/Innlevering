@@ -1,8 +1,14 @@
 <StyleCopSettings Version="105">
+  <GlobalSettings>
+    <CollectionProperty Name="RecognizedWords">
+      <Value>bool</Value>
+      <Value>pre-initialised</Value>
+    </CollectionProperty>
+  </GlobalSettings>
   <Analyzers>
     <Analyzer AnalyzerId="StyleCop.CSharp.DocumentationRules">
       <AnalyzerSettings>
-        <StringProperty Name="CompanyName">MarSimJør</StringProperty>
+        <StringProperty Name="CompanyName">MarSim</StringProperty>
         <StringProperty Name="Copyright">Copyright © 2012</StringProperty>
       </AnalyzerSettings>
     </Analyzer>
