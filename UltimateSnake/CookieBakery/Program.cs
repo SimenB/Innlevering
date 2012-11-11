@@ -33,8 +33,7 @@ namespace CookieBakery
         /// Gives feedback and keeps the console alive by listening for
         /// key press when the program is finished.
         /// </summary>
-        /// <param name="args">The arguments</param>
-        private static void Main(string[] args)
+        private static void Main()
         {
             ParameterizedThreadStart parameterizedThreadStart = GrabCookies;
 
