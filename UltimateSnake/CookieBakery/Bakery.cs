@@ -49,27 +49,8 @@ namespace CookieBakery
         }
 
         /// <summary>
-        /// <para>
         /// "Bakes" a cookie by adding a new cookie to the list and prints a
         /// message indicating how many cookies are now in the list.
-        /// </para>
-        /// <para>
-        /// The factory pattern could potentially be useful here if there were several
-        /// cookie types, but makes no sense in this case. Creating a static class with
-        /// a pre-initialized cookie and accessing that instead of running through
-        /// the constructor for every "baked" cookie makes no difference to performance.
-        /// </para>
-        /// <para>
-        /// Printing happens before adding a cookie to the list because the boolean
-        /// properties will (rightfully) indicate that there is at least one cookie
-        /// up for grabs, and the "cookie grabbers" may grab the cookie before
-        /// it has made its presence known through the console.
-        /// </para>
-        /// <para>
-        /// Locking the list here makes no difference when it comes to performance,
-        /// as long as there are time restrictions. Without the time restrictions,
-        /// the lock makes the program take approximately three times longer to complete.
-        /// </para>
         /// </summary>
         public static void BakeCookie()
         {
@@ -82,15 +63,8 @@ namespace CookieBakery
         }
 
         /// <summary>
-        /// <para>
         /// "Sells" a cookie to the customer by incrementing the number of cookies
-        /// sold. An alternate solution could be to remove the cookie from the list
-        /// (or use a Queue or Stack and Push/Pop), and instead keep track of how many
-        /// cookies have been baked.
-        /// </para>
-        /// <para>
-        /// Makes sure each cookie can only be sold once by locking the list.
-        /// </para>
+        /// sold. Makes sure each cookie can only be sold once by locking the list.
         /// </summary>
         /// <param name="customer">The customer attempting to grab the cookie.</param>
         public static void SellCookieTo(Person customer)

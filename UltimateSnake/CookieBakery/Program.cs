@@ -49,8 +49,7 @@ namespace CookieBakery
             }
 
             Console.ForegroundColor = ConsoleColor.White;
-            Console.WriteLine("All out of cookies for today!");
-
+            Console.WriteLine("All out of cookies for today!\nPress any key to continue...");
             Console.ReadKey();
         }
 
