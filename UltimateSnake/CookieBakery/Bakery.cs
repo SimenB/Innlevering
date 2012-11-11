@@ -97,7 +97,7 @@ namespace CookieBakery
         {
             lock (BakedCookies)
             {
-            // Can't sell cookies that don't exist
+                // Can't sell cookies that don't exist
                 if (BakedCookies.Count <= cookiesSold)
                 {
                     Console.ForegroundColor = ConsoleColor.Cyan;
