@@ -1,5 +1,5 @@
 ﻿// --------------------------------------------------------------------------------------------------------------------
-// <copyright file="View.cs" company="MarSimJør">
+// <copyright file="View.cs" company="MarSim">
 //   Copyright © 2012
 // </copyright>
 // <summary>
@@ -14,13 +14,11 @@ namespace UltimateSnake.MVC
 
     using GameObjects;
 
+    /// <summary>
+    /// Parent-class that contains what's needed to expand with further views down the road
+    /// </summary>
     public abstract class View
     {
-        /// <summary>
-        /// The instance.
-        /// </summary>
-        protected static View instance;
-
         /// <summary>
         /// Gets or sets a mapping of colors
         /// </summary>

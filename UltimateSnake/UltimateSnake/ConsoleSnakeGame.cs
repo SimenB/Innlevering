@@ -1,5 +1,5 @@
 ﻿// --------------------------------------------------------------------------------------------------------------------
-// <copyright file="ConsoleSnakeGame.cs" company="MarSimJør">
+// <copyright file="ConsoleSnakeGame.cs" company="MarSim">
 //   Copyright © 2012
 // </copyright>
 // <summary>

@@ -1,5 +1,5 @@
 ﻿// --------------------------------------------------------------------------------------------------------------------
-// <copyright file="SnakeBody.cs" company="MarSimJør">
+// <copyright file="SnakeBody.cs" company="MarSim">
 //   Copyright © 2012
 // </copyright>
 // <summary>

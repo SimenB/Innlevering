@@ -1,5 +1,5 @@
 ﻿// --------------------------------------------------------------------------------------------------------------------
-// <copyright file="InputHandler.cs" company="MarSimJør">
+// <copyright file="InputHandler.cs" company="MarSim">
 //   Copyright © 2012
 // </copyright>
 // <summary>

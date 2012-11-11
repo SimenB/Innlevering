@@ -1,5 +1,5 @@
 ﻿// --------------------------------------------------------------------------------------------------------------------
-// <copyright file="Loot.cs" company="MarSimJør">
+// <copyright file="Loot.cs" company="MarSim">
 //   Copyright © 2012
 // </copyright>
 // <summary>

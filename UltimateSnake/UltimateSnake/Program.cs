@@ -1,11 +1,11 @@
 ﻿// --------------------------------------------------------------------------------------------------------------------
-// <copyright file="Program.cs" company="MarSimJør">
+// <copyright file="Program.cs" company="MarSim">
 //   Copyright © 2012
 // </copyright>
 // <summary>
 //   Defines the Program type.
 // </summary>
-// -------------------------------------------------------------------------------------------------------------------
+// --------------------------------------------------------------------------------------------------------------------
 
 namespace UltimateSnake
 {
@@ -13,6 +13,7 @@ namespace UltimateSnake
 
     using UltimateSnake.GameObjects;
     using UltimateSnake.MVC;
+    using UltimateSnake.Utilities;
 
     /// <summary>
     /// The program.
@@ -42,7 +43,7 @@ namespace UltimateSnake
             do
             {
                 // Check for pause
-                Controller.Instance.Update();
+                Input.Update();
 
                 if (stopwatch.ElapsedMilliseconds < 1000 / SnakeGame.FPS)
                 {

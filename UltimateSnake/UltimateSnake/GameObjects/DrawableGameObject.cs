@@ -26,6 +26,9 @@ namespace UltimateSnake.GameObjects
         /// </summary>
         public object Texture { get; protected set; }
 
+        /// <summary>
+        /// Gets or sets the texture used in the console
+        /// </summary>
         public char ConsoleTexture { get; set; }
 
         /// <summary>

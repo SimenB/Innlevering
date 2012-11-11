@@ -1,5 +1,5 @@
 ﻿// --------------------------------------------------------------------------------------------------------------------
-// <copyright file="Point.cs" company="MarSimJør">
+// <copyright file="Point.cs" company="MarSim">
 //   Copyright © 2012
 // </copyright>
 // <summary>

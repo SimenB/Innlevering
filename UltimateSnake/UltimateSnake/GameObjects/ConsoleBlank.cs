@@ -1,5 +1,5 @@
 ﻿// --------------------------------------------------------------------------------------------------------------------
-// <copyright file="ConsoleBlank.cs" company="MarSimJør">
+// <copyright file="ConsoleBlank.cs" company="MarSim">
 //   Copyright © 2012
 // </copyright>
 // <summary>
@@ -23,6 +23,12 @@ namespace UltimateSnake.GameObjects
         {
         }
 
+        /// <summary>
+        /// Initializes a new instance of the <see cref="ConsoleBlank"/> class.
+        /// </summary>
+        /// <param name="pos">
+        /// The position to be set
+        /// </param>
         public ConsoleBlank(Point pos)
         {
             this.Color = "Black";

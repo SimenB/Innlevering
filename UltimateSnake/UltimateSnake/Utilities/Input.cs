@@ -1,5 +1,5 @@
 // --------------------------------------------------------------------------------------------------------------------
-// <copyright file="Input.cs" company="MarSimJør">
+// <copyright file="Input.cs" company="MarSim">
 //   Copyright © 2012
 // </copyright>
 // <summary>
@@ -41,7 +41,7 @@ namespace UltimateSnake.Utilities
         /// <summary>
         /// The update.
         /// </summary>
-        public static void UpdateInput()
+        public static void Update()
         {
             if (!InputHandler.CheckAllInputs())
             {
