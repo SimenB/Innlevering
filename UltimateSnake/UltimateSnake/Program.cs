@@ -11,8 +11,8 @@ namespace UltimateSnake
 {
     using System.Diagnostics;
 
+    using UltimateSnake.Architecture;
     using UltimateSnake.GameObjects;
-    using UltimateSnake.MVC;
     using UltimateSnake.Utilities;
 
     /// <summary>
@@ -54,7 +54,7 @@ namespace UltimateSnake
 
                 View.DrawAll();
 
-                Model.Update();
+                GameMonitor.Update();
             }
             while (Snake.Instance.Alive);
         }

@@ -13,7 +13,7 @@ namespace UltimateSnake.Utilities
 
     using GameObjects;
 
-    using UltimateSnake.MVC;
+    using UltimateSnake.Architecture;
 
     /// <summary>
     /// The input handler
@@ -122,7 +122,7 @@ namespace UltimateSnake.Utilities
                     Environment.Exit(0);
                     break;
                 case AvailableInput.Pause:
-                    Model.Paused = !Model.Paused;
+                    GameMonitor.Paused = !GameMonitor.Paused;
                     DirectionToMove = Snake.Instance.CurrentDirection;
                     break;
                 default:

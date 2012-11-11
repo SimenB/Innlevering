@@ -7,13 +7,13 @@
 // </summary>
 // --------------------------------------------------------------------------------------------------------------------
 
-namespace UltimateSnake.MVC
+namespace UltimateSnake.Architecture
 {
     using System;
     using System.Collections.Generic;
     using System.Drawing;
 
-    using GameObjects;
+    using UltimateSnake.GameObjects;
 
     // BUG: The bottom right corner (This has to do with how the console works)
 

@@ -1,5 +1,5 @@
 ﻿// --------------------------------------------------------------------------------------------------------------------
-// <copyright file="Model.cs" company="MarSim">
+// <copyright file="GameMonitor.cs" company="MarSim">
 //   Copyright © 2012
 // </copyright>
 // <summary>
@@ -7,14 +7,14 @@
 // </summary>
 // --------------------------------------------------------------------------------------------------------------------
 
-namespace UltimateSnake.MVC
+namespace UltimateSnake.Architecture
 {
-    using GameObjects;
+    using UltimateSnake.GameObjects;
 
     /// <summary>
     /// The model for the game. Contains all data
     /// </summary>
-    public static class Model
+    public static class GameMonitor
     {
         /// <summary>
         /// Gets or sets a value indicating whether the game is paused.

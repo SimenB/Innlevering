@@ -22,18 +22,19 @@ namespace UltimateSnake.Architecture
         /// <summary>
         /// Gets or sets a mapping of colors
         /// </summary>
-        protected virtual Dictionary<Color, object> ColorMap { get; set; }
+        protected abstract Dictionary<Color, object> ColorMap { get; set; }
 
         /// <summary>
         /// Draw for every view available
         /// </summary>
         public static void DrawAll()
         {
+            // At the moment, there is only console-view
             ConsoleView.Draw();
         }
 
         /// <summary>
-        /// Draw a char
+        /// Draw an object
         /// </summary>
         /// <param name="obj">
         /// The object to draw
@@ -41,7 +42,7 @@ namespace UltimateSnake.Architecture
         protected abstract void Draw(DrawableGameObject obj);
 
         /// <summary>
-        /// Draw a char
+        /// Draw everything in a list
         /// </summary>
         /// <param name="objList">
         /// The list of objects to draw
