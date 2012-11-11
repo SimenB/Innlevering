@@ -7,12 +7,12 @@
 // </summary>
 // --------------------------------------------------------------------------------------------------------------------
 
-namespace UltimateSnake.MVC
+namespace UltimateSnake.Architecture
 {
     using System.Collections.Generic;
     using System.Drawing;
 
-    using GameObjects;
+    using UltimateSnake.GameObjects;
 
     /// <summary>
     /// Parent-class that contains what's needed to expand with further views down the road
